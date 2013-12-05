@@ -1,2 +1,143 @@
-<h1>Pages#about</h1>
-<p>Find me in app/views/pages/about.html.erb</p>
+<div id="main">
+  <div id="header">
+    <div class="row-1">
+      <div class="fleft"><a href="#"><%= image_tag 'logo.gif', alt: '' %></a></div>
+      <div class="fright">
+        <ul>
+          <li><a href="#"><%= image_tag 'icon1.gif', alt: ''%></a></li>
+          <li><a href="#"><%= image_tag 'icon2.gif', alt: ''%></a></li>
+          <li><a href="#"><%= image_tag 'icon3.gif', alt: ''%></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row-2">
+      <div class="left">
+        <ul>
+          <li><a href="index.html"><span>home</span></a></li>
+          <li><a href="about-us.html" class="active"><span>about</span></a></li>
+          <li><a href="articles.html"><span>articles</span></a></li>
+          <li><a href="contact-us.html"><span>contact</span></a></li>
+          <li class="last"><a href="sitemap.html"><span>sitemap</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row-3">
+      <div class="inside">
+        <h2>Speed is the Source <b>of Emotions</b></h2>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit volutem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+        <form action="#" id="search-form">
+          <fieldset>
+            <label>Search:</label>
+            <input type="text" />
+            <a href="#" class="link1"><em><b>Go!</b></em></a>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <div class="extra" style="margin-left: 400px"><%= image_tag 'header-img.png', alt: ''%></div>
+  </div>
+  <div id="content">
+    <div class="box">
+      <div class="border-bot">
+        <div class="right-bot-corner">
+          <div class="left-bot-corner">
+            <div class="inner">
+              <div class="box1 alt">
+                <div class="inner">
+                  <h4><b>About</b> Your Website</h4>
+                  <p class="p0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="indent">
+      <div class="wrapper">
+        <div class="col-1">
+          <h3><b>About</b> Your Team</h3>
+          <ul class="list">
+            <li><%= image_tag '2page-img1.jpg', alt: ''%><a href="#">Team Member One</a><br />
+              Eusus consequam vitae habitur amet nullam vitae condis phasellus sed justo. Orcivel mollis intesque eu sempor ridictum a non laorem lacingilla wisi. Nuncrhoncus eros maurien ulla facilis tor.</li>
+            <li><%= image_tag '2page-img2.jpg', alt: ''%><a href="#">Another Team Member</a><br />
+              Eusus consequam vitae habitur amet nullam vitae condis phasellus sed justo. Orcivel mollis intesque eu sempor ridictum a non laorem lacingilla wisi. Nuncrhoncus eros maurien ulla facilis tor.</li>
+            <li><%= image_tag '2page-img3.jpg', alt: ''%><a href="#">Another Team Member</a><br />
+              Eusus consequam vitae habitur amet nullam vitae condis phasellus sed justo. Orcivel mollis intesque eu sempor ridictum a non laorem lacingilla wisi. Nuncrhoncus eros maurien ulla facilis tor.</li>
+            <li><%= image_tag '2page-img4.jpg', alt: ''%><a href="#">Another Team Member</a><br />
+              Eusus consequam vitae habitur amet nullam vitae condis phasellus sed justo. Orcivel mollis intesque eu sempor ridictum a non laorem lacingilla wisi. Nuncrhoncus eros maurien ulla facilis tor.</li>
+          </ul>
+        </div>
+        <div class="col-2">
+          <div class="box2">
+            <div class="border-top">
+              <div class="left-top-corner">
+                <div class="right-top-corner">
+                  <div class="inner">
+                    <h4><b>Latest</b> News</h4>
+                    <ul class="news">
+                      <li><a href="#">May 21, 2010</a>
+                        <p>Lorem ipsum dolor sit amet, coisectur adipisicing elit, sed doeiusmo.</p>
+                      </li>
+                      <li><a href="#">May 12, 2010</a>
+                        <p>Ut enim ad minim veniam, qnostrud exercitation ullamco.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box3">
+            <div class="right-bot-corner">
+              <div class="left-bot-corner">
+                <div class="inner">
+                  <h4><b>Login</b> Form</h4>
+                  <form action="#" id="login-form">
+                    <fieldset>
+                      <div class="field">
+                        <label>Username:</label>
+                        <input type="text" />
+                      </div>
+                      <div class="field">
+                        <label>Password:</label>
+                        <input type="password" />
+                      </div>
+                      <div class="field1">
+                        <label class="extra">Remember Me:</label>
+                        <input type="checkbox" class="extra" />
+                        <a href="#"><em><b>Log In<span>Log In</span></b></em></a></div>
+                      <ul>
+                        <li><a href="#">Forgot your password?</a></li>
+                        <li class="last"><a href="#">Register</a></li>
+                      </ul>
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="footer-nav">
+      <div class="left">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Articles</a></li>
+          <li><a href="#">Contacts</a></li>
+          <li class="last"><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footerlink">
+      <p class="lf">Copyright &copy; 2010 <a href="#">SiteName</a> - All Rights Reserved</p>
+      <p class="rf"><a href="http://www.free-css.com/">Free CSS Templates</a> by <a href="http://www.templatemonster.com/">TemplateMonster</a></p>
+      <div style="clear:both;"></div>
+    </div>
+  </div>
+  <script type="text/javascript"> Cufon.now(); </script>
+</div>

@@ -2,11 +2,29 @@
 <html>
 <head>
   <title>Trucking</title>
+  <title>Trucking | About Us</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag "style" %>
+  <%= javascript_include_tag "cufon-yui" %>
+  <%= javascript_include_tag "cufon-replace" %>
+  <%= javascript_include_tag "Myriad_Pro_400.font" %>
+  <%= javascript_include_tag "Myriad_Pro_600.font" %>
+  <%= javascript_include_tag "NewsGoth_BT_400.font" %>
+  <%= javascript_include_tag "NewsGoth_BT_700.font" %>
+  <%= javascript_include_tag "NewsGoth_Dm_BT_400.font" %>
+  <%= javascript_include_tag "script" %>
+  <!--[if lt IE 7]>
+  <%= javascript_include_tag "ie_png" %>
+  <script type="text/javascript">ie_png.fix('.png, #header .row-2 ul li a, .extra img, #search-form a, #search-form a em, #login-form .field1 a, #login-form .field1 a em, #login-form .field1 a b');</script>
+  <%= stylesheet_link_tag "ie6" %>
+  <![endif]-->
 </head>
-<body>
+
+<body id="page2">
 
 <%= yield %>
 
