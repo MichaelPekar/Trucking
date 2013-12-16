@@ -5,7 +5,9 @@
   <title>Trucking | About Us</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    controller_path, :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag controller_path %>
   <%= csrf_meta_tags %>
 
   <%= stylesheet_link_tag "style" %>
@@ -25,8 +27,45 @@
 </head>
 
 <body id="page2">
-
-<%= yield %>
-
+<div id="main">
+  <div id="header">
+    <div class="row-1">
+      <div class="fleft"><a href="#"><%= image_tag 'logo.gif', alt: '' %></a></div>
+      <div class="fright">
+        <ul>
+          <li><a href="#"><%= image_tag 'icon1.gif', alt: ''%></a></li>
+          <li><a href="#"><%= image_tag 'icon2.gif', alt: ''%></a></li>
+          <li><%= link_to image_tag('icon3.gif', alt: ''), admin_path %></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row-2">
+      <div class="left">
+        <ul>
+          <li><a href="index.html"><span>home</span></a></li>
+          <li><a href="about-us.html" class="active"><span>about</span></a></li>
+          <li><a href="articles.html"><span>articles</span></a></li>
+          <li><a href="contact-us.html"><span>contact</span></a></li>
+          <li class="last"><a href="sitemap.html"><span>sitemap</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row-3">
+      <div class="inside">
+        <h2>Speed is the Source <b>of Emotions</b></h2>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit volutem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+        <form action="#" id="search-form">
+          <fieldset>
+            <label>Search:</label>
+            <input type="text" />
+            <a href="#" class="link1"><em><b>Go!</b></em></a>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <div class="extra" style="margin-left: 400px"><%= image_tag 'header-img.png', alt: ''%></div>
+  </div>
+  <%= yield %>
+</div>
 </body>
 </html>
