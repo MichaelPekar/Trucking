@@ -120,7 +120,7 @@
                           <div class="field1">
                             <label class="extra">Remember Me:</label>
                             <%= f.check_box :remember_me, class: 'extra' %>
-                            <%= f.submit "Log In" %>
+                            <a href="#" onclick="$('#login-form').submit()"><em><b>Log In<span>Log In</span></b></em></a>
                           </div>
                           <ul>
                             <%= render "devise/shared/links" %>
