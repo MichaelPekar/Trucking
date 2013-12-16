@@ -93,26 +93,41 @@
               <div class="left-bot-corner">
                 <div class="inner">
                   <h4><b>Login</b> Form</h4>
-                  <form action="#" id="login-form">
-                    <fieldset>
-                      <div class="field">
-                        <label>Username:</label>
-                        <input type="text" />
-                      </div>
-                      <div class="field">
-                        <label>Password:</label>
-                        <input type="password" />
-                      </div>
-                      <div class="field1">
-                        <label class="extra">Remember Me:</label>
-                        <input type="checkbox" class="extra" />
-                        <a href="#"><em><b>Log In<span>Log In</span></b></em></a></div>
-                      <ul>
-                        <li><a href="#">Forgot your password?</a></li>
-                        <li class="last"><a href="#">Register</a></li>
-                      </ul>
-                    </fieldset>
-                  </form>
+                  <% if current_user %>
+                      <form id='login-form'>
+                          <fieldset>
+                            <div class="field">
+                              <label>Hello:</label>
+                              <%= current_user.email %>
+                            </div>
+                            <ul>
+                              <%= render "devise/shared/links" %>
+                            </ul>
+
+                          </fieldset>
+                      </form>
+                  <% else %>
+                      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { id: 'login-form'} ) do |f| %>
+                        <fieldset>
+                          <div class="field">
+                            <label>Email:</label>
+                            <%= f.email_field :email, :autofocus => true %>
+                          </div>
+                          <div class="field">
+                            <label>Password:</label>
+                            <%= f.password_field :password %>
+                          </div>
+                          <div class="field1">
+                            <label class="extra">Remember Me:</label>
+                            <%= f.check_box :remember_me, class: 'extra' %>
+                            <%= f.submit "Log In" %>
+                          </div>
+                          <ul>
+                            <%= render "devise/shared/links" %>
+                          </ul>
+                        </fieldset>
+                      <% end %>
+                  <% end %>
                 </div>
               </div>
             </div>

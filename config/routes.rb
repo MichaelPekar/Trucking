@@ -1,4 +1,6 @@
 Trucking::Application.routes.draw do
+  devise_for :users
+
   get "pages/about"
 
   # The priority is based upon order of creation:
