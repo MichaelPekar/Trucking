@@ -20,7 +20,6 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
   gem 'uglifier'
-  gem 'modernizr-rails'
 end
 
 gem 'jquery-rails'
