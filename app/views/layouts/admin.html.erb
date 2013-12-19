@@ -50,7 +50,9 @@
           <%= link_to 'babydorych-trans.com.ua', root_path, class: 'brand' %>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Collaborators", admin_collaborators_path  %></li>
+              <li class="nav <%= 'active' if params[:controller] == 'admin/collaborators' %>">
+                <%= link_to "Collaborators", admin_collaborators_path %>
+              </li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

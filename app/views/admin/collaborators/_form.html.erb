@@ -1,3 +1,4 @@
+<%= @admin_collaborator.errors.first%>
 <%= form_for @admin_collaborator, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
     <%= f.label :full_name, :class => 'control-label' %>
@@ -15,6 +16,12 @@
     <%= f.label :description, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_area :description, :class => 'span_12 text_area', rows: 5 %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :avatar, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.file_field :avatar, :class => 'span_12 file_field' %>
     </div>
   </div>
 

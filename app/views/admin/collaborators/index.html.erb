@@ -5,6 +5,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th><%= model_class.human_attribute_name(:avatar) %></th>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:full_name) %></th>
       <th><%= model_class.human_attribute_name(:post) %></th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @admin_collaborators.each do |collaborator| %>
       <tr>
+        <td><%= image_tag collaborator.avatar.url(:small), class: 'small_avatar' %></td>
         <td><%= link_to collaborator.id, admin_collaborator_path(collaborator) %></td>
         <td><%= collaborator.full_name %></td>
         <td><%= collaborator.post %></td>

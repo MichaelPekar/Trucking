@@ -9,6 +9,7 @@ gem 'mysql2'
 gem 'haml'
 gem 'devise'
 gem "twitter-bootstrap-rails"
+gem "paperclip"
 
 
 # Gems used only for assets and not required
