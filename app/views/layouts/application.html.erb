@@ -13,11 +13,6 @@
   <%= stylesheet_link_tag "style" %>
   <%= javascript_include_tag "cufon-yui" %>
   <%= javascript_include_tag "cufon-replace" %>
-  <%= javascript_include_tag "Myriad_Pro_400.font" %>
-  <%= javascript_include_tag "Myriad_Pro_600.font" %>
-  <%= javascript_include_tag "NewsGoth_BT_400.font" %>
-  <%= javascript_include_tag "NewsGoth_BT_700.font" %>
-  <%= javascript_include_tag "NewsGoth_Dm_BT_400.font" %>
   <%= javascript_include_tag "Calibri_400-Calibri_700-Calibri_italic_400-Calibri_italic_700.font" %>
   <%= javascript_include_tag "script" %>
   <!--[if lt IE 7]>
@@ -55,21 +50,9 @@
     </div>
     <div class="row-3">
       <div class="inside">
-        <h2>Вантажні перевезення <b>по Україні</b></h2>
-        <p> Дозвольте Вам запропонувати послуги з вантажних перевезень
-          <br>на території
-          України та Європи. В нашої фірми є багаторічний<br> досвід у сфері
-          міжнародних вантажних перевезень<br> та експедиційних послуг.</p>
-        <form action="#" id="search-form">
-          <fieldset>
-            <label>Пошук:</label>
-            <input type="text" />
-            <a href="#" class="link1"><em><b>Вперед!</b></em></a>
-          </fieldset>
-        </form>
+        <%= render partial: 'layouts/gallery' %>
       </div>
     </div>
-    <div class="extra" style="margin-left: 400px"><%= image_tag 'header-img.png', alt: ''%></div>
   </div>
   <%= yield %>
 

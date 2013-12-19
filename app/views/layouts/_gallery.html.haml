@@ -1,0 +1,52 @@
+%section#dg-container.dg-container
+  .dg-wrapper
+    %a{ href: "#" }
+      = image_tag 'gallery/1.jpg', alt: 'image1'
+      %div
+        .gallery-text.calibri
+          %br
+          Мы организуем
+          %b
+            доставку Вашего груза
+          до места разгрузки.
+    %a{ href: "#" }
+      = image_tag 'gallery/2.jpg', alt: 'image1'
+      %div
+        .gallery-text.calibri
+          %br
+          %b
+            Гибкая ценовая политика
+          и
+          %b
+            грамотный менеджмент
+          позволяют нам всегда находить компромиссы и идти вперед
+          %b
+            вместе с Вами.
+    %a{ href: "#" }
+      = image_tag 'gallery/3.jpg', alt: 'image1'
+      %div
+        .gallery-text.calibri
+          %br
+          %b
+            Индивидуальный подход
+          к каждому клиенту.
+    %a{ href: "#" }
+      = image_tag 'gallery/4.jpg', alt: 'image1'
+      %div
+        .gallery-text.calibri
+          %br
+          Наша команда специалистов и менеджеров решит
+          %b
+            Ваши самые амбициозные задачи.
+  %nav
+    %span.dg-prev
+      &lt;
+    %span.dg-next
+      &gt;
+:javascript
+  $(function() {
+  $('#dg-container').gallery({
+  autoplay	:	true,
+  interval:  5000
+  });
+  });

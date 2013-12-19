@@ -6,3 +6,7 @@ Cufon.replace('.link1', { fontFamily: 'CalibriI', textShadow:'#165ebd 1px 1px' }
 Cufon.replace('h3, h4', { fontFamily: 'CalibriB' });
 Cufon.replace('h3 b, h4 b', { fontFamily: 'CalibriB' });
 Cufon.replace('.box2 h4, .box3 h4', { fontFamily: 'CalibriB', textShadow:'#2074cb 1px 1px' });
+
+
+Cufon.replace('.calibri', { fontFamily: 'CalibriB', textShadow:'#1f7dd2 1px 1px' });
+Cufon.replace('.calibri b', { fontFamily: 'CalibriB', textShadow:'#ffffff 1px 1px' });

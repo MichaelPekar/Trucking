@@ -9,4 +9,16 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require gallery/style.css
  */
+
+
+.gallery-text{
+    font-size: 30px;
+    color: #e6e6e6;
+}
+
+.gallery-text b{
+    color: #1f7dd2;
+    font-size: 30px;
+}

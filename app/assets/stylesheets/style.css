@@ -434,8 +434,8 @@ h3 b, h4 b {
 	color:#c1f0ff;
 }
 #header {
-	height:419px;
 	position:relative;
+    height: 580px;
 }
 #header .row-1 {
 	height:88px;
@@ -500,13 +500,10 @@ h3 b, h4 b {
 	background:url(nav-arrow.gif) no-repeat center bottom;
 }
 #header .row-3 {
-	height:276px;
-	overflow:hidden;
 	background:url(header-tail.gif) repeat-x left top;
 }
 #header .row-3 .inside {
-	padding:35px 0 0 50px;
-	width: 500px;
+	padding: 35px 0 0 0px;
 	position:relative;
 	z-index:2;
 }
