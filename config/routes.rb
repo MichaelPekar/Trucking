@@ -1,5 +1,10 @@
 Trucking::Application.routes.draw do
 
+  namespace :admin do
+    resources :collaborators
+  end
+
+
   get "admin", to: "admin/pages#index"
 
   devise_for :users

@@ -1,0 +1,26 @@
+<%= form_for @admin_collaborator, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :full_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :full_name, :class => 'span_12 text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :post, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :post, :class => 'span_12 text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :description, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :description, :class => 'span_12 text_area', rows: 5 %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                admin_collaborators_path, :class => 'btn' %>
+  </div>
+<% end %>
