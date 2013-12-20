@@ -1,16 +1,6 @@
-<%= form_for @about_as_page, :html => { :class => 'form-horizontal' } do |f| %>
-  <div class="control-group">
-    <%= f.label :content, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_area :content, :class => 'text_area' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :lang, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :lang, :class => 'text_field' %>
-    </div>
-  </div>
+<%= form_for @admin_about_as_page, :html => { :class => 'form-horizontal' } do |f| %>
+
+  <%= f.cktext_area :content, :class => "text_area span_12", :ckeditor => {:language => "uk"} %>
 
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>

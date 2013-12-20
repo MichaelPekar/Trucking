@@ -33,6 +33,8 @@
   </tbody>
 </table>
 
+<% if new_about_as_page_needed? %>
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_admin_about_as_page_path,
             :class => 'btn btn-primary' %>
+<% end%>
