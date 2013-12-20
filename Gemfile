@@ -10,6 +10,7 @@ gem 'haml'
 gem 'devise'
 gem "twitter-bootstrap-rails"
 gem "paperclip"
+gem "ckeditor", "~> 4.0.2"
 
 
 # Gems used only for assets and not required

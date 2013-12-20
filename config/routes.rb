@@ -1,6 +1,11 @@
 Trucking::Application.routes.draw do
 
   namespace :admin do
+    resources :about_as_pages
+  end
+
+
+  namespace :admin do
     resources :collaborators
   end
 

@@ -4,7 +4,7 @@ class Admin::CollaboratorsController < Admin::AdminController
   def index
     @admin_collaborators = Admin::Collaborator.all
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.html.haml
       format.json { render json: @admin_collaborators }
     end
   end

@@ -1,0 +1,20 @@
+<%= form_for @about_as_page, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :content, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :content, :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :lang, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :lang, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                admin_about_as_pages_path, :class => 'btn' %>
+  </div>
+<% end %>
