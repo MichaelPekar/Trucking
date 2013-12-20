@@ -1,5 +1,10 @@
 Trucking::Application.routes.draw do
 
+  namespace :admin do
+    resources :contact_us_pages
+  end
+
+
   mount Ckeditor::Engine => '/ckeditor'
 
   namespace :admin do

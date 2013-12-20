@@ -11,9 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131220214354) do
+ActiveRecord::Schema.define(:version => 20131220220818) do
 
-  create_table "admin_about_as_pages", :force => true do |t|
+  create_table "admin_about_us_pages", :force => true do |t|
     t.text     "content"
     t.string   "lang"
     t.datetime "created_at", :null => false
@@ -30,6 +30,13 @@ ActiveRecord::Schema.define(:version => 20131220214354) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+  end
+
+  create_table "admin_contact_us_pages", :force => true do |t|
+    t.text     "content"
+    t.string   "lang"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "ckeditor_assets", :force => true do |t|

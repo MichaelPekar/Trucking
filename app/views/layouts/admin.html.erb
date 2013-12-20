@@ -54,7 +54,10 @@
                 <%= link_to "Collaborators", admin_collaborators_path %>
               </li>
               <li class="nav <%= 'active' if params[:controller] == 'admin/about_us_pages' %>">
-                <%= link_to "About As", admin_about_as_pages_path %>
+                <%= link_to "About Us", admin_about_us_pages_path %>
+              </li>
+              <li class="nav <%= 'active' if params[:controller] == 'admin/contact_us_pages' %>">
+                <%= link_to "Contact Us", admin_contact_us_pages_path %>
               </li>
             </ul>
           </div><!--/.nav-collapse -->
