@@ -3,7 +3,7 @@ Trucking::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
 
   namespace :admin do
-    resources :about_as_pages
+    resources :about_us_pages
     resources :collaborators
   end
 

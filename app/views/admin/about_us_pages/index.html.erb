@@ -1,4 +1,4 @@
-<%- model_class = Admin::AboutAsPage -%>
+<%- model_class = Admin::AboutUsPage -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
@@ -13,17 +13,17 @@
     </tr>
   </thead>
   <tbody>
-    <% @admin_about_as_pages.each do |about_as_page| %>
+    <% @admin_about_us_pages.each do |about_us_page| %>
       <tr>
-        <td><%= link_to about_as_page.id, admin_about_as_page_path(about_as_page) %></td>
-        <td><%= about_as_page.content %></td>
-        <td><%= about_as_page.lang %></td>
-        <td><%=l about_as_page.created_at %></td>
+        <td><%= link_to about_us_page.id, admin_about_us_page_path(about_us_page) %></td>
+        <td><%= about_us_page.content %></td>
+        <td><%= about_us_page.lang %></td>
+        <td><%=l about_us_page.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_admin_about_as_page_path(about_as_page), :class => 'btn btn-mini' %>
+                      edit_admin_about_us_page_path(about_us_page), :class => 'btn btn-mini' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      admin_about_as_page_path(about_as_page),
+                      admin_about_us_page_path(about_us_page),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                       :class => 'btn btn-mini btn-danger' %>
@@ -33,8 +33,8 @@
   </tbody>
 </table>
 
-<% if new_about_as_page_needed? %>
+<% if new_about_us_page_needed? %>
 <%= link_to t('.new', :default => t("helpers.links.new")),
-            new_admin_about_as_page_path,
+            new_admin_about_us_page_path,
             :class => 'btn btn-primary' %>
 <% end%>

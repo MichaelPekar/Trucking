@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Admin::AboutAsPagesControllerTest < ActionController::TestCase
+class Admin::AboutUsPagesControllerTest < ActionController::TestCase
   setup do
     @admin_about_as_page = admin_about_as_pages(:one)
   end
@@ -17,7 +17,7 @@ class Admin::AboutAsPagesControllerTest < ActionController::TestCase
   end
 
   test "should create admin_about_as_page" do
-    assert_difference('Admin::AboutAsPage.count') do
+    assert_difference('Admin::AboutUsPage.count') do
       post :create, admin_about_as_page: { content: @admin_about_as_page.content, lang: @admin_about_as_page.lang }
     end
 
@@ -40,7 +40,7 @@ class Admin::AboutAsPagesControllerTest < ActionController::TestCase
   end
 
   test "should destroy admin_about_as_page" do
-    assert_difference('Admin::AboutAsPage.count', -1) do
+    assert_difference('Admin::AboutUsPage.count', -1) do
       delete :destroy, id: @admin_about_as_page
     end
 

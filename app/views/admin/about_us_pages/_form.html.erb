@@ -1,10 +1,10 @@
-<%= form_for @admin_about_as_page, :html => { :class => 'form-horizontal' } do |f| %>
+<%= form_for @admin_about_us_page, :html => { :class => 'form-horizontal' } do |f| %>
 
   <%= f.cktext_area :content, :class => "text_area span_12", :ckeditor => {:language => "uk"} %>
 
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                admin_about_as_pages_path, :class => 'btn' %>
+                admin_about_us_pages_path, :class => 'btn' %>
   </div>
 <% end %>
