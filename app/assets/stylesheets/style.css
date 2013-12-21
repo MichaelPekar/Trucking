@@ -49,7 +49,7 @@ ul, ol {
 	float:left;
 }
 #content .col-1 {
-	width:526px;
+	width: 600px;
 	padding:12px 0;
 }
 #content .col-2 {
@@ -375,18 +375,19 @@ h3 b, h4 b {
 	background:url(right-bot-corner.gif) no-repeat right bottom;
 }
 .box .inner {
-	padding:0 0 10px 21px;
+	padding: 10px 21px 10px 21px;
 }
 .box1 {
-	width:263px;
+
 	background:url(box1-bot.jpg) no-repeat left bottom;
 }
 .box1.alt {
 	background:url(box1-bot1.jpg) no-repeat left bottom;
-	width:900px;
+	width: 100%;
+    background-size: contain;
 }
 .box1 .inner {
-	padding:34px 22px 28px 29px;
+
 }
 .box2 {
 	width:100%;
@@ -477,12 +478,11 @@ h3 b, h4 b {
 	padding-right:0;
 }
 #header .row-2 ul li.last a {
-	width: 468px;
 }
 #header .row-2 ul li a {
 	text-decoration:none;
 	color:#fff;
-	width: 468px;
+	width: 311px;
 	text-align:center;
 	display:block;
 	padding:14px 0 0 0;
@@ -532,7 +532,7 @@ h3 b, h4 b {
 	padding:0;
 }
 #content .indent {
-	padding:0 0 0 49px;
+
 }
 #footer .footer-nav {
 	background:url(footer-nav-tail.gif) repeat-x left top;
@@ -552,7 +552,7 @@ h3 b, h4 b {
 	font-weight:bold;
 	line-height:1em;
 	border-right:1px solid #fff;
-	padding:0 72px;
+	padding: 0 121px;
 }
 #footer .footer-nav ul li.last {
 	border:0;

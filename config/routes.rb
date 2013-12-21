@@ -2,15 +2,12 @@ Trucking::Application.routes.draw do
 
   namespace :admin do
     resources :contact_us_pages
+    resources :about_us_pages
+    resources :collaborators
   end
 
 
   mount Ckeditor::Engine => '/ckeditor'
-
-  namespace :admin do
-    resources :about_us_pages
-    resources :collaborators
-  end
 
   get "admin", to: "admin/pages#index"
 
@@ -18,6 +15,7 @@ Trucking::Application.routes.draw do
 
   get "pages/about"
   get "pages/contact"
+  get "pages/team"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

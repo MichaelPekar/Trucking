@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require gallery/style.css
+ *= require bootstrap_and_overrides
  */
 
 
@@ -21,4 +22,8 @@
 .gallery-text b{
     color: #1f7dd2;
     font-size: 30px;
+}
+
+ul, ol{
+    margin: 1px 0 0px 0px !important;
 }
