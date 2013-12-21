@@ -43,8 +43,12 @@ ul, ol {
 	margin:0 auto;
 }
 #header, #content, #footer {
-	font-size:0.75em;
+	font-size: 0.75em;
 }
+.col-2{
+    font-size: 1.5em !important;
+}
+
 .col-1, .col-2, .col-3 {
 	float:left;
 }

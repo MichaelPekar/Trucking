@@ -3,6 +3,7 @@
 <head>
   <title>Вантажні перевезення</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8">
   <%= javascript_include_tag "modernizr.custom" %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= stylesheet_link_tag    controller_path, :media => "all" %>
@@ -21,6 +22,7 @@
   <%= stylesheet_link_tag "ie6" %>
   <![endif]-->
 </head>
+
 
 <body id="page2">
 <div id="main">
@@ -64,26 +66,14 @@
             <%= yield %>
           </div>
           <div class="col-2">
-            <div class="box2">
-              <div class="border-top">
-                <div class="left-top-corner">
-                  <div class="right-top-corner">
-                    <div class="inner">
-                      <h4><b>Останні</b> новини</h4>
-                      <ul class="news">
-                        <li><a href="#">Dec 12, 2013</a>
-                          <p>Відтепер ми з вами online.</p>
-                        </li>
-                        <li><a href="#">Dec 12, 2013</a>
-                          <p>На Закарпатье лавина перекрыла движение транспорта С 9 Декабря, 15:24
-                            Ограничено движение для грузовых и пассажирских авто</p>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <h4 class="calibri">
+              Автомобільні
+              <b>Новини</b>
+            </h4>
+            <link rel="stylesheet" type="text/css" href="http://autoportal.ua/css/ap_news.css?r=2" />
+            <span id="jnews"><a href="http://autoportal.ua">Новости авто ...</a></span>
+            <script language="javascript" type="text/javascript" src="http://autoportal.ua/news/informer.html?cat=0&count=4"></script>
+
             <div class="box3">
               <div class="right-bot-corner">
                 <div class="left-bot-corner">
