@@ -1,8 +1,11 @@
-<!--<li>-->
-  <!--<%- if controller_name != 'sessions' %>-->
-      <%= link_to "Вхід", new_session_path(resource_name) %><br />
-  <!--<% end -%>-->
-<!--</li>-->
+<ul class="devise_links">
+
+  <%- if controller_name != 'sessions' %>
+      <li>
+
+      <%= link_to "Вхід", new_session_path(resource_name) %>
+      </li>
+  <% end -%>
 
 <% if current_user %>
    <li>
@@ -46,3 +49,4 @@
     </li>
 <% end -%>
 
+</ul>

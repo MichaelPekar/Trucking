@@ -27,7 +27,7 @@ class Admin::AboutUsPagesController < Admin::AdminController
     @admin_about_us_page = Admin::AboutUsPage.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html # new.html.haml
       format.json { render json: @admin_about_us_page }
     end
   end

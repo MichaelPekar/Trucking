@@ -11,7 +11,7 @@ Trucking::Application.routes.draw do
 
   get "admin", to: "admin/pages#index"
 
-  devise_for :users
+  devise_for :users, controllers: { :sessions => "sessions", :registrations => "registrations" }
 
   get "pages/about"
   get "pages/contact"

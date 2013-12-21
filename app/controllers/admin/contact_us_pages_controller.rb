@@ -27,7 +27,7 @@ class Admin::ContactUsPagesController < Admin::AdminController
     @admin_contact_us_page = Admin::ContactUsPage.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html # new.html.haml
       format.json { render json: @admin_contact_us_page }
     end
   end

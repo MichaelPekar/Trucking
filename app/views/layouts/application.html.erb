@@ -31,12 +31,18 @@
       <div class="fleft">
         <h2><b style="padding-left: 0px; margin-top: 4px">BABYDORYCH-TRANS.COM.UA</b></h2>
       </div>
-      <div class="fright">
+      <div class="fright" style="text-align: right">
+        <h5>
         <ul>
-          <li><%= link_to image_tag('icon1.gif', alt: ''), root_path %></li>
-          <li><a href="#"><%= image_tag 'icon2.gif', alt: ''%></a></li>
-          <li><%= link_to image_tag('icon3.gif', alt: ''), admin_path %></li>
+          <li><%= link_to raw("<i class='icon-home'></i>"), root_path %></li>
+          <li><%= link_to raw("<i class='icon-wrench'></i>"), admin_path %></li>
+          <% if current_user %>
+            <li><%= link_to raw("<i class='icon-user'></i>"), edit_user_registration_path %></li>
+          <% else %>
+            <li><%= link_to raw("<i class='icon-share'></i>"), new_user_session_path %></li>
+          <% end %>
         </ul>
+        </h5>
       </div>
     </div>
     <div class="row-2">
@@ -74,50 +80,6 @@
             <span id="jnews"><a href="http://autoportal.ua">Новости авто ...</a></span>
             <script language="javascript" type="text/javascript" src="http://autoportal.ua/news/informer.html?cat=0&count=4"></script>
 
-            <div class="box3">
-              <div class="right-bot-corner">
-                <div class="left-bot-corner">
-                  <div class="inner">
-                    <h4><b>Форма</b> Входу</h4>
-                    <% if current_user %>
-                        <form id='login-form'>
-                          <fieldset>
-                            <div class="field">
-                              <label>Вітаємо:</label>
-                              <%= current_user.email %>
-                            </div>
-                            <ul>
-                              <%= render "devise/shared/links" %>
-                            </ul>
-
-                          </fieldset>
-                        </form>
-                    <% else %>
-                        <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { id: 'login-form'} ) do |f| %>
-                        <fieldset>
-                          <div class="field">
-                            <label>Email:</label>
-                            <%= f.email_field :email %>
-                          </div>
-                          <div class="field">
-                            <label>Пароль:</label>
-                            <%= f.password_field :password %>
-                          </div>
-                          <div class="field1">
-                            <label class="extra">Залишатися в системі:</label>
-                            <%= f.check_box :remember_me, class: 'extra' %>
-                                <a href="#" onclick="$('#login-form').submit()"><em><b>Вхід<span>Вхід</span></b></em></a>
-                                </div>
-                                <ul>
-                                  <%= render "devise/shared/links" %>
-                                </ul>
-                                </fieldset>
-                            <% end %>
-                    <% end %>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
     </div>

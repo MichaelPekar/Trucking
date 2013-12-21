@@ -1,0 +1,40 @@
+//= require bootstrap_and_overrides
+
+#container{
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  width: 400px;
+  margin: 100px auto;
+  background: #fff;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 17px #323232;
+  -moz-box-shadow: 0px 0px 17px #323232;
+  box-shadow: 0px 0px 17px #323232;
+  padding: 0px 30px 10px 30px;
+  position: relative;
+  text-align: center;
+}
+
+body{
+  background-image: url(devise-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.title{
+  color: #1f7dd2;
+}
+
+input{
+ display: inline-block;
+}
+
+.devise_links{
+  list-style: none;
+  li{
+    display: inline-block;
+  }
+}
