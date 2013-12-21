@@ -55,7 +55,83 @@
       </div>
     </div>
   </div>
-  <%= yield %>
+
+
+  <div id="content">
+    <%= yield %>
+
+    <div class="indent">
+        <div class="wrapper">
+          <%= render partial: 'layouts/collaborators' %>
+          <div class="col-2">
+            <div class="box2">
+              <div class="border-top">
+                <div class="left-top-corner">
+                  <div class="right-top-corner">
+                    <div class="inner">
+                      <h4><b>Останні</b> новини</h4>
+                      <ul class="news">
+                        <li><a href="#">Dec 12, 2013</a>
+                          <p>Відтепер ми з вами online.</p>
+                        </li>
+                        <li><a href="#">Dec 12, 2013</a>
+                          <p>На Закарпатье лавина перекрыла движение транспорта С 9 Декабря, 15:24
+                            Ограничено движение для грузовых и пассажирских авто</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box3">
+              <div class="right-bot-corner">
+                <div class="left-bot-corner">
+                  <div class="inner">
+                    <h4><b>Форма</b> Входу</h4>
+                    <% if current_user %>
+                        <form id='login-form'>
+                          <fieldset>
+                            <div class="field">
+                              <label>Вітаємо:</label>
+                              <%= current_user.email %>
+                            </div>
+                            <ul>
+                              <%= render "devise/shared/links" %>
+                            </ul>
+
+                          </fieldset>
+                        </form>
+                    <% else %>
+                        <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { id: 'login-form'} ) do |f| %>
+                        <fieldset>
+                          <div class="field">
+                            <label>Email:</label>
+                            <%= f.email_field :email, :autofocus => true %>
+                          </div>
+                          <div class="field">
+                            <label>Пароль:</label>
+                            <%= f.password_field :password %>
+                          </div>
+                          <div class="field1">
+                            <label class="extra">Залишатися в системі:</label>
+                            <%= f.check_box :remember_me, class: 'extra' %>
+                                <a href="#" onclick="$('#login-form').submit()"><em><b>Вхід<span>Вхід</span></b></em></a>
+                                </div>
+                                <ul>
+                                  <%= render "devise/shared/links" %>
+                                </ul>
+                                </fieldset>
+                            <% end %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
 
   <div id="footer">
     <div class="footerlink">
