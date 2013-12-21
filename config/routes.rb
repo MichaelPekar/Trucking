@@ -4,6 +4,7 @@ Trucking::Application.routes.draw do
     resources :contact_us_pages
     resources :about_us_pages
     resources :collaborators
+    resources :users, only: [:index]
   end
 
 

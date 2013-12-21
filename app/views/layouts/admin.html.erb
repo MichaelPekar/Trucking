@@ -59,6 +59,9 @@
               <li class="nav <%= 'active' if params[:controller] == 'admin/contact_us_pages' %>">
                 <%= link_to "Contact Us", admin_contact_us_pages_path %>
               </li>
+              <li class="nav <%= 'active' if params[:controller] == 'admin/users' %>">
+                <%= link_to "Users", admin_users_path %>
+              </li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
