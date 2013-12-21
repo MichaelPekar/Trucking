@@ -1,4 +1,5 @@
 class Admin::CollaboratorsController < Admin::AdminController
+  load_and_authorize_resource
   # GET /admin/collaborators
   # GET /admin/collaborators.json
   def index

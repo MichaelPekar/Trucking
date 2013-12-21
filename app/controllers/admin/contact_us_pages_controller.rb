@@ -1,4 +1,5 @@
 class Admin::ContactUsPagesController < Admin::AdminController
+  load_and_authorize_resource
   # GET /admin/contact_us_pages
   # GET /admin/contact_us_pages.json
   def index

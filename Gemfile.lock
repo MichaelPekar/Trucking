@@ -31,6 +31,7 @@ GEM
     arel (3.0.3)
     bcrypt-ruby (3.1.1-x86-mingw32)
     builder (3.0.4)
+    cancan (1.6.10)
     ckeditor (4.0.4)
       mime-types
       orm_adapter
@@ -132,6 +133,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  cancan
   ckeditor (~> 4.0.2)
   coffee-rails (~> 3.2.1)
   devise

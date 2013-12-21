@@ -1,4 +1,5 @@
 class Admin::AboutUsPagesController < Admin::AdminController
+  load_and_authorize_resource
   # GET /admin/about_us_pages
   # GET /admin/about_us_pages.json
   def index
