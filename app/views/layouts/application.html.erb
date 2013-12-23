@@ -21,6 +21,7 @@
   <script type="text/javascript">ie_png.fix('.png, #header .row-2 ul li a, .extra img, #search-form a, #search-form a em, #login-form .field1 a, #login-form .field1 a em, #login-form .field1 a b');</script>
   <%= stylesheet_link_tag "ie6" %>
   <![endif]-->
+
 </head>
 
 
@@ -42,6 +43,59 @@
           <% else %>
             <li><%= link_to raw("<i class='icon-share'></i>"), new_user_session_path %></li>
           <% end %>
+          <li>
+            <select name="countries" id="countries" style="width: 60px;">
+              <option value='en'
+                      <%= 'selected' if params[:locale] == 'en' %>
+                      data-image="country_select/images/msdropdown/icons/blank.gif"
+                      data-imagecss="flag gb"
+                      data-title="Great Britain (UK)"
+                      data-href="<%= url_for(:locale => :en) %>">
+              </option>
+              <option value='de'
+                      <%= 'selected' if params[:locale] == 'de' %>
+                      data-image="country_select/images/msdropdown/icons/blank.gif"
+                      data-imagecss="flag de"
+                      data-title="Germany"
+                      data-href="<%= url_for(:locale => :de) %>">
+              </option>
+              <option value='ru'
+                      <%= 'selected' if params[:locale] == 'ru' %>
+                      data-image="country_select/images/msdropdown/icons/blank.gif"
+                      data-imagecss="flag ru"
+                      data-title="Russian Federation"
+                      data-href="<%= url_for(:locale => :ru) %>">
+              </option>
+              <option value='ua'
+                      <%= 'selected' if params[:locale] == 'ua' %>
+                      data-image="country_select/images/msdropdown/icons/blank.gif"
+                      data-imagecss="flag ua"
+                      data-title="Ukraine"
+                      data-href="<%= url_for(:locale => :ua) %>">
+              </option>
+              <option value='sk'
+                      <%= 'selected' if params[:locale] == 'sk' %>
+                      data-image="country_select/images/msdropdown/icons/blank.gif"
+                      data-imagecss="flag sk"
+                      data-title="Slovakia"
+                      data-href="<%= url_for(:locale => :sk) %>">
+              </option>
+              <option value='cz'
+                      <%= 'selected' if params[:locale] == 'cz' %>
+                      data-image="country_select/images/msdropdown/icons/blank.gif"
+                      data-imagecss="flag cz"
+                      data-title="Czech Republic"
+                      data-href="<%= url_for(:locale => :cz) %>">
+              </option>
+              <option value='pl'
+                      <%= 'selected' if params[:locale] == 'pl' %>
+                      data-image="country_select/images/msdropdown/icons/blank.gif"
+                      data-imagecss="flag pl"
+                      data-title="Poland"
+                      data-href="<%= url_for(:locale => :pl) %>">
+              </option>
+            </select>
+          </li>
         </ul>
         </h5>
       </div>

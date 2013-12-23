@@ -1,22 +1,27 @@
 Trucking::Application.routes.draw do
 
-  namespace :admin do
-    resources :contact_us_pages
-    resources :about_us_pages
-    resources :collaborators
-    resources :users, only: [:index]
+  scope "(:locale)" do
+    namespace :admin do
+      resources :contact_us_pages
+      resources :about_us_pages
+      resources :collaborators
+      resources :users, only: [:index]
+    end
+
+    mount Ckeditor::Engine => '/ckeditor'
+
+    get "admin", to: "admin/pages#index"
+
+    devise_for :users, controllers: { :sessions => "sessions", :registrations => "registrations" }
+
+    get "pages/about"
+    get "pages/contact"
+    get "pages/team"
+
+    root :to => 'pages#about'
   end
 
-
-  mount Ckeditor::Engine => '/ckeditor'
-
-  get "admin", to: "admin/pages#index"
-
-  devise_for :users, controllers: { :sessions => "sessions", :registrations => "registrations" }
-
-  get "pages/about"
-  get "pages/contact"
-  get "pages/team"
+  get '/:locale' => 'pages#about'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -67,7 +72,6 @@ Trucking::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'pages#about'
 
   # See how all your routes lay out with "rake routes"
 

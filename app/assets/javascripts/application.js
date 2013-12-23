@@ -13,3 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require gallery/jquery.gallery
+//= require country_select/js/msdropdown/jquery.dd.min
+
+
+$(document).ready(function() {
+    $("#countries").msDropdown();
+    $("#countries").change(function(){
+        window.location.href = $(this).find('option:selected').data('href');
+    });
+});
