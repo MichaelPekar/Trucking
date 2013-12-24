@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require gallery/jquery.gallery
 //= require country_select/js/msdropdown/jquery.dd.min
+//= require twitter/bootstrap
 
 
 $(document).ready(function() {

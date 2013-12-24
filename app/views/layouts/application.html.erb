@@ -53,12 +53,10 @@
     <div class="row-2">
       <div class="left">
         <ul>
-          <li><%= link_to raw("<span>#{ t 'tabs.home' }</span>"), pages_about_path, class: "#{ "active" if params[:controller] == 'pages' && params[:action] == 'about'}" %></li>
-          <!--<li><a href="about-us.html" class="active"><span>about</span></a></li>-->
-          <!--<li><a href="articles.html"><span>articles</span></a></li>-->
-          <li><%= link_to raw("<span>#{ t 'tabs.contact' }</span>"), pages_contact_path, class: "#{ "active" if params[:controller] == 'pages' && params[:action] == 'contact'}" %></li>
-          <li class="last"><%= link_to raw("<span>#{ t 'tabs.team' }</span>"), pages_team_path, class: "#{ "active" if params[:controller] == 'pages' && params[:action] == 'team'}" %></li>
-          <!--<li class="last"><a href="sitemap.html"><span>sitemap</span></a></li>-->
+          <li><%= link_to raw("<span>#{ t 'tabs.home' }</span>"), pages_about_path, class: "#{ "active" if params[:action] == 'about'}" %></li>
+          <li><%= link_to raw("<span>#{ t 'tabs.contact' }</span>"), pages_contact_path, class: "#{ "active" if params[:action] == 'contact'}" %></li>
+          <li><%= link_to raw("<span>#{ t 'tabs.team' }</span>"), pages_team_path, class: "#{ "active" if params[:action] == 'team'}" %></li>
+          <li class="last"><%= link_to raw("<span>#{ t 'tabs.partners' }</span>"), pages_partners_path, class: "#{ "active" if params[:action] == 'partners'}" %></li>
         </ul>
       </div>
     </div>
@@ -96,7 +94,8 @@
         <ul>
           <li><%= link_to t('tabs.home'), pages_about_path %></li>
           <li><%= link_to t('tabs.contact'), pages_contact_path %></li>
-          <li class="last"><%= link_to t('tabs.team'), pages_team_path %></li>
+          <li><%= link_to t('tabs.team'), pages_team_path %></li>
+          <li class="last"><%= link_to t('tabs.partners'), pages_partners_path %></li>
         </ul>
       </div>
     </div>

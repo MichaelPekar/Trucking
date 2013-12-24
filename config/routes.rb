@@ -18,6 +18,7 @@ Trucking::Application.routes.draw do
     get "pages/about"
     get "pages/contact"
     get "pages/team"
+    get "pages/partners"
 
     root :to => 'pages#about'
   end

@@ -10,4 +10,9 @@ class PagesController < ApplicationController
   def team
 
   end
+
+  def partners
+    @partners = Admin::Partner.all
+  end
+
 end
