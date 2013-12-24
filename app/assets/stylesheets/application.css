@@ -34,3 +34,6 @@ ul, ol{
     max-width: 100px !important;
 
 }
+
+#map label { width: auto; display:inline; }
+#map img { max-width: none; }
