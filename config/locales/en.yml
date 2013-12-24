@@ -2,8 +2,11 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
   helpers:
     titles:
       new: New %{model}
       edit: Edit %{model}
+  tabs:
+    home: 'Home'
+    contact: 'Contact Us'
+    team: 'Team'
