@@ -2,7 +2,7 @@
   - locales.each do |locale|
     %option{ value:             locale[:value],
              selected:          (params[:locale] == locale[:value]),
-             'data-image'    => 'country_select/images/msdropdown/icons/blank.gif',
+             'data-image'    => '/assets/country_select/images/msdropdown/icons/blank.gif',
              'data-imagecss' => "flag #{ locale[:flag] }",
              'data-title'    => locale[:title],
              'data-href'     => url_for(:locale => locale[:value]) }
