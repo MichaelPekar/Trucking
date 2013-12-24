@@ -21,7 +21,14 @@
   <div class="control-group">
     <%= f.label :avatar, :class => 'control-label' %>
     <div class="controls">
-      <%= f.file_field :avatar, :class => 'span_12 file_field' %>
+      <div class="fileupload fileupload-new" data-provides="fileupload" >
+        <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;">
+          <%= image_tag @admin_collaborator.avatar.url, style: 'max-width: 200px; max-height: 150px;' %>
+        </div>
+        <div>
+          <%= f.file_field :avatar, :class => 'span_12 file_field' %>
+        </div>
+      </div>
     </div>
   </div>
 

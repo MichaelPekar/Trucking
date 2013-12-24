@@ -20,7 +20,7 @@
         <td><%= link_to collaborator.id, admin_collaborator_path(collaborator) %></td>
         <td><%= collaborator.full_name %></td>
         <td><%= collaborator.post %></td>
-        <td><%=l collaborator.created_at %></td>
+        <td><%= collaborator.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_admin_collaborator_path(collaborator), :class => 'btn btn-mini' %>
