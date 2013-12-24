@@ -68,6 +68,9 @@
               <li class="nav <%= 'active' if params[:controller] == 'admin/users' %>">
                 <%= link_to "Users", admin_users_path %>
               </li>
+              <li class="nav <%= 'active' if params[:controller] == 'admin/partners' %>">
+                <%= link_to "Partners", admin_partners_path %>
+              </li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

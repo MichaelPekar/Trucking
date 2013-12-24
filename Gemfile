@@ -6,7 +6,7 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
-gem 'haml'
+gem "haml-rails"
 gem 'devise'
 gem "twitter-bootstrap-rails"
 gem "paperclip"

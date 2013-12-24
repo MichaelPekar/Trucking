@@ -1,0 +1,16 @@
+= form_for @partner, :html => { :class => 'form-horizontal' } do |f|
+  .control-group
+    = f.label :link, :class => 'control-label'
+    .controls
+      = f.text_field :link, :class => 'text_field span_12'
+  .control-group
+    = f.label :logo_file_name, :class => 'control-label'
+    .controls
+      .fileupload.fileupload-new{ 'data-provides' => 'fileupload' }
+        .fileupload-preview.fileupload-exists.thumbnail{ style: "max-width: 200px; max-height: 150px; line-height: 20px;" }
+          = image_tag @partner.logo.url, style: 'max-width: 200px; max-height: 150px;'
+        %div
+          = f.file_field :logo, :class => 'span_12 file_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), admin_partners_path, :class => 'btn'

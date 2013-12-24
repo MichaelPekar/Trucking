@@ -6,6 +6,7 @@ Trucking::Application.routes.draw do
       resources :about_us_pages
       resources :collaborators
       resources :users, only: [:index]
+      resources :partners
     end
 
     mount Ckeditor::Engine => '/ckeditor'

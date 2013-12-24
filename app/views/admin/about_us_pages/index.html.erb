@@ -16,7 +16,7 @@
       <tr>
         <td><%= link_to about_us_page.id, admin_about_us_page_path(about_us_page) %></td>
         <td><%= about_us_page.lang %></td>
-        <td><%=l about_us_page.created_at %></td>
+        <td><%= about_us_page.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_admin_about_us_page_path(about_us_page), :class => 'btn btn-mini' %>
