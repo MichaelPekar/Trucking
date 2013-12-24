@@ -12,6 +12,8 @@ gem "twitter-bootstrap-rails"
 gem "paperclip"
 gem "ckeditor", "~> 4.0.2"
 gem 'cancan'
+gem 'underscore-rails'
+gem 'gmaps4rails'
 
 
 # Gems used only for assets and not required

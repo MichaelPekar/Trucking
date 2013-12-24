@@ -15,11 +15,26 @@
 //= require gallery/jquery.gallery
 //= require country_select/js/msdropdown/jquery.dd.min
 //= require twitter/bootstrap
+//= require underscore
+//= require gmaps/google
 
 
 $(document).ready(function() {
     $("#countries").msDropdown();
     $("#countries").change(function(){
         window.location.href = $(this).find('option:selected').data('href');
+    });
+
+    handler = Gmaps.build('Google');
+    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+        markers = handler.addMarkers([
+            {
+                "lat": 48.607518,
+                "lng": 22.310761,
+                "infowindow": "hello!"
+            }
+        ]);
+        handler.map.centerOn({lat: 48.607518, lng: 22.310761});
+        handler.getMap().setZoom(15);
     });
 });
