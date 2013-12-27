@@ -47,7 +47,7 @@
             <li><%= link_to raw("<i class='icon-share'></i>"), new_user_session_path %></li>
           <% end %>
           <li>
-            <%= render 'layouts/language_select' %>
+            <%= locale_select id: 'countries', locales: application_languages %>
           </li>
         </ul>
         </h5>

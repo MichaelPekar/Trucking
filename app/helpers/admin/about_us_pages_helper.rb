@@ -1,7 +1,7 @@
 module Admin::AboutUsPagesHelper
 
-  def new_about_us_page_needed?
-    Admin::AboutUsPage.count == 0
+  def available_about_us_languages
+    application_languages.select{ |l| Admin::AboutUsPage.where(lang: l[:value]).count == 0}
   end
 
 end

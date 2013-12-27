@@ -15,7 +15,7 @@ module ApplicationHelper
     Admin::Collaborator.all
   end
 
-  def locales
+  def application_languages
     [
         {value: 'en', flag: 'gb', title: 'Great Britain (UK)'},
         {value: 'de', flag: 'de', title: 'Germany'},
@@ -26,4 +26,9 @@ module ApplicationHelper
         {value: 'pl', flag: 'pl', title: 'Poland '}
     ]
   end
+
+  def locale_select( options )
+    render partial: 'layouts/language_select', locals: { id: options[:id], name: options[:name] , locales: options[:locales] }
+  end
+
 end

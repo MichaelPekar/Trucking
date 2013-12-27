@@ -10,4 +10,6 @@ $(document).ready(function() {
     $("#countries").change(function(){
         window.location.href = $(this).find('option:selected').data('href');
     });
+
+    $("#lang").msDropdown();
 });

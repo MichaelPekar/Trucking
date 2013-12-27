@@ -1,7 +1,7 @@
 module PagesHelper
 
   def about_us_page
-    page = Admin::AboutUsPage.first
+    page = Admin::AboutUsPage.where(lang: params[:locale]).first
     raw page.content if page
   end
 

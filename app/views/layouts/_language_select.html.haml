@@ -1,4 +1,4 @@
-%select#countries{ style: 'width: 60px;' }
+%select{ style: 'width: 60px;', id: id, name: (name || nil) }
   - locales.each do |locale|
     %option{ value:             locale[:value],
              selected:          (params[:locale] == locale[:value]),
