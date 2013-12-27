@@ -1,0 +1,41 @@
+- model_class = Admin::Collaborator
+.page-header
+  %h1= t '.title', :default => model_class.model_name.human.pluralize.titleize
+#accordion2.accordion
+  - application_languages.each_with_index do |language, i|
+    .accordion-group
+      .accordion-heading
+        %a.accordion-toggle{"data-parent" => "#accordion2", "data-toggle" => "collapse", href: "#collapse_#{ i }"}
+          .flag{ class: language[:flag] }
+          = language[:title]
+      .accordion-body.collapse{ id: "collapse_#{ i }", class: ( i == 0 ? "in" : "") }
+        .accordion-inner
+          %table.table.table-striped
+            %thead
+              %tr
+                %th= model_class.human_attribute_name(:avatar)
+                %th= model_class.human_attribute_name(:id)
+                %th= model_class.human_attribute_name(:full_name)
+                %th= model_class.human_attribute_name(:post)
+                %th= model_class.human_attribute_name(:created_at)
+                %th= t '.actions', :default => t("helpers.actions")
+            %tbody
+              - @admin_collaborators.select{|collaborator| collaborator.lang == language[:value]}.each do |collaborator|
+                %tr
+                  %td= image_tag collaborator.avatar.url(:small), class: 'small_avatar'
+                  %td= link_to collaborator.id, admin_collaborator_path(collaborator)
+                  %td= collaborator.full_name
+                  %td= collaborator.post
+                  %td= collaborator.created_at
+                  %td
+                    = link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_admin_collaborator_path(collaborator), :class => 'btn btn-mini'
+                    = link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      admin_collaborator_path(collaborator),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger'
+%br
+= link_to t('.new', :default => t("helpers.links.new")), |
+  new_admin_collaborator_path,                           |
+  :class => 'btn btn-primary'

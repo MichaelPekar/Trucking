@@ -1,5 +1,5 @@
 class Admin::Collaborator < ActiveRecord::Base
-  attr_accessible :description, :full_name, :post, :avatar
+  attr_accessible :description, :full_name, :post, :avatar, :lang
 
   has_attached_file :avatar, :url => "/attachments/collaborators/:attachment/:class/:id/:style_:basename.:extension",
                     :styles => { :thumb => "300x300>",

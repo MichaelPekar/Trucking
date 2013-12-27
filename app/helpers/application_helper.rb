@@ -12,7 +12,7 @@ module ApplicationHelper
   end
 
   def collaborators_list
-    Admin::Collaborator.all
+    Admin::Collaborator.where(lang: params[:locale])
   end
 
   def application_languages

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131224134422) do
+ActiveRecord::Schema.define(:version => 20131227184206) do
 
   create_table "admin_about_us_pages", :force => true do |t|
     t.text     "content"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20131224134422) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "lang"
   end
 
   create_table "admin_contact_us_pages", :force => true do |t|

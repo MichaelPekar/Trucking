@@ -1,5 +1,13 @@
 <%= @admin_collaborator.errors.first%>
 <%= form_for @admin_collaborator, :html => { :class => 'form-horizontal' } do |f| %>
+    <%= @admin_collaborator.errors.full_messages %>
+    <br>
+    <div class="control-group">
+      <%= f.label :language, :class => 'control-label' %>
+      <div class="controls">
+        <%= locale_select id: 'lang', name: "admin_collaborator[lang]", locales: application_languages %>
+      </div>
+    </div>
   <div class="control-group">
     <%= f.label :full_name, :class => 'control-label' %>
     <div class="controls">

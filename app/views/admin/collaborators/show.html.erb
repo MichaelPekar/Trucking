@@ -11,6 +11,8 @@
   <dd><%= @admin_collaborator.post %></dd>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @admin_collaborator.description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:lang) %>:</strong></dt>
+  <dd><div class="flag <%= application_languages.select{ |l| l[:value] == @admin_collaborator.lang }.first[:flag] %>"> </div></dd>
 </dl>
 
 <div class="form-actions">
