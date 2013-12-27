@@ -1,4 +1,12 @@
 <%= form_for @admin_contact_us_page, :html => { :class => 'form-horizontal' } do |f| %>
+    <%= @admin_contact_us_page.errors.full_messages %>
+    <br>
+    <div class="control-group">
+      <%= f.label :language, :class => 'control-label' %>
+      <div class="controls">
+        <%= locale_select id: 'lang', name: "admin_contact_us_page[lang]", locales: available_contact_us_languages %>
+      </div>
+    </div>
 
     <%= f.cktext_area :content, :class => "text_area span_12", :ckeditor => {:language => "uk"} %>
 

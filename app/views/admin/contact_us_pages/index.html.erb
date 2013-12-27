@@ -15,7 +15,7 @@
     <% @admin_contact_us_pages.each do |contact_us_page| %>
       <tr>
         <td><%= link_to contact_us_page.id, admin_contact_us_page_path(contact_us_page) %></td>
-        <td><%= contact_us_page.lang %></td>
+        <td><div class="flag <%= contact_us_page.lang %>"> </div></td>
         <td><%= contact_us_page.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
@@ -31,7 +31,7 @@
   </tbody>
 </table>
 
-<% if new_contact_us_page_needed? %>
+<% unless available_contact_us_languages.blank? %>
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_admin_contact_us_page_path,
             :class => 'btn btn-primary' %>

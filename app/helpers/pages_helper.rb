@@ -6,7 +6,7 @@ module PagesHelper
   end
 
   def contact_us_page
-    page = Admin::ContactUsPage.first
+    page = Admin::ContactUsPage.where(lang: params[:locale]).first
     raw page.content if page
   end
 

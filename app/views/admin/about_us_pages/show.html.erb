@@ -7,7 +7,7 @@
   <dt><strong><%= model_class.human_attribute_name(:content) %>:</strong></dt>
   <dd><%= raw @admin_about_us_page.content %></dd>
   <dt><strong><%= model_class.human_attribute_name(:lang) %>:</strong></dt>
-  <dd><%= @admin_about_us_page.lang %></dd>
+  <dd><div class="flag <%= @admin_about_us_page.lang %>"> </div></dd>
 </dl>
 
 <div class="form-actions">
