@@ -1,0 +1,18 @@
+- model_class = Admin::PageSection
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.titleize
+
+%p
+  %strong= model_class.human_attribute_name(:name) + ':'
+  %br
+  = @page_section.name
+%p
+  %strong= model_class.human_attribute_name(:language) + ':'
+  %br
+  .flag{ class: application_languages.select{ |l| l[:value] == @page_section.lang }.first[:flag] }
+%br
+
+.form-actions
+  = link_to t('.back', :default => t("helpers.links.back")), admin_page_sections_path, :class => 'btn'
+  = link_to t('.edit', :default => t("helpers.links.edit")), edit_admin_page_section_path(@page_section), :class => 'btn'
+  = link_to t('.destroy', :default => t("helpers.links.destroy")), admin_page_section_path(@page_section), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'
