@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  company: MyString
+  contact_person: MyString
+  address: MyString
+  cargo: MyString
+  from_address: MyString
+  to_address: MyString
+  start_date: 2013-12-28 20:43:07
+
+two:
+  company: MyString
+  contact_person: MyString
+  address: MyString
+  cargo: MyString
+  from_address: MyString
+  to_address: MyString
+  start_date: 2013-12-28 20:43:07

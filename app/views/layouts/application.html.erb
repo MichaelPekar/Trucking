@@ -42,6 +42,7 @@
           <li><%= link_to raw("<i class='icon-wrench'></i>"), admin_path %></li>
           <% if current_user %>
             <li><%= link_to raw("<i class='icon-user'></i>"), edit_user_registration_path %></li>
+            <li><%= link_to raw("<i class='icon-file'></i>"), orders_path %></li>
             <li><%= link_to raw("<i class='icon-remove-circle'></i>"), destroy_user_session_path, method: :delete %></li>
           <% else %>
             <li><%= link_to raw("<i class='icon-share'></i>"), new_user_session_path %></li>
@@ -79,6 +80,10 @@
             <%= yield %>
           </div>
           <div class="col-2">
+            <br>
+            <br>
+            <br>
+            <%= link_to "Create Order", new_order_path, class: "btn btn-info btn-large", style: "width: 85%" %>
             <h4 class="calibri">
               Автомобільні
               <b>Новини</b>

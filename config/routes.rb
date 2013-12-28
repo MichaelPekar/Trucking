@@ -1,5 +1,4 @@
 Trucking::Application.routes.draw do
-
   scope "(:locale)" do
     namespace :admin do
       resources :contact_us_pages
@@ -22,6 +21,7 @@ Trucking::Application.routes.draw do
     get "pages/team"
     get "pages/partners"
     resources :services, only: [:index, :show]
+    resources :orders
 
     root :to => 'pages#about'
 
