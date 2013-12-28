@@ -13,6 +13,7 @@
  *= require bootstrap_and_overrides
  *= require country_select/css/msdropdown/dd
  *= require country_select/css/msdropdown/flags
+ *= require bootstrap-datetimepicker
  */
 
 

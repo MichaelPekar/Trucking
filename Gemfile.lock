@@ -29,8 +29,8 @@ GEM
       i18n (~> 0.6)
       multi_json (~> 1.0)
     arel (3.0.3)
-    bcrypt-ruby (3.1.1)
     bcrypt-ruby (3.1.1-x86-mingw32)
+    bootstrap-datetimepicker-rails (0.0.11)
     builder (3.0.4)
     cancan (1.6.10)
     ckeditor (4.0.4)
@@ -75,7 +75,6 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     multi_json (1.8.2)
-    mysql2 (0.3.11)
     mysql2 (0.3.11-x86-mingw32)
     orm_adapter (0.4.0)
     paperclip (3.4.2)
@@ -145,6 +144,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  bootstrap-datetimepicker-rails
   cancan
   ckeditor (~> 4.0.2)
   coffee-rails (~> 3.2.1)

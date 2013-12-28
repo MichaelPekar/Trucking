@@ -17,6 +17,7 @@
 //= require twitter/bootstrap
 //= require underscore
 //= require gmaps/google
+//= require bootstrap-datetimepicker
 
 
 $(document).ready(function() {
