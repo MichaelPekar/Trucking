@@ -14,6 +14,7 @@ gem "ckeditor", "~> 4.0.2"
 gem 'cancan'
 gem 'underscore-rails'
 gem 'gmaps4rails'
+gem 'will_paginate-bootstrap', '0.2.5'
 
 
 # Gems used only for assets and not required

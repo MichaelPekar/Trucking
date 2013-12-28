@@ -4,7 +4,8 @@ class OrdersController < ApplicationController
     unless current_user
       redirect_to new_user_session_path
     else
-      @orders = current_user.orders
+      params[:page] ||= 1
+      @orders = current_user.orders.paginate(:page => params[:page], per_page: 20).order('id DESC')
     end
   end
   # GET /orders/1
