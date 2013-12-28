@@ -74,6 +74,9 @@
               <li class="nav <%= 'active' if params[:controller] == 'admin/page_sections' %>">
                 <%= link_to "Info Pages", admin_page_sections_path %>
               </li>
+              <li class="nav <%= 'active' if params[:controller] == 'admin/orders' %>">
+                <%= link_to "Orders", admin_orders_path %>
+              </li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

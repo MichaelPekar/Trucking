@@ -70,11 +70,16 @@ class OrdersController < ApplicationController
   # DELETE /orders/1.json
   def destroy
     @order = Order.find(params[:id])
-    @order.destroy
+    unless (current_user && @order.user == current_user) || (current_user && current_user.admin?)
+      redirect_to new_user_session_path
+    else
+      @order.destroy
 
-    respond_to do |format|
-      format.html { redirect_to orders_url }
-      format.json { head :no_content }
+      if current_user.admin?
+        redirect_to admin_orders_path
+      else
+        redirect_to orders_path
+      end
     end
   end
 end
