@@ -1,0 +1,21 @@
+- model_class = Admin::Page
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.titleize
+
+%p
+  %strong= model_class.human_attribute_name(:title) + ':'
+  %br
+  = @admin_page.title
+%p
+  %strong= model_class.human_attribute_name(:content) + ':'
+  %br
+  = @admin_page.content
+%p
+  %strong= model_class.human_attribute_name(:section_id) + ':'
+  %br
+  = @admin_page.section_id
+
+.form-actions
+  = link_to t('.back', :default => t("helpers.links.back")), admin_page_sections_path, :class => 'btn'
+  = link_to t('.edit', :default => t("helpers.links.edit")), edit_admin_page_path(@admin_page), :class => 'btn'
+  = link_to t('.destroy', :default => t("helpers.links.destroy")), admin_page_path(@admin_page), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'

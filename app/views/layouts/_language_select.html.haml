@@ -5,4 +5,4 @@
              'data-image'    => '/assets/country_select/images/msdropdown/icons/blank.gif',
              'data-imagecss' => "flag #{ locale[:flag] }",
              'data-title'    => locale[:title],
-             'data-href'     => url_for(:locale => locale[:value]) }
+             'data-href'     => url_for(params.merge({ :locale => locale[:value] } )) }

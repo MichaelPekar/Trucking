@@ -1,9 +1,5 @@
 Trucking::Application.routes.draw do
 
-  namespace :admin do
-    resources :page_sections
-  end
-
 
   scope "(:locale)" do
     namespace :admin do
@@ -12,11 +8,13 @@ Trucking::Application.routes.draw do
       resources :collaborators
       resources :users, only: [:index]
       resources :partners
+      resources :pages, except: [:index]
+      resources :page_sections
     end
 
     mount Ckeditor::Engine => '/ckeditor'
 
-    get "admin", to: "admin/pages#index"
+    get "admin", to: "admin/users#index"
 
     devise_for :users, controllers: { :sessions => "sessions", :registrations => "registrations" }
 
