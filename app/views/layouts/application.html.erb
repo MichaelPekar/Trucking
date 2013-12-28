@@ -59,7 +59,8 @@
           <li><%= link_to raw("<span>#{ t 'tabs.home' }</span>"), pages_about_path, class: "#{ "active" if params[:action] == 'about'}" %></li>
           <li><%= link_to raw("<span>#{ t 'tabs.contact' }</span>"), pages_contact_path, class: "#{ "active" if params[:action] == 'contact'}" %></li>
           <li><%= link_to raw("<span>#{ t 'tabs.team' }</span>"), pages_team_path, class: "#{ "active" if params[:action] == 'team'}" %></li>
-          <li class="last"><%= link_to raw("<span>#{ t 'tabs.partners' }</span>"), pages_partners_path, class: "#{ "active" if params[:action] == 'partners'}" %></li>
+          <li><%= link_to raw("<span>#{ t 'tabs.partners' }</span>"), pages_partners_path, class: "#{ "active" if params[:action] == 'partners'}" %></li>
+          <li class="last"><%= link_to raw("<span>Послуги</span>"), services_path, class: "#{ "active" if params[:controller] == 'services'}" %></li>
         </ul>
       </div>
     </div>
