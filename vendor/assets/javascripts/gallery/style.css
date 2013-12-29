@@ -1,6 +1,6 @@
 .dg-container{
 	width: 100%;
-	height: 450px;
+	height: 362px;
 	position: relative;
 }
 .dg-wrapper{
@@ -51,12 +51,10 @@
 	display: block;
 }
 .dg-container nav{
-	width: 58px;
+	width: 100%;
 	position: absolute;
 	z-index: 1000;
 	bottom: 40px;
-	left: 50%;
-	margin-left: -29px;
 }
 .dg-container nav span{
 	text-indent: -9000px;
@@ -70,7 +68,13 @@
 .dg-container nav span:hover{
 	opacity: 1;
 }
+.dg-container nav span.dg-prev{
+    position: absolute;
+    background-position: top left;
+    left: 10px;
+}
 .dg-container nav span.dg-next{
-	background-position: top right;
-	margin-left: 10px;
+    position: absolute;
+    background-position: top right;
+    right: 10px;
 }
