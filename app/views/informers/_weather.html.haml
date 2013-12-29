@@ -4,7 +4,7 @@
       .siMh
         %a{href: "http://ua.sinoptik.ua/", onmousedown: "siClickCount();", target: "_blank"} Погода
         %a.siLogo{href: "http://ua.sinoptik.ua/", onmousedown: "siClickCount();", target: "_blank"}
-          %img{src: "http://informers.sinoptik.ua/img/t.gif"}/
+          %img{ async:true, src: "http://informers.sinoptik.ua/img/t.gif"}
   .siBody
     .siTitle
       %span#siHeader
@@ -58,4 +58,4 @@
   .siFooter
     .siLf
       .siMf
-%script{charset: "UTF-8", src: "http://informers.sinoptik.ua/js3.php?title=3&wind=3&cities=303010783,303027343&lang=ua", type: "text/javascript"}
+%script{ async: true, charset: "UTF-8", src: "http://informers.sinoptik.ua/js3.php?title=3&wind=3&cities=303010783,303027343&lang=ua", type: "text/javascript"}
