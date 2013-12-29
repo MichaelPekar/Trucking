@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
 
   rescue_from CanCan::AccessDenied do |exception|
+    flash[:error] = "Access Denied !!!"
     redirect_to root_url
   end
 

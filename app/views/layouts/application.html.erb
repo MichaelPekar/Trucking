@@ -29,6 +29,21 @@
 
 
 <body id="page2">
+<% if flash[:message] %>
+    <div class="alert alert-info">
+      <%= flash[:message]%>
+    </div>
+<% end %>
+<% if flash[:error] %>
+    <div class="alert alert-error">
+      <%= flash[:error]%>
+    </div>
+<% end %>
+<% if flash[:success] %>
+    <div class="alert alert-info">
+      <%= flash[:success]%>
+    </div>
+<% end %>
 <div id="main">
   <div id="header">
     <div class="row-1">
