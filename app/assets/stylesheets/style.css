@@ -556,7 +556,8 @@ h3 b, h4 b {
 	font-weight:bold;
 	line-height:1em;
 	border-right:1px solid #fff;
-	padding: 0 95px;
+	width: 184px;
+    text-align: center;
 }
 #footer .footer-nav ul li.last {
 	border:0;
