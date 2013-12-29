@@ -1,0 +1,94 @@
+!!!
+%html
+  %head
+    %title Вантажні перевезення
+    %meta{content: "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %meta{charset: "utf-8"}/
+    = javascript_include_tag "modernizr.custom"
+    = stylesheet_link_tag    "application", :media => "all"
+    = stylesheet_link_tag    controller_path, :media => "all"
+    = javascript_include_tag "application"
+    = javascript_include_tag controller_path
+    = csrf_meta_tags
+    = stylesheet_link_tag "style"
+    = javascript_include_tag "cufon-yui"
+    = javascript_include_tag "cufon-replace"
+    = javascript_include_tag "Calibri_400-Calibri_700-Calibri_italic_400-Calibri_italic_700.font"
+    = javascript_include_tag "script"
+    /[if lt IE 7]
+      <haml_loud> javascript_include_tag "ie_png" </haml_loud>
+      <script type="text/javascript">ie_png.fix('.png, #header .row-2 ul li a, .extra img, #search-form a, #search-form a em, #login-form .field1 a, #login-form .field1 a em, #login-form .field1 a b');</script>
+      <haml_loud> stylesheet_link_tag "ie6" </haml_loud>
+    %script{src: "//maps.google.com/maps/api/js?v=3.13&sensor=false&libraries=geometry", type: "text/javascript"}
+    %script{src: "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js", type: "text/javascript"}
+  %body#page2
+    - if flash[:message]
+      .alert.alert-info
+        = flash[:message]
+    - if flash[:error]
+      .alert.alert-error
+        = flash[:error]
+    - if flash[:success]
+      .alert.alert-info
+        = flash[:success]
+    #main
+      #header
+        .row-1
+          .fleft
+            %h2
+              %b{style: "padding-left: 0px; margin-top: 4px"} BABYDORYCH-TRANS.COM.UA
+          .fright{style: "text-align: right"}
+            %h5
+              %ul
+                %li= link_to raw("<i class='icon-home'></i>"), root_path
+                %li= link_to raw("<i class='icon-wrench'></i>"), admin_path
+                - if current_user
+                  %li= link_to raw("<i class='icon-user'></i>"), edit_user_registration_path
+                  %li= link_to raw("<i class='icon-file'></i>"), orders_path
+                  %li= link_to raw("<i class='icon-remove-circle'></i>"), destroy_user_session_path, method: :delete
+                - else
+                  %li= link_to raw("<i class='icon-share'></i>"), new_user_session_path
+                %li
+                  = locale_select id: 'countries', locales: application_languages
+        .row-2
+          .left
+            %ul
+              %li= link_to raw("<span>#{ t 'tabs.home' }</span>"), pages_about_path, class: "#{ "active" if params[:action] == 'about'}"
+              %li= link_to raw("<span>#{ t 'tabs.contact' }</span>"), pages_contact_path, class: "#{ "active" if params[:action] == 'contact'}"
+              %li= link_to raw("<span>#{ t 'tabs.team' }</span>"), pages_team_path, class: "#{ "active" if params[:action] == 'team'}"
+              %li= link_to raw("<span>#{ t 'tabs.partners' }</span>"), pages_partners_path, class: "#{ "active" if params[:action] == 'partners'}"
+              %li.last= link_to raw("<span>#{ t 'tabs.services' }</span>"), services_path, class: "#{ "active" if params[:controller] == 'services'}"
+        .row-3
+          .inside
+            = render partial: 'layouts/gallery'
+      #content
+        .row-fluid
+          .span3
+            = link_to "Create Order", new_order_path, class: "btn btn-info btn-large", style: "width: 85%"
+          .span6
+            = yield
+          .span3
+            %h4.calibri
+              Автомобільні
+              %b Новини
+            %link{href: "http://autoportal.ua/css/ap_news.css?r=2", rel: "stylesheet", type: "text/css"}/
+            %span#jnews
+              %a{href: "http://autoportal.ua"} Новости авто ...
+            %script{language: "javascript", src: "http://autoportal.ua/news/informer.html?cat=0&count=4", type: "text/javascript"}
+      #footer
+        .footer-nav
+          .left
+            %ul
+              %li= link_to t('tabs.home'), pages_about_path
+              %li= link_to t('tabs.contact'), pages_contact_path
+              %li= link_to t('tabs.team'), pages_team_path
+              %li= link_to t('tabs.partners'), pages_partners_path
+              %li.last= link_to t('tabs.services'), services_path
+        .footerlink
+          %p.lf
+            Copyright © 2013-2014
+            %a{href: "#"} babydorych-trans.com.ua
+            \- All Rights Reserved
+          %div{style: "clear:both;"}
+      :javascript
+        Cufon.now();
