@@ -67,82 +67,16 @@
             = link_to "Create Order", new_order_path, class: "btn btn-info btn-large", style: "width: 174px"
             %br
             %br
-            %a{href: "http://avtoprom.ua", style: "border:0", title: "Автобазар"}
-              %img{ style: 'width: 217px', alt: "Автобазар", src: "http://avtoprom.ua/images/informers/benzin/200x200.png", style: "border:0"}
-            / weather widget start
+            = render partial: 'informers/fuel'
             %br
             %br
-            #SinoptikInformer.SinoptikInformer.type2{style: "width:217px;"}
-              .siHeader
-                .siLh
-                  .siMh
-                    %a{href: "http://ua.sinoptik.ua/", onmousedown: "siClickCount();", target: "_blank"} Погода
-                    %a.siLogo{href: "http://ua.sinoptik.ua/", onmousedown: "siClickCount();", target: "_blank"}
-                      %img{src: "http://informers.sinoptik.ua/img/t.gif"}/
-              .siBody
-                .siTitle
-                  %span#siHeader
-                .siCity
-                  .siCityName
-                    %a{href: "http://ua.sinoptik.ua/погода-київ", onmousedown: "siClickCount();", target: "_blank"}
-                      Погода у
-                      %span Києві
-                  #siCont0.siBodyContent
-                    .siLeft
-                      .siTerm
-                      #siT0.siT
-                      #weatherIco0
-                    .siInf
-                      %p
-                        вологість:
-                        %span#vl0
-                      %p
-                        тиск:
-                        %span#dav0
-                      %p
-                        вітер:
-                        %span#wind0
-                .siCity
-                  .siCityName
-                    %a{href: "http://ua.sinoptik.ua/погода-ужгород", onmousedown: "siClickCount();", target: "_blank"}
-                      Погода в
-                      %span Ужгороді
-                  #siCont1.siBodyContent
-                    .siLeft
-                      .siTerm
-                      #siT1.siT
-                      #weatherIco1
-                    .siInf
-                      %p
-                        вологість:
-                        %span#vl1
-                      %p
-                        тиск:
-                        %span#dav1
-                      %p
-                        вітер:
-                        %span#wind1
-                .siLinks
-                  %span
-                    %a{href: "http://ua.sinoptik.ua/погода-запоріжжя", onmousedown: "siClickCount();", target: "_blank"}> Погода у Запоріжжі
-                     
-                  %span
-                    %a{href: "http://ua.sinoptik.ua/погода-вінниця", onmousedown: "siClickCount();", target: "_blank"}> Погода у Вінниці
-                     
-              .siFooter
-                .siLf
-                  .siMf
-            %script{charset: "UTF-8", src: "http://informers.sinoptik.ua/js3.php?title=3&wind=3&cities=303010783,303027343&lang=ua", type: "text/javascript"}
+            = render partial: 'informers/weather'
           .span6
             = yield
           .span3
             %h4.calibri
               %b Новини
-            .weeklynewsmain
-              %span.weeklynews
-              %script{src: "http://vesti-online.ru/informer.htm?theme=autonews&num=3&width=217&css=&font=Arial&bgcolor=&bsize=0&bcol=DDDDDD&tcol=1f7dd2&tsize=16&lcol=1f7dd2&lsize=13&dcol=333333&dsize=12&img=1&desc=1", type: "text/javascript"}
-              %a.weeklynewsm{href: "http://vesti-online.ru/news/facts/906.html", target: "_blank"}
-                Вести Онлайн
+            = render partial: 'informers/news'
       #footer
         .footer-nav
           .left
