@@ -1,9 +1,10 @@
 !!!
 %html
   %head
-    %title Вантажні перевезення
-    %meta{content: "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
-    %meta{charset: "utf-8"}/
+    %title
+      = t('trucking')
+    %meta{content: "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
+    %meta{charset: "utf-8"}
     = javascript_include_tag "modernizr.custom"
     = stylesheet_link_tag    "application", :media => "all"
     = stylesheet_link_tag    controller_path, :media => "all"
@@ -42,24 +43,35 @@
           .fright{style: "text-align: right"}
             %h5
               %ul
-                %li= link_to raw("<i class='icon-home'></i>"), root_path
-                %li= link_to raw("<i class='icon-wrench'></i>"), admin_path
+                %li
+                  = link_to raw("<i class='icon-home'></i>"), root_path
+                %li
+                  = link_to raw("<i class='icon-wrench'></i>"), admin_path
                 - if current_user
-                  %li= link_to raw("<i class='icon-user'></i>"), edit_user_registration_path
-                  %li= link_to raw("<i class='icon-file'></i>"), orders_path
-                  %li= link_to raw("<i class='icon-remove-circle'></i>"), destroy_user_session_path, method: :delete
+                  %li
+                    = link_to raw("<i class='icon-user'></i>"), edit_user_registration_path
+                  %li
+                    = link_to raw("<i class='icon-file'></i>"), orders_path
+                  %li
+                    = link_to raw("<i class='icon-remove-circle'></i>"), destroy_user_session_path, method: :delete
                 - else
-                  %li= link_to raw("<i class='icon-share'></i>"), new_user_session_path
+                  %li
+                    = link_to raw("<i class='icon-share'></i>"), new_user_session_path
                 %li
                   = locale_select id: 'countries', locales: application_languages
         .row-2
           .left
             %ul
-              %li= link_to raw("<span>#{ t 'tabs.home' }</span>"), pages_about_path, class: "#{ "active" if params[:action] == 'about'}"
-              %li= link_to raw("<span>#{ t 'tabs.contact' }</span>"), pages_contact_path, class: "#{ "active" if params[:action] == 'contact'}"
-              %li= link_to raw("<span>#{ t 'tabs.team' }</span>"), pages_team_path, class: "#{ "active" if params[:action] == 'team'}"
-              %li= link_to raw("<span>#{ t 'tabs.partners' }</span>"), pages_partners_path, class: "#{ "active" if params[:action] == 'partners'}"
-              %li.last= link_to raw("<span>#{ t 'tabs.services' }</span>"), services_path, class: "#{ "active" if params[:controller] == 'services'}"
+              %li
+                = link_to raw("<span>#{ t 'tabs.home' }</span>"), pages_about_path, class: "#{ "active" if params[:action] == 'about'}"
+              %li
+                = link_to raw("<span>#{ t 'tabs.contact' }</span>"), pages_contact_path, class: "#{ "active" if params[:action] == 'contact'}"
+              %li
+                = link_to raw("<span>#{ t 'tabs.team' }</span>"), pages_team_path, class: "#{ "active" if params[:action] == 'team'}"
+              %li
+                = link_to raw("<span>#{ t 'tabs.partners' }</span>"), pages_partners_path, class: "#{ "active" if params[:action] == 'partners'}"
+              %li.last
+                = link_to raw("<span>#{ t 'tabs.services' }</span>"), services_path, class: "#{ "active" if params[:controller] == 'services'}"
         .row-3
           .inside
             = render partial: 'layouts/gallery'
@@ -82,7 +94,8 @@
             = render partial: 'informers/partners'
             %br
             %h4.calibri
-              %b Новини
+              %b
+                = t :news
             = render partial: 'informers/news'
       #footer
         .footer-nav
