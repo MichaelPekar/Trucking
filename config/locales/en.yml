@@ -10,8 +10,8 @@ en:
       new: New %{model}
       edit: Edit %{model}
   tabs:
-    home: 'Home'
-    contact: 'Contact Us'
-    team: 'Team'
-    partners: 'Partners'
-    services: 'Services'
+    home: Home
+    contact: Contact Us
+    team: Team
+    partners: Partners
+    services: Services

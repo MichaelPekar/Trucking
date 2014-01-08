@@ -2,3 +2,9 @@ pl:
   trucking: Transport ładunków
   news: Aktualności
   make_order: Złóż zamówienie
+  tabs:
+    home: Dom
+    contact: Kontakt z nami
+    team: zespół
+    partners: Partnerzy
+    services: Usługi
