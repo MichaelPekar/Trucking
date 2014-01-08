@@ -1,0 +1,15 @@
+- @partners = Admin::Partner.all
+#myCarousel.carousel.slide
+  %ol.carousel-indicators
+    - @partners.each_with_index do |partner, i|
+      %li{ class: "#{ "active" if i == 0}", "data-slide-to" => "#{ i }", "data-target" => "#myCarousel" }
+  / Carousel items
+  .carousel-inner
+    - @partners.each_with_index do |partner, i|
+      .item{ class: "#{ "active" if i == 0}"}
+        %table{ style: 'width: 100%'}
+          %tr
+            %td{ style: 'vertical-align: middle; height: 250px; text-align: center'}
+              = image_tag partner.logo.url(:thumb), style: 'max-height: 250px; display: inline'
+:javascript
+  $('.carousel').carousel()

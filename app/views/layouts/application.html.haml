@@ -77,17 +77,27 @@
             = yield
           .span3
             %h4.calibri
+              %b
+                = t('tabs.partners')
+            = render partial: 'informers/partners'
+            %br
+            %h4.calibri
               %b Новини
             = render partial: 'informers/news'
       #footer
         .footer-nav
           .left
             %ul
-              %li= link_to t('tabs.home'), pages_about_path
-              %li= link_to t('tabs.contact'), pages_contact_path
-              %li= link_to t('tabs.team'), pages_team_path
-              %li= link_to t('tabs.partners'), pages_partners_path
-              %li.last= link_to t('tabs.services'), services_path
+              %li
+                = link_to t('tabs.home'), pages_about_path
+              %li
+                = link_to t('tabs.contact'), pages_contact_path
+              %li
+                = link_to t('tabs.team'), pages_team_path
+              %li
+                = link_to t('tabs.partners'), pages_partners_path
+              %li.last
+                = link_to t('tabs.services'), services_path
         .footerlink
           %p.lf
             Copyright © 2013-2014
