@@ -1,25 +1,19 @@
-.box
-  .border-bot
-    .right-bot-corner
-      .left-bot-corner
-        .inner
-          .box1.alt
-            .inner
-              %h4
-                Наші
-                %b
-                  партнери
-              - @partners.in_groups_of(3) do |group|
-                %ul.thumbnails
-                  - if group[0]
-                    %li{ style: 'width: 26%'}
-                      %a.thumbnail{ href: group[0].link }
-                        = image_tag group[0].logo.url(:thumb), alt: ""
-                  - if group[1]
-                    %li{ style: 'width: 26%'}
-                      %a.thumbnail{ href: group[1].link }
-                        = image_tag group[1].logo.url(:thumb), alt: ""
-                  - if group[2]
-                    %li{ style: 'width: 26%'}
-                      %a.thumbnail{ href: group[2].link }
-                        = image_tag group[2].logo.url(:thumb), alt: ""
+%div
+  %h4
+    Наші
+    %b
+      партнери
+  - @partners.in_groups_of(3) do |group|
+    %ul.thumbnails
+      - if group[0]
+        %li{ style: 'width: 26%'}
+          %a.thumbnail{ href: group[0].link }
+            = image_tag group[0].logo.url(:thumb), alt: ""
+      - if group[1]
+        %li{ style: 'width: 26%'}
+          %a.thumbnail{ href: group[1].link }
+            = image_tag group[1].logo.url(:thumb), alt: ""
+      - if group[2]
+        %li{ style: 'width: 26%'}
+          %a.thumbnail{ href: group[2].link }
+            = image_tag group[2].logo.url(:thumb), alt: ""

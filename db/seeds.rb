@@ -5,10 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.destroy_all
 
-role = Role.create(name: 'admin')
+role = Role.create name: 'admin'
 
-user = User.create(email: 'admin@gmail.com', password: '12345678', password_confirmation: '12345678')
-user.role = role
-user.save
+u = User.new(email: 'admin@gmail.com', password: '12345678', password_confirmation: '12345678', role_id: role.id)
+u.skip_confirmation!
+u.save
