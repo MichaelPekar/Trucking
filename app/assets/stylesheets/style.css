@@ -549,17 +549,20 @@ h3 b, h4 b {
 #footer .footer-nav ul {
 	width:100%;
 	overflow:hidden;
-	padding:15px 0 16px 0;
+	height: 33px;
 	background:url(footer-nav-right.gif) no-repeat right top;
+    padding: 5px 0 5px 0;
 }
 #footer .footer-nav ul li {
-	float:left;
 	font-family:Arial, Helvetica, sans-serif;
 	font-weight:bold;
 	line-height:1em;
 	border-right:1px solid #fff;
-	width: 184px;
+	width: 150px;
     text-align: center;
+    height: 33px;
+    display: table-cell;
+    vertical-align: middle;
 }
 #footer .footer-nav ul li.last {
 	border:0;

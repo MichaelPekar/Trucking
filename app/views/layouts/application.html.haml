@@ -106,15 +106,19 @@
           .left
             %ul
               %li
-                = link_to t('tabs.home'), pages_about_path
+                = link_to t('tabs.home'), pages_home_path, class: "#{ "active" if params[:action] == 'home'}"
               %li
-                = link_to t('tabs.contact'), pages_contact_path
+                = link_to t('tabs.services'), services_path, class: "#{ "active" if params[:controller] == 'services'}"
               %li
-                = link_to t('tabs.team'), pages_team_path
+                = link_to t('tabs.partners'), pages_partners_path, class: "#{ "active" if params[:action] == 'partners'}"
               %li
-                = link_to t('tabs.partners'), pages_partners_path
+                = link_to t('make_order'), new_order_path, class: "#{ "active" if params[:action] == 'new'}"
+              %li
+                = link_to t('tabs.about'), pages_about_path, class: "#{ "active" if params[:action] == 'about'}"
+              %li
+                = link_to t('tabs.team'), pages_team_path, class: "#{ "active" if params[:action] == 'team'}"
               %li.last
-                = link_to t('tabs.services'), services_path
+                = link_to t('tabs.contact'), pages_contact_path, class: "#{ "active" if params[:action] == 'contact'}"
         .footerlink
           %p.lf
             Copyright © 2013-2014
