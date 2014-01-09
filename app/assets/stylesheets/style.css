@@ -471,7 +471,7 @@ h3 b, h4 b {
 #header .row-2 ul li {
 	float:left;
 	text-transform:uppercase;
-	font-size:16px;
+	font-size: 14px;
 	line-height:1.2em;
 	background:url(divider.gif) no-repeat right 4px;
 	padding:4px 2px 0 0;
@@ -485,16 +485,19 @@ h3 b, h4 b {
 #header .row-2 ul li a {
 	text-decoration:none;
 	color:#fff;
-	width: 186px;
+	width: 130px;
 	text-align:center;
 	display:block;
-	padding:14px 0 0 0;
 	cursor:pointer;
 	background:url(spacer.gif);
 }
 #header .row-2 ul li a span {
 	display:block;
-	height:40px;
+	height: 53px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 130px;
 }
 #header .row-2 ul li a:hover, #header .row-2 ul li a.active {
 	background:url(nav-act.png) repeat-x left top;
