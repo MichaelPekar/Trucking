@@ -20,7 +20,6 @@ Trucking::Application.routes.draw do
     devise_for :users, controllers: { :sessions => "sessions", :registrations => "registrations" }
 
     get "pages/about"
-    get "pages/home"
     get "pages/contact"
     get "pages/team"
     get "pages/partners"

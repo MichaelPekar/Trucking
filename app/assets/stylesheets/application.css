@@ -68,3 +68,20 @@ body{
     height: 250px;
 }
 
+.title-text{
+    font-family: Arial;
+    font-size: 24px;
+    color: #1f7dd2;
+}
+
+.calibri{
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: bold;
+}
+.calibri b{
+    font-size: 22px;
+    line-height: 28px;
+    color: #1f7dd2;
+}
+

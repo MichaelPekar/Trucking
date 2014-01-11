@@ -5,6 +5,11 @@ en:
   trucking: Trucking
   news: News
   make_order: Make Order
+  gallery:
+    slide1_html: We will arrange delivery of <b>your cargo </b>to the point of discharge.
+    slide2_html: <b> Flexible pricing </b>and <b>competent management </b>allow us always to compromise and move forward <b>together with you. </b>
+    slide3_html: <b> Individual approach </b>to each client.
+    slide4_html: Our team of specialists and managers <b>solve your most ambitious tasks. </b>
   helpers:
     titles:
       new: New %{model}

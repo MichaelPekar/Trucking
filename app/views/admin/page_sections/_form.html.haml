@@ -7,7 +7,7 @@
   .control-group
     = f.label :language, :class => 'control-label'
     .controls
-      = locale_select id: 'lang', name: "admin_page_section[lang]", locales: available_page_section_languages
+      = locale_select id: 'lang', name: "admin_page_section[lang]", locales: application_languages
   .form-actions
     = f.submit nil, :class => 'btn btn-primary'
     = link_to t('.cancel', :default => t("helpers.links.cancel")), admin_page_sections_path, :class => 'btn'

@@ -445,10 +445,10 @@ h3 b, h4 b {
 	height:88px;
 }
 #header .row-1 .fleft {
-	padding:20px 0 0 240px;
+	padding: 39px 0 0 240px;
 }
 #header .row-1 .fright {
-	padding:34px 34px 0 0;
+	padding:34px 0px 0 0;
 }
 #header .row-1 .fright ul li {
 	float:left;
@@ -485,7 +485,7 @@ h3 b, h4 b {
 #header .row-2 ul li a {
 	text-decoration:none;
 	color:#fff;
-	width: 130px;
+	width: 154px;
 	text-align:center;
 	display:block;
 	cursor:pointer;
@@ -497,7 +497,7 @@ h3 b, h4 b {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    width: 130px;
+    width: 154px;
 }
 #header .row-2 ul li a:hover, #header .row-2 ul li a.active {
 	background:url(nav-act.png) repeat-x left top;

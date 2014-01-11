@@ -15,8 +15,4 @@ class PagesController < ApplicationController
     @partners = Admin::Partner.all
   end
 
-  def home
-
-  end
-
 end

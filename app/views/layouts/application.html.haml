@@ -12,9 +12,6 @@
     = javascript_include_tag controller_path
     = csrf_meta_tags
     = stylesheet_link_tag "style"
-    = javascript_include_tag "cufon-yui"
-    = javascript_include_tag "cufon-replace"
-    = javascript_include_tag "Calibri_400-Calibri_700-Calibri_italic_400-Calibri_italic_700.font"
     = javascript_include_tag "script"
     /[if lt IE 7]
       <haml_loud> javascript_include_tag "ie_png" </haml_loud>
@@ -37,41 +34,37 @@
         = image_tag 'logo340x340.jpg', style: 'position: absolute; height: 90px; z-index: 1000000'
         .row-1
           .fleft
-            %h3
-              %b{style: "padding-left: 0px; margin-top: 4px"}
-                BABYDORYCH-TRANS.COM.UA
+            %b.title-text{style: "padding-left: 0px; margin-top: 4px"}
+              BABYDORYCH-TRANS.COM.UA
           .fright{style: "text-align: right"}
-            %h5
-              %ul
+            %ul{ style: 'font-size: 17px'}
+              %li
+                = link_to raw("<i class='icon-home'></i>"), root_path
+              %li
+                = link_to raw("<i class='icon-wrench'></i>"), admin_path
+              - if current_user
                 %li
-                  = link_to raw("<i class='icon-home'></i>"), root_path
+                  = link_to raw("<i class='icon-user'></i>"), edit_user_registration_path
                 %li
-                  = link_to raw("<i class='icon-wrench'></i>"), admin_path
-                - if current_user
-                  %li
-                    = link_to raw("<i class='icon-user'></i>"), edit_user_registration_path
-                  %li
-                    = link_to raw("<i class='icon-file'></i>"), orders_path
-                  %li
-                    = link_to raw("<i class='icon-remove-circle'></i>"), destroy_user_session_path, method: :delete
-                - else
-                  %li
-                    = link_to raw("<i class='icon-share'></i>"), new_user_session_path
+                  = link_to raw("<i class='icon-shopping-cart'></i>"), orders_path
                 %li
-                  = locale_select id: 'countries', locales: application_languages
+                  = link_to raw("<i class='icon-off'></i>"), destroy_user_session_path, method: :delete
+              - else
+                %li
+                  = link_to raw("<i class='icon-user' alt= `Log in`></i>"), new_user_session_path
+              %li
+                = locale_select id: 'countries', locales: application_languages
         .row-2
           .left
             %ul
               %li
-                = link_to raw("<span>#{ t 'tabs.home' }</span>"), pages_home_path, class: "#{ "active" if params[:action] == 'home'}"
+                = link_to raw("<span>#{ t 'tabs.home' }</span>"), pages_about_path, class: "#{ "active" if params[:action] == 'home'}"
               %li
                 = link_to raw("<span>#{ t 'tabs.services' }</span>"), services_path, class: "#{ "active" if params[:controller] == 'services'}"
               %li
                 = link_to raw("<span>#{ t 'tabs.partners' }</span>"), pages_partners_path, class: "#{ "active" if params[:action] == 'partners'}"
               %li
                 = link_to raw("<span>#{ t 'make_order' }</span>"), new_order_path, class: "#{ "active" if params[:action] == 'new'}"
-              %li
-                = link_to raw("<span>#{ t 'tabs.about' }</span>"), pages_about_path, class: "#{ "active" if params[:action] == 'about'}"
               %li
                 = link_to raw("<span>#{ t 'tabs.team' }</span>"), pages_team_path, class: "#{ "active" if params[:action] == 'team'}"
               %li.last
@@ -82,7 +75,7 @@
       #content
         .row-fluid
           .span3
-            = link_to t('make_order'), new_order_path, class: "btn btn-info btn-large", style: "width: 174px"
+            = link_to t('make_order'), new_order_path, class: "btn btn-primary btn-large", style: "width: 174px"
             %br
             %br
             = render partial: 'informers/fuel'
@@ -92,29 +85,27 @@
           .span6
             = yield
           .span3
-            %h4.calibri
-              %b
-                = t('tabs.partners')
-            = render partial: 'informers/partners'
-            %br
-            %h4.calibri
-              %b
-                = t :news
+            -#%h4.calibri
+            -#  %b
+            -#    = t :news
             = render partial: 'informers/news'
+            -#%br
+            -#%h4.calibri
+            -#  %b
+            -#    = t('tabs.partners')
+            -#= render partial: 'informers/partners'
       #footer
         .footer-nav
           .left
             %ul
               %li
-                = link_to t('tabs.home'), pages_home_path, class: "#{ "active" if params[:action] == 'home'}"
+                = link_to t('tabs.home'), pages_about_path, class: "#{ "active" if params[:action] == 'home'}"
               %li
                 = link_to t('tabs.services'), services_path, class: "#{ "active" if params[:controller] == 'services'}"
               %li
                 = link_to t('tabs.partners'), pages_partners_path, class: "#{ "active" if params[:action] == 'partners'}"
               %li
                 = link_to t('make_order'), new_order_path, class: "#{ "active" if params[:action] == 'new'}"
-              %li
-                = link_to t('tabs.about'), pages_about_path, class: "#{ "active" if params[:action] == 'about'}"
               %li
                 = link_to t('tabs.team'), pages_team_path, class: "#{ "active" if params[:action] == 'team'}"
               %li.last
@@ -124,6 +115,10 @@
             Copyright © 2013-2014
             %a{href: "#"} babydorych-trans.com.ua
             \- All Rights Reserved
+          %p.rf
+            %i.icon-phone
+            +38(0312)65-55-56
+            &nbsp;
+            %i.icon-envelope
+            info@babydorych-trans.com.ua
           %div{style: "clear:both;"}
-      :javascript
-        Cufon.now();

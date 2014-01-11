@@ -2,6 +2,11 @@ sk:
   trucking: Prepravné
   news: Novinky
   make_order: Aby objednávka
+  gallery:
+    slide1_html: Zaistíme dodanie <b>vášho nákladu </b>k miestu vypúšťania.
+    slide2_html: <b> Flexibilné cenová </b>a <b>príslušné riadenie </b>, aby nám vždy ku kompromisu a pokročiť <b>spoločne s vami. </ b>
+    slide3_html: <b> Individuálny prístup </b>ku každému klientovi.
+    slide4_html: Náš tím špecialistov a manažérov <b>vyriešiť vaše najnáročnejšie úlohy. </b>
   tabs:
     home: Domáce
     contact: Kontaktujte nás
