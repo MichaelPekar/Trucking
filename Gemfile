@@ -16,6 +16,8 @@ gem 'underscore-rails'
 gem 'gmaps4rails'
 gem 'will_paginate-bootstrap', '0.2.5'
 gem 'bootstrap-datetimepicker-rails'
+gem 'geocoder'
+gem 'i18n_data'
 
 
 # Gems used only for assets and not required

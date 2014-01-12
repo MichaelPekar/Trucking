@@ -23,7 +23,7 @@ module ApplicationHelper
         {value: 'ua', flag: 'ua', title: t('countries.ua') },
         {value: 'sk', flag: 'sk', title: t('countries.sk') },
         {value: 'cz', flag: 'cz', title: t('countries.cz') },
-        {value: 'pl', flag: 'pl', title: t('countries.pl') },
+        {value: 'pl', flag: 'pl', title: t('countries.pl') }
     ]
   end
 
