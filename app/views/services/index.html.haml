@@ -1,7 +1,9 @@
 - @sections.each do |section|
-  %h4
-    = section.name
+  .calibri
+    %b
+      = section.name
   %ul
     - section.pages.each do |page|
       %li
-        = link_to page.title, service_path(page)
+        %h5
+          = link_to page.title, service_path(page)
