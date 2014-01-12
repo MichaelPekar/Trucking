@@ -36,6 +36,6 @@
                     language: 'pt-BR'
                 });
             });
-  .form-actions
-    = f.submit nil, :class => 'btn btn-primary'
+  %div
+    = f.submit t('make_order'), :class => 'btn btn-primary'
     = link_to t('.cancel', :default => t("helpers.links.cancel")), orders_path, :class => 'btn'
