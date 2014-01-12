@@ -17,13 +17,13 @@ module ApplicationHelper
 
   def application_languages
     [
-        {value: 'en', flag: 'gb', title: 'Great Britain (UK)'},
-        {value: 'de', flag: 'de', title: 'Germany'},
-        {value: 'ru', flag: 'ru', title: 'Russian Federation'},
-        {value: 'ua', flag: 'ua', title: 'Ukraine'},
-        {value: 'sk', flag: 'sk', title: 'Slovakia'},
-        {value: 'cz', flag: 'cz', title: 'Czech Republic '},
-        {value: 'pl', flag: 'pl', title: 'Poland '}
+        {value: 'en', flag: 'gb', title: t('countries.en') },
+        {value: 'de', flag: 'de', title: t('countries.de') },
+        {value: 'ru', flag: 'ru', title: t('countries.ru') },
+        {value: 'ua', flag: 'ua', title: t('countries.ua') },
+        {value: 'sk', flag: 'sk', title: t('countries.sk') },
+        {value: 'cz', flag: 'cz', title: t('countries.cz') },
+        {value: 'pl', flag: 'pl', title: t('countries.pl') },
     ]
   end
 

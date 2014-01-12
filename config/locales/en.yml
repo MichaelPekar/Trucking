@@ -28,3 +28,11 @@ en:
     admin: Admin
     profile: Profile
     orders: Orders
+  countries:
+    en: 'Great Britain (UK)'
+    de: 'Germany'
+    ru: 'Russian Federation'
+    ua: 'Ukraine'
+    sk: 'Slovakia'
+    cz: 'Czech Republic'
+    pl: 'Poland'

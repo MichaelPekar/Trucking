@@ -21,3 +21,11 @@ pl:
     admin: Admin
     profile: Profil
     orders: Zamówienia
+  countries:
+    en: 'Wielkiej Brytanii (UK)'
+    de: 'Niemcy'
+    ru: 'Federacja Rosyjska'
+    ua: 'Ukraina'
+    sk: 'Słowacja'
+    cz: 'Czechy'
+    pl: 'Polska'
