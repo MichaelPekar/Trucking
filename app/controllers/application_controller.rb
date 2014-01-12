@@ -20,6 +20,7 @@ class ApplicationController < ActionController::Base
 
   def locale_by_ip
     locale = I18nData.country_code(request.location.country)
+    locale = locale.downcase if locale
     locale = I18n.default_locale unless application_languages.map{ |l| l[:value] }.include?(locale)
     locale
   end
