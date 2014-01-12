@@ -14,3 +14,10 @@ cz:
     partners: Partneři
     services: Služby
     about: O nás
+  icons:
+    login: Přihlásit
+    logout: Exit
+    home: Domů
+    admin: Admin
+    profile: Profil
+    orders: Objednávky

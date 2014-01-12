@@ -14,3 +14,10 @@ pl:
     partners: Partnerzy
     services: Usługi
     about: O nas
+  icons:
+    login: Zaloguj się
+    logout: Wyloguj
+    home: Strona główna
+    admin: Admin
+    profile: Profil
+    orders: Zamówienia

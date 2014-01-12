@@ -39,19 +39,19 @@
           .fright{style: "text-align: right"}
             %ul{ style: 'font-size: 17px'}
               %li
-                = link_to raw("<i class='icon-home'></i>"), root_path
-              %li
-                = link_to raw("<i class='icon-wrench'></i>"), admin_path
+                = link_to raw("<i class='icon-home'></i>"), root_path, title: t('icons.home')
               - if current_user
                 %li
-                  = link_to raw("<i class='icon-user'></i>"), edit_user_registration_path
+                  = link_to raw("<i class='icon-wrench'></i>"), admin_path, title: t('icons.admin') if current_user.admin?
                 %li
-                  = link_to raw("<i class='icon-shopping-cart'></i>"), orders_path
+                  = link_to raw("<i class='icon-user'></i>"), edit_user_registration_path, title: t('icons.profile')
                 %li
-                  = link_to raw("<i class='icon-off'></i>"), destroy_user_session_path, method: :delete
+                  = link_to raw("<i class='icon-shopping-cart'></i>"), orders_path, title: t('icons.orders')
+                %li
+                  = link_to raw("<i class='icon-off'></i>"), destroy_user_session_path, method: :delete, title: t('icons.logout')
               - else
                 %li
-                  = link_to raw("<i class='icon-user' alt= `Log in`></i>"), new_user_session_path
+                  = link_to raw("<i class='icon-user' alt= `Log in`></i>"), new_user_session_path, title: t('icons.login')
               %li
                 = locale_select id: 'countries', locales: application_languages
         .row-2

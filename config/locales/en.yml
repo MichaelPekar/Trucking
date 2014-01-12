@@ -21,3 +21,10 @@ en:
     partners: Partners
     services: Services
     about: About Us
+  icons:
+    login: Log In
+    logout: Log Out
+    home: Home
+    admin: Admin
+    profile: Profile
+    orders: Orders

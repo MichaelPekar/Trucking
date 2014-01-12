@@ -14,3 +14,10 @@ de:
     partners: Partner
     services: Dienstleistungen
     about: Über uns
+  icons:
+    login: Anmeldung
+    logout: Ausfahrt
+    home: Hause
+    admin: Admin
+    profile: Profil
+    orders: Bestellungen

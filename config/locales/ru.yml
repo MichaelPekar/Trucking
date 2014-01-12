@@ -14,3 +14,10 @@ ru:
     partners: Наши Партнеры
     services: Услуги
     about: О нас
+  icons:
+    login: Вход
+    logout: Выход
+    home: Домашняя страница
+    admin: Админка
+    profile: Профиль
+    orders: Заказы
