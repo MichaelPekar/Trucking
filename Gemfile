@@ -5,9 +5,10 @@ gem 'rails', '3.2.11'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
+
+gem 'mysql2', "0.3.11"
 gem "haml-rails"
-gem 'devise'
+gem 'devise', "3.0.3"
 gem "twitter-bootstrap-rails"
 gem "paperclip"
 gem "ckeditor", "~> 4.0.2"
