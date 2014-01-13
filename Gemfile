@@ -14,7 +14,7 @@ gem "paperclip"
 gem "ckeditor", "~> 4.0.2"
 gem 'cancan'
 gem 'underscore-rails'
-gem 'gmaps4rails'
+gem 'gmaps4rails', "2.0.4"
 gem 'will_paginate-bootstrap', '0.2.5'
 gem 'bootstrap-datetimepicker-rails'
 gem 'geocoder'
