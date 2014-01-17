@@ -21,9 +21,6 @@ class OrdersController < ApplicationController
   # GET /orders/new.json
   def new
     @order = Order.new
-    unless current_user
-      redirect_to new_user_session_path
-    end
   end
 
   # GET /orders/1/edit
@@ -37,13 +34,16 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    params[:order][:user_id] = current_user.id
+    params[:order][:user_id] = current_user.id if current_user
     @order = Order.new(params[:order])
 
     respond_to do |format|
       if @order.save
-        format.html { redirect_to @order, notice: 'Order was successfully created.' }
-        format.json { render json: @order, status: :created, location: @order }
+        if current_user
+          format.html { redirect_to @order, notice: 'Order was successfully created.' }
+        else
+          format.html { redirect_to root_path, notice: 'Order was successfully created.' }
+        end
       else
         format.html { render action: "new" }
         format.json { render json: @order.errors, status: :unprocessable_entity }

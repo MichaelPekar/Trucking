@@ -10,6 +10,7 @@ class Ability
       can :view_admin_pages
     else
       can :read, :all
+      can :manage, :order
       cannot :view_admin_pages
     end
     #

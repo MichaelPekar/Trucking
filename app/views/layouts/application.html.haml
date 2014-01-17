@@ -20,15 +20,19 @@
     %script{src: "//maps.google.com/maps/api/js?v=3.13&sensor=false&libraries=geometry", type: "text/javascript"}
     %script{src: "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js", type: "text/javascript"}
   %body#page2
-    - if flash[:message]
-      .alert.alert-info
-        = flash[:message]
-    - if flash[:error]
-      .alert.alert-error
-        = flash[:error]
-    - if flash[:success]
-      .alert.alert-info
-        = flash[:success]
+    %h5
+      - if flash[:message]
+        .alert.alert-info.text-center
+          = flash[:message]
+      - if flash[:error]
+        .alert.alert-error.text-center
+          = flash[:error]
+      - if flash[:success]
+        .alert.alert-info.text-center
+          = flash[:success]
+      - if flash[:notice]
+        .alert.alert-info.text-center
+          = flash[:notice]
     #main
       #header
         = image_tag 'logo3.png', style: 'position: absolute; height: 90px; z-index: 1000000'
