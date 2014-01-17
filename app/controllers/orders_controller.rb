@@ -38,7 +38,7 @@ class OrdersController < ApplicationController
     @order = Order.new(params[:order])
 
     respond_to do |format|
-      if @order.save
+      if @order.save_with_captcha
         if current_user
           format.html { redirect_to @order, notice: 'Order was successfully created.' }
         else

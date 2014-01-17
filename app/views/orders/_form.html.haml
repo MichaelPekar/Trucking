@@ -36,6 +36,10 @@
                     language: 'pt-BR'
                 });
             });
+    .control-group
+      .controls
+        %br
+        = f.simple_captcha :label => "Enter numbers.."
   %div
     = f.submit t('make_order'), :class => 'btn btn-primary'
     = link_to t('.cancel', :default => t("helpers.links.cancel")), orders_path, :class => 'btn'

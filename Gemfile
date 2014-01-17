@@ -19,6 +19,7 @@ gem 'will_paginate-bootstrap', '0.2.5'
 gem 'bootstrap-datetimepicker-rails'
 gem 'geocoder'
 gem 'i18n_data'
+gem "galetahub-simple_captcha", :require => "simple_captcha"
 
 
 # Gems used only for assets and not required

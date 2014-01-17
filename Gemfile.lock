@@ -55,6 +55,7 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.0.2)
+    galetahub-simple_captcha (0.1.5)
     geocoder (1.1.9)
     gmaps4rails (2.0.4)
     haml (4.0.5)
@@ -153,6 +154,7 @@ DEPENDENCIES
   ckeditor (~> 4.0.2)
   coffee-rails (~> 3.2.1)
   devise (= 3.0.3)
+  galetahub-simple_captcha
   geocoder
   gmaps4rails (= 2.0.4)
   haml-rails
