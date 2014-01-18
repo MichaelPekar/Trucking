@@ -2,11 +2,6 @@ cz:
   trucking: Přepravní
   news: Zprávy
   make_order: Aby objednávka
-  gallery:
-    slide1_html: Zajistíme dodání <b>vašeho nákladu </b>k místu vypouštění.
-    slide2_html: <b> Flexibilní cenová </b>a <b>příslušné řízení </b>, aby nám vždy ke kompromisu a pokročit <b>společně s vámi.</b>
-    slide3_html: <b> Individuální přístup </b>ke každému klientovi.
-    slide4_html: Náš tým specialistů a manažerů <b>vyřešit vaše nejnáročnější úkoly. </b>
   tabs:
     home: Domácí
     contact: Kontaktujte nás

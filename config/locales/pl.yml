@@ -2,11 +2,6 @@ pl:
   trucking: Transport ładunków
   news: Aktualności
   make_order: Złóż zamówienie
-  gallery:
-    slide1_html: Zorganizujemy dostawę <b>Państwa ładunku </b>do punktu zrzutu.
-    slide2_html: <b> Elastyczne ceny </b>i <b>właściwego zarządzania </b>pozwala nam zawsze do kompromisu i do przodu <b>razem z wami. </b>
-    slide3_html: <b> Indywidualne podejście </b>do każdego klienta.
-    slide4_html: Nasz zespół specjalistów i menedżerów <b>rozwiązać najbardziej ambitnych zadań. </b>
   tabs:
     home: Dom
     contact: Kontakt z nami
