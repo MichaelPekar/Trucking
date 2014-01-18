@@ -10,17 +10,6 @@ class Admin::GalleryItemsController < Admin::AdminController
     end
   end
 
-  # GET /admin/gallery_items/1
-  # GET /admin/gallery_items/1.json
-  def show
-    @gallery_item = Admin::GalleryItem.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @admin_gallery_item }
-    end
-  end
-
   # GET /admin/gallery_items/new
   # GET /admin/gallery_items/new.json
   def new

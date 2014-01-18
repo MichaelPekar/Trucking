@@ -4,28 +4,15 @@
 %table.table.table-striped
   %thead
     %tr
-      %th= model_class.human_attribute_name(:id)
-      %th= model_class.human_attribute_name(:en_text)
-      %th= model_class.human_attribute_name(:de_text)
-      %th= model_class.human_attribute_name(:ru_text)
-      %th= model_class.human_attribute_name(:ua_text)
-      %th= model_class.human_attribute_name(:sk_text)
-      %th= model_class.human_attribute_name(:cz_text)
-      %th= model_class.human_attribute_name(:pl_text)
-      %th= model_class.human_attribute_name(:created_at)
+      %th
+        = model_class.human_attribute_name(:image)
       %th=t '.actions', :default => t("helpers.actions")
   %tbody
     - @admin_gallery_items.each do |gallery_item|
       %tr
-        %td= link_to gallery_item.id, admin_gallery_item_path(gallery_item)
-        %td= gallery_item.en_text
-        %td= gallery_item.de_text
-        %td= gallery_item.ru_text
-        %td= gallery_item.ua_text
-        %td= gallery_item.sk_text
-        %td= gallery_item.cz_text
-        %td= gallery_item.pl_text
-        %td=l gallery_item.created_at
+        %td
+          .thumbnail{style: "max-width: 100%; max-height: 500px; line-height: 20px;"}
+            = image_tag gallery_item.image.url, style: 'max-width: 200px; max-height: 150px;'
         %td
           = link_to t('.edit', :default => t("helpers.links.edit")), edit_admin_gallery_item_path(gallery_item), :class => 'btn btn-mini'
           = link_to t('.destroy', :default => t("helpers.links.destroy")), admin_gallery_item_path(gallery_item), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-mini btn-danger'
