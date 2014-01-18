@@ -33,7 +33,7 @@ class Admin::GalleryItemsController < Admin::AdminController
 
     respond_to do |format|
       if @admin_gallery_item.save
-        format.html { redirect_to @admin_gallery_item, notice: 'Gallery item was successfully created.' }
+        format.html { redirect_to admin_gallery_items_path, notice: 'Gallery item was successfully created.' }
         format.json { render json: @admin_gallery_item, status: :created, location: @admin_gallery_item }
       else
         format.html { render action: "new" }
@@ -49,7 +49,7 @@ class Admin::GalleryItemsController < Admin::AdminController
 
     respond_to do |format|
       if @admin_gallery_item.update_attributes(params[:admin_gallery_item])
-        format.html { redirect_to @admin_gallery_item, notice: 'Gallery item was successfully updated.' }
+        format.html { redirect_to admin_gallery_items_path, notice: 'Gallery item was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
