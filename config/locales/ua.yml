@@ -24,3 +24,27 @@ ua:
     sk: 'Словаччина'
     cz: 'Чехія'
     pl: 'Польща'
+  order_form:
+    order:                       'Замовлення'
+    orders:                      'Замовлення'
+    company:                     'Назва компанії'
+    company_placeholder:         'Будь ласка, введіть назву Вашої компанії'
+    contact_person:              'Контактна особа'
+    contact_person_placeholder:  "Будь ласка, введіть своє ім'я"
+    phone:                       'Телефон'
+    phone_placeholder:           'Будь ласка, введіть Ваш телефон'
+    email:                       'E-mail'
+    email_placeholder:           'Будь ласка, введіть адресу електронної пошти'
+    cargo:                       'Назва та особливості вантажу'
+    cargo_placeholder:           'Будь ласка, введіть назву і особливості вантажу'
+    from_address:                'Адреса відправлення'
+    from_address_placeholder:    'Будь ласка, введіть адресу відправлення'
+    to_address:                  'Адреса прибуття'
+    to_address_placeholder:      'Будь ласка, введіть адресу прибуття'
+    start_date:                  'Дата початку'
+    additional_info:             'Додаткова інформація'
+    additional_info_placeholder: 'Будь ласка, введіть додаткову інформацію'
+  simple_captcha:
+    placeholder:                 'Будь ласка, введіть код, вказаний на зображенні'
+  validation_errors:
+    blank:                       'Не може бути порожнім'

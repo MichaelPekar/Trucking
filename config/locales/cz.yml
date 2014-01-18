@@ -1,26 +1,50 @@
 cz:
-  trucking: Přepravní
-  news: Zprávy
-  make_order: Aby objednávka
+  trucking: Prepravni
+  news: Zpravy
+  make_order: Aby objednavka
   tabs:
-    home: Domácí
-    contact: Kontaktujte nás
-    team: Náš tým
-    partners: Partneři
-    services: Služby
-    about: O nás
+    home: Domaci
+    contact: Kontaktujte nas
+    team: Nas tym
+    partners: Partneri
+    services: Sluzby
+    about: O nas
   icons:
-    login: Přihlásit
+    login: Prihlasit
     logout: Exit
-    home: Domů
+    home: Domu
     admin: Admin
     profile: Profil
-    orders: Objednávky
+    orders: Objednavky
   countries:
-    en: 'Velká Británie (UK)'
-    de: 'Německo'
-    ru: 'Ruská federace'
+    en: 'Velka Britanie (UK)'
+    de: 'Nemecko'
+    ru: 'Ruska federace'
     ua: 'Ukrajina'
     sk: 'Slovensko'
-    cz: 'Česká republika'
+    cz: 'Ceska republika'
     pl: 'Polsko'
+  order_form:
+    order:                       'Objednavka'
+    orders:                      'Objednavky'
+    company:                     'Nazev spolecnosti'
+    company_placeholder:         'Prosim, zadejte nazev vasi spolecnosti'
+    contact_person:              'Kontaktni osoba'
+    contact_person_placeholder:  'Prosim, zadejte sve jmeno'
+    phone:                       'telefon'
+    phone_placeholder:           'Prosim zadejte svuj telefon'
+    email:                       'E-mail'
+    email_placeholder:           'Prosim zadejte svuj e-mail'
+    cargo:                       'Jmeno a funkce nakladu'
+    cargo_placeholder:           'Prosim, zadejte nazev a vlastnosti nakladu'
+    from_address:                'z adresy'
+    from_address_placeholder:    'Prosim, zadejte z adresy'
+    to_address:                  'Pro reseni'
+    to_address_placeholder:      'Prosim, zadejte na adresu'
+    start_date:                  'datum zahajeni'
+    additional_info:             'Dalsi informace'
+    additional_info_placeholder: 'Zadejte prosim dalsi informace'
+  simple_captcha:
+    placeholder:                 'Zadejte prosim kod z obrazku'
+  validation_errors:
+    blank:                       'Nemuze byt prazdny'

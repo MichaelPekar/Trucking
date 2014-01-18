@@ -5,6 +5,6 @@ class Order < ActiveRecord::Base
   apply_simple_captcha
 
   validates_presence_of :cargo, :company, :contact_person, :from_address,
-                       :to_address, :phone, :email, message: t('validation_errors.blank')
+                       :to_address, :phone, :email, message: I18n.t('validation_errors.blank')
   validates :email, :email => true
 end
