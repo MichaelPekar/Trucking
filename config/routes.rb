@@ -11,6 +11,7 @@ Trucking::Application.routes.draw do
       resources :page_sections
       resources :orders, only: [:index, :show]
       post "orders/accept"
+      resources :gallery_items
     end
 
     mount Ckeditor::Engine => '/ckeditor'

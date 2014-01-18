@@ -1,0 +1,32 @@
+= form_for @admin_gallery_item, :html => { :class => 'form-horizontal' } do |f|
+  .control-group
+    = f.label :en_text, :class => 'control-label'
+    .controls
+      = f.text_field :en_text, :class => 'text_field'
+  .control-group
+    = f.label :de_text, :class => 'control-label'
+    .controls
+      = f.text_field :de_text, :class => 'text_field'
+  .control-group
+    = f.label :ru_text, :class => 'control-label'
+    .controls
+      = f.text_field :ru_text, :class => 'text_field'
+  .control-group
+    = f.label :ua_text, :class => 'control-label'
+    .controls
+      = f.text_field :ua_text, :class => 'text_field'
+  .control-group
+    = f.label :sk_text, :class => 'control-label'
+    .controls
+      = f.text_field :sk_text, :class => 'text_field'
+  .control-group
+    = f.label :cz_text, :class => 'control-label'
+    .controls
+      = f.text_field :cz_text, :class => 'text_field'
+  .control-group
+    = f.label :pl_text, :class => 'control-label'
+    .controls
+      = f.text_field :pl_text, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), admin_gallery_items_path, :class => 'btn'

@@ -1,0 +1,37 @@
+- model_class = Admin::GalleryItem
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.titleize
+
+%p
+  %strong= model_class.human_attribute_name(:en_text) + ':'
+  %br
+  = @gallery_item.en_text
+%p
+  %strong= model_class.human_attribute_name(:de_text) + ':'
+  %br
+  = @gallery_item.de_text
+%p
+  %strong= model_class.human_attribute_name(:ru_text) + ':'
+  %br
+  = @gallery_item.ru_text
+%p
+  %strong= model_class.human_attribute_name(:ua_text) + ':'
+  %br
+  = @gallery_item.ua_text
+%p
+  %strong= model_class.human_attribute_name(:sk_text) + ':'
+  %br
+  = @gallery_item.sk_text
+%p
+  %strong= model_class.human_attribute_name(:cz_text) + ':'
+  %br
+  = @gallery_item.cz_text
+%p
+  %strong= model_class.human_attribute_name(:pl_text) + ':'
+  %br
+  = @gallery_item.pl_text
+
+.form-actions
+  = link_to t('.back', :default => t("helpers.links.back")), admin_gallery_items_path, :class => 'btn'
+  = link_to t('.edit', :default => t("helpers.links.edit")), edit_admin_gallery_item_path(@gallery_item), :class => 'btn'
+  = link_to t('.destroy', :default => t("helpers.links.destroy")), admin_gallery_item_path(@gallery_item), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'

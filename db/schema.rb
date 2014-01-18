@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140117112405) do
+ActiveRecord::Schema.define(:version => 20140118100554) do
 
   create_table "admin_about_us_pages", :force => true do |t|
     t.text     "content"
@@ -36,6 +36,18 @@ ActiveRecord::Schema.define(:version => 20140117112405) do
   create_table "admin_contact_us_pages", :force => true do |t|
     t.text     "content"
     t.string   "lang"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "admin_gallery_items", :force => true do |t|
+    t.string   "en_text"
+    t.string   "de_text"
+    t.string   "ru_text"
+    t.string   "ua_text"
+    t.string   "sk_text"
+    t.string   "cz_text"
+    t.string   "pl_text"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
