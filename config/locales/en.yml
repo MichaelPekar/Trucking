@@ -31,3 +31,21 @@ en:
     sk: 'Slovakia'
     cz: 'Czech Republic'
     pl: 'Poland'
+  order_form:
+    company: Company Name
+    company_placeholder: Please enter you'r company name
+    contact_person: Contact Person
+    contact_person_placeholder: Please enter you'r name
+    phone: Phone
+    phone_placeholder: Please enter you'r phone
+    email: Email
+    email_placeholder: Please enter you'r email
+    cargo: Name and features of the cargo
+    cargo_placeholder: Please enter name and features of the cargo
+    from_address: From address
+    from_address_placeholder: Please enter from address
+    to_address: To address
+    to_address_placeholder: Please enter to address
+    start_date: Start date
+  simple_captcha:
+    placeholder: Please type the code from the image

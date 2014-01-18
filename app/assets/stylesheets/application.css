@@ -85,3 +85,8 @@ body{
     color: #1f7dd2;
 }
 
+.form-label{
+    font-weight: bold;
+    text-align: right;
+}
+

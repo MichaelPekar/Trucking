@@ -1,33 +1,68 @@
 = form_for @order, :html => { :class => 'form-horizontal' } do |f|
-  .control-group
-    = f.label :company, :class => 'control-label'
-    .controls
-      = f.text_field :company, :class => 'text_field'
-  .control-group
-    = f.label :contact_person, :class => 'control-label'
-    .controls
-      = f.text_field :contact_person, :class => 'text_field'
-  .control-group
-    = f.label :address, :class => 'control-label'
-    .controls
-      = f.text_field :address, :class => 'text_field'
-  .control-group
-    = f.label :cargo, :class => 'control-label'
-    .controls
-      = f.text_field :cargo, :class => 'text_field'
-  .control-group
-    = f.label :from_address, :class => 'control-label'
-    .controls
-      = f.text_field :from_address, :class => 'text_field'
-  .control-group
-    = f.label :to_address, :class => 'control-label'
-    .controls
-      = f.text_field :to_address, :class => 'text_field'
-  .control-group
-    = f.label :start_date, :class => 'control-label'
-    .controls
-      #datetimepicker1.input-append.date
-        = f.text_field :start_date, 'data-format' => 'dd/MM/yyyy hh:mm:ss', 'type' => 'text', :required=> 'required'
+  .row-fluid
+    .span3
+      .form-label
+        = t 'order_form.company'
+        = ':'
+    .span9
+      = f.text_field :company, :class => 'span_12 text_field', placeholder: t('order_form.company_placeholder')
+  %br
+  .row-fluid
+    .span3
+      .form-label
+        = t 'order_form.contact_person'
+        = ':'
+    .span9
+      = f.text_field :contact_person, :class => 'span_12 text_field', placeholder: t('order_form.contact_person_placeholder')
+  %br
+  .row-fluid
+    .span3
+      .form-label
+        = t 'order_form.phone'
+        = ':'
+    .span9
+      = f.phone_field :phone, :class => 'span12 text_field', placeholder: t('order_form.phone_placeholder')
+  %br
+  .row-fluid
+    .span3
+      .form-label
+        = t 'order_form.email'
+        = ':'
+    .span9
+      = f.email_field :email, :class => 'span_12 text_field', placeholder: t('order_form.email_placeholder'), value: "#{ current_user.email if current_user }"
+  %br
+  .row-fluid
+    .span3
+      .form-label
+        = t 'order_form.cargo'
+        = ':'
+    .span9
+      = f.text_area :cargo, class: 'span_12', rows: 5, placeholder: t('order_form.cargo_placeholder'), style: 'resize: none'
+  %br
+  .row-fluid
+    .span3
+      .form-label
+        = t 'order_form.from_address'
+        = ':'
+    .span9
+      = f.text_area :cargo, class: 'span_12', rows: 3, placeholder: t('order_form.from_address_placeholder'), style: 'resize: none'
+  %br
+  .row-fluid
+    .span3
+      .form-label
+        = t 'order_form.to_address'
+        = ':'
+    .span9
+      = f.text_area :cargo, class: 'span_12', rows: 3, placeholder: t('order_form.to_address_placeholder'), style: 'resize: none'
+  %br
+  .row-fluid
+    .span3
+      .form-label
+        = t 'order_form.start_date'
+        = ':'
+    .span9
+      #datetimepicker1.input-append.date{ style: 'width: 91%'}
+        = f.text_field :start_date, class: 'span12', 'data-format' => 'dd/MM/yyyy hh:mm:ss', 'type' => 'text', :required=> 'required'
         %span.add-on
           %i{ 'data-time-icon' => 'icon-time', 'data-date-icon' => 'icon-calendar'}
           :javascript
@@ -36,10 +71,9 @@
                     language: 'pt-BR'
                 });
             });
-    .control-group
-      .controls
-        %br
-        = f.simple_captcha :label => "Enter numbers.."
+  %br
+  = f.simple_captcha :label => "Enter numbers.."
+  %br
   %div
     = f.submit t('make_order'), :class => 'btn btn-primary'
     = link_to t('.cancel', :default => t("helpers.links.cancel")), orders_path, :class => 'btn'
