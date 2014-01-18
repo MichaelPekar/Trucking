@@ -2,34 +2,70 @@
 .page-header
   %h1=t '.title', :default => model_class.model_name.human.titleize
 
-%p
-  %strong= model_class.human_attribute_name(:company) + ':'
-  %br
-  = @order.company
-%p
-  %strong= model_class.human_attribute_name(:contact_person) + ':'
-  %br
-  = @order.contact_person
-%p
-  %strong= model_class.human_attribute_name(:address) + ':'
-  %br
-  = @order.address
-%p
-  %strong= model_class.human_attribute_name(:cargo) + ':'
-  %br
-  = @order.cargo
-%p
-  %strong= model_class.human_attribute_name(:from_address) + ':'
-  %br
-  = @order.from_address
-%p
-  %strong= model_class.human_attribute_name(:to_address) + ':'
-  %br
-  = @order.to_address
-%p
-  %strong= model_class.human_attribute_name(:start_date) + ':'
-  %br
-  = @order.start_date
+
+.row-fluid
+  .span3
+    .form-label
+      = t 'order_form.company'
+      = ':'
+  .span9
+    = @order.company
+%br
+.row-fluid
+  .span3
+    .form-label
+      = t 'order_form.contact_person'
+      = ':'
+  .span9
+    = @order.contact_person
+%br
+.row-fluid
+  .span3
+    .form-label
+      = t 'order_form.phone'
+      = ':'
+  .span9
+    = @order.phone
+%br
+.row-fluid
+  .span3
+    .form-label
+      = t 'order_form.email'
+      = ':'
+  .span9
+    = @order.email
+%br
+.row-fluid
+  .span3
+    .form-label
+      = t 'order_form.cargo'
+      = ':'
+  .span9
+    = @order.cargo
+%br
+.row-fluid
+  .span3
+    .form-label
+      = t 'order_form.from_address'
+      = ':'
+  .span9
+    = @order.from_address
+%br
+.row-fluid
+  .span3
+    .form-label
+      = t 'order_form.to_address'
+      = ':'
+  .span9
+    = @order.to_address
+%br
+.row-fluid
+  .span3
+    .form-label
+      = t 'order_form.start_date'
+      = ':'
+  .span9
+    = @order.start_date
 
 .form-actions
   = link_to t('.back', :default => t("helpers.links.back")), admin_orders_path, :class => 'btn'

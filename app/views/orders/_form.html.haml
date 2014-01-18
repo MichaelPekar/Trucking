@@ -45,7 +45,7 @@
         = t 'order_form.from_address'
         = ':'
     .span9
-      = f.text_area :cargo, class: 'span_12', rows: 3, placeholder: t('order_form.from_address_placeholder'), style: 'resize: none'
+      = f.text_area :from_address, class: 'span_12', rows: 3, placeholder: t('order_form.from_address_placeholder'), style: 'resize: none'
   %br
   .row-fluid
     .span3
@@ -53,7 +53,7 @@
         = t 'order_form.to_address'
         = ':'
     .span9
-      = f.text_area :cargo, class: 'span_12', rows: 3, placeholder: t('order_form.to_address_placeholder'), style: 'resize: none'
+      = f.text_area :to_address, class: 'span_12', rows: 3, placeholder: t('order_form.to_address_placeholder'), style: 'resize: none'
   %br
   .row-fluid
     .span3

@@ -32,6 +32,8 @@ en:
     cz: 'Czech Republic'
     pl: 'Poland'
   order_form:
+    order: Order
+    orders: Orders
     company: Company Name
     company_placeholder: Please enter you'r company name
     contact_person: Contact Person
