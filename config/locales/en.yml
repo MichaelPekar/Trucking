@@ -49,5 +49,9 @@ en:
     to_address: To address
     to_address_placeholder: Please enter to address
     start_date: Start date
+    additional_info: Additional info
+    additional_info_placeholder: Please enter additional info
   simple_captcha:
     placeholder: Please type the code from the image
+  validation_errors:
+    blank: Can't be blank
