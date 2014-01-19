@@ -37,14 +37,35 @@ ua:
     email_placeholder:           'Будь ласка, введіть адресу електронної пошти'
     cargo:                       'Назва та особливості вантажу'
     cargo_placeholder:           'Будь ласка, введіть назву і особливості вантажу'
-    from_address:                'Адреса відправлення'
+    from_address:                'Звідки'
     from_address_placeholder:    'Будь ласка, введіть адресу відправлення'
-    to_address:                  'Адреса прибуття'
+    to_address:                  'Куди'
     to_address_placeholder:      'Будь ласка, введіть адресу прибуття'
-    start_date:                  'Дата початку'
+    start_date:                  'Дата'
     additional_info:             'Додаткова інформація'
     additional_info_placeholder: 'Будь ласка, введіть додаткову інформацію'
   simple_captcha:
     placeholder:                 'Будь ласка, введіть код, вказаний на зображенні'
   validation_errors:
     blank:                       'Не може бути порожнім'
+  devise:
+    resend_confirm_instructions:                                        'Надіслати підтвердження реєстрації ще раз'
+    email_label:                                                        'Введіть адресу електронної пошти'
+    change_your_password:                                               'Змінити пароль'
+    new_password:                                                       'Новий пароль'
+    confirm_new_password:                                               "Підтвердження нового пароля"
+    change_my_password:                                                 "Зміна пароля"
+    forgot_password:                                                    "Забули пароль"
+    send_restore_passwords_instructions:                                'Відправити інструкцію по відновлення пароля'
+    registration:                                                       "Реєстрація"
+    sign_up:                                                            'Зареєструватися'
+    profile:                                                            'Профіль'
+    password:                                                           'Пароль'
+    leave_blanck:                                                       "Залиште порожнім, якщо не хочете змінювати"
+    password_confirmation:                                              'Підтвердження пароля'
+    current_password:                                                   "Поточний пароль"
+    save_changes:                                                       "Зберегти зміни"
+    back:                                                               "Назад"
+    enter:                                                              "Увійти"
+    exit:                                                               'Вихід'
+    didnt_receive:                                                      "Не отримали лист із підтвердженням?"

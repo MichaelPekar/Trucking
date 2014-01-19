@@ -48,3 +48,24 @@ pl:
     placeholder:                 'Proszę wpisać kod z obrazka'
   validation_errors:
     blank:                       'Nie może być puste'
+  devise:
+    resend_confirm_instructions:                                        "Wyślij ponownie potwierdzenie instrukcje"
+    email_label:                                                        "Wpisz adres e-mail"
+    change_your_password:                                               "Zmiana hasła"
+    new_password:                                                       'Nowe hasło'
+    confirm_new_password:                                               "Potwierdź nowe hasło"
+    change_my_password:                                                 "Zmiana hasła"
+    forgot_password:                                                    "Zapomniałem hasła"
+    send_restore_passwords_instructions:                                "Wyślij przywrócić instrukcje Hasło"
+    registration:                                                       "Rejestracja"
+    sign_up:                                                            "Zapisz się"
+    profile:                                                            "Profil"
+    password:                                                           "Hasło"
+    leave_blanck:                                                       "Pozostaw puste, jeśli ne aby zmienić"
+    password_confirmation:                                              "Potwierdzenie hasła"
+    current_password:                                                   "Bieżące hasło"
+    save_changes:                                                       "Zapisz zmiany"
+    back:                                                               'Powrót'
+    enter:                                                              "Zaloguj się"
+    exit:                                                               "Wyloguj"
+    didnt_receive:                                                      "Nie otrzymałeś instrukcji potwierdzania?"

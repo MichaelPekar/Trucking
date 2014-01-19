@@ -69,8 +69,8 @@
                 = link_to raw("<span>#{ t 'tabs.partners' }</span>"), pages_partners_path, class: "#{ "active" if params[:action] == 'partners'}"
               %li
                 = link_to raw("<span>#{ t 'make_order' }</span>"), new_order_path, class: "#{ "active" if params[:action] == 'new'}"
-              %li
-                = link_to raw("<span>#{ t 'tabs.team' }</span>"), pages_team_path, class: "#{ "active" if params[:action] == 'team'}"
+              -#%li
+              -#  = link_to raw("<span>#{ t 'tabs.team' }</span>"), pages_team_path, class: "#{ "active" if params[:action] == 'team'}"
               %li.last
                 = link_to raw("<span>#{ t 'tabs.contact' }</span>"), pages_contact_path, class: "#{ "active" if params[:action] == 'contact'}"
         .row-3
@@ -106,8 +106,8 @@
                 = link_to t('tabs.partners'), pages_partners_path, class: "#{ "active" if params[:action] == 'partners'}"
               %li
                 = link_to t('make_order'), new_order_path, class: "#{ "active" if params[:action] == 'new'}"
-              %li
-                = link_to t('tabs.team'), pages_team_path, class: "#{ "active" if params[:action] == 'team'}"
+              -#%li
+              -#  = link_to t('tabs.team'), pages_team_path, class: "#{ "active" if params[:action] == 'team'}"
               %li.last
                 = link_to t('tabs.contact'), pages_contact_path, class: "#{ "active" if params[:action] == 'contact'}"
         .footerlink

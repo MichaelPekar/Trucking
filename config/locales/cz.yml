@@ -48,3 +48,24 @@ cz:
     placeholder:                 'Zadejte prosim kod z obrazku'
   validation_errors:
     blank:                       'Nemuze byt prazdny'
+  devise:
+    resend_confirm_instructions:                                        "Znovu poslat potvrzení pokyny"
+    email_label:                                                        "Zadejte Váš e-mail"
+    change_your_password:                                               "Změnit heslo"
+    new_password:                                                       'Nové heslo'
+    confirm_new_password:                                               "Potvrzení nového hesla"
+    change_my_password:                                                 "Změnit heslo"
+    forgot_password:                                                    "Zapomněli jste heslo?"
+    send_restore_passwords_instructions:                                "Poslat nové pokyny hesla"
+    registration:                                                       "Registrace"
+    sign_up:                                                            "Registrace"
+    profile:                                                            "Profil"
+    password:                                                           "Heslo"
+    leave_blanck:                                                       "Ponechte prázdné, pokud jste ne změnit"
+    password_confirmation:                                              "Potvrzení hesla"
+    current_password:                                                   "Aktuální heslo"
+    save_changes:                                                       "Uložit změny"
+    back:                                                               "Zpět"
+    enter:                                                              "Přihlásit se"
+    exit:                                                               'Odhlásit se'
+    didnt_receive:                                                      "Neobdrželi jste potvrzující informaci?"

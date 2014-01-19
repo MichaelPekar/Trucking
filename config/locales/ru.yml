@@ -37,14 +37,35 @@ ru:
     email_placeholder:           'Пожалуйста, введите адрес электронной почты'
     cargo:                       'Название и особенности груза'
     cargo_placeholder:           'Пожалуйста, введите название и особенности груза'
-    from_address:                'Адрес отправления'
+    from_address:                'Откуда'
     from_address_placeholder:    'Пожалуйста, введите адрес отправления'
-    to_address:                  'Адрес назначения'
+    to_address:                  'Куда'
     to_address_placeholder:      'Пожалуйста, введите адрес назначения'
-    start_date:                  'Дата начала'
+    start_date:                  'Дата'
     additional_info:             'Дополнительная информация'
     additional_info_placeholder: 'Пожалуйста, введите дополнительную информацию'
   simple_captcha:
     placeholder:                 'Пожалуйста, введите код, указанный на картинке'
   validation_errors:
     blank:                       'Не может быть пустым'
+  devise:
+    resend_confirm_instructions:                                        'Прислать подтверждение ещё раз'
+    email_label:                                                        'Введите адрес электронной почты'
+    change_your_password:                                               'Изменить пароль'
+    new_password:                                                       'Новый пароль'
+    confirm_new_password:                                               "Подтвердите новый пароль"
+    change_my_password:                                                 "Изменение пароля"
+    forgot_password:                                                    "Забыли пароль"
+    send_restore_passwords_instructions:                                'Отправить инструкции по восстановлению пароля'
+    registration:                                                       "Регистрация"
+    sign_up:                                                            'Зарегистрироваться'
+    profile:                                                            'Профиль'
+    password:                                                           'Пароль'
+    leave_blanck:                                                       "Оставьте пустым, если не собираетесь изменять"
+    password_confirmation:                                              'Подтверждение пароля'
+    current_password:                                                   "Текущий пароль"
+    save_changes:                                                       "Сохранить изменения"
+    back:                                                               "Назад"
+    enter:                                                              "Войти"
+    exit:                                                               'Выход'
+    didnt_receive:                                                      "Не получили письмо с подтверждением?"

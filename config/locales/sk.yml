@@ -48,3 +48,24 @@ sk:
     placeholder:                 'Zadajte prosím kód z obrázku'
   validation_errors:
     blank:                       'Nemôže byť prázdne'
+  devise:
+    resend_confirm_instructions:                                        "Znovu poslať potvrdenie pokyny"
+    email_label:                                                        "Zadajte Váš e-mail"
+    change_your_password:                                               "Zmeniť heslo"
+    new_password:                                                       'Nové heslo'
+    confirm_new_password:                                               "Potvrdenie nového hesla"
+    change_my_password:                                                 "Zmeniť heslo"
+    forgot_password:                                                    "Zabudli ste heslo?"
+    send_restore_passwords_instructions:                                "Poslať obnoviť pokyny hesla"
+    registration:                                                       "Registrácia"
+    sign_up:                                                            "Registrácia"
+    profile:                                                            "Profil"
+    password:                                                           "Heslo"
+    leave_blanck:                                                       "Ponechajte prázdne, ak  nechcete zmeniť"
+    password_confirmation:                                              "Potvrdenie hesla"
+    current_password:                                                   "Aktuálne heslo"
+    save_changes:                                                       "Uložiť zmeny"
+    back:                                                               "Späť"
+    enter:                                                              "Prihlásiť sa"
+    exit:                                                               'Odhlásiť sa'
+    didnt_receive:                                                      "Nedostali ste potvrdzujúci informáciu?"

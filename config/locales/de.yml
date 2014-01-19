@@ -48,3 +48,24 @@ de:
     placeholder:                 'Bitte geben Sie den Code aus dem Bild'
   validation_errors:
     blank:                       'Darf nicht leer sein'
+  devise:
+    resend_confirm_instructions:                                        "Erneut senden Best?tigungsanweisungen"
+    email_label:                                                        "Geben Sie Ihre E-Mail"
+    change_your_password:                                               "?ndern Sie Ihr Passwort"
+    new_password:                                                       "Neues Kennwort"
+    confirm_new_password:                                               "Neues Kennwort best?tigen"
+    change_my_password:                                                 "Eigenes Kennwort ?ndern"
+    forgot_password:                                                    "Passwort vergessen"
+    send_restore_passwords_instructions:                                "Senden wiederherstellen passwort Anweisungen "
+    registration:                                                       "Registrierung"
+    sign_up:                                                            'Registrieren'
+    profile:                                                            "Profil"
+    password:                                                           'Passwort'
+    leave_blanck:                                                       "Leer lassen, wenn Sie nicht ?ndern"
+    password_confirmation:                                              "Passwort-Best?tigung"
+    current_password:                                                   "Aktuelles Kennwort"
+    save_changes:                                                       "?nderungen speichern"
+    back:                                                               'Zur?ck'
+    enter:                                                              'Anmelden'
+    exit:                                                               "Abmelden"
+    didnt_receive:                                                      "Hast Best?tigungsanweisungen nicht empfangen hast?"

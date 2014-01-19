@@ -44,14 +44,35 @@ en:
     email_placeholder:           'Please enter your email'
     cargo:                       'Name and features of the cargo'
     cargo_placeholder:           'Please enter name and features of the cargo'
-    from_address:                'From address'
+    from_address:                'From'
     from_address_placeholder:    'Please enter from address'
-    to_address:                  'To address'
+    to_address:                  'To'
     to_address_placeholder:      'Please enter to address'
-    start_date:                  'Start date'
+    start_date:                  'Date'
     additional_info:             'Additional info'
     additional_info_placeholder: 'Please enter additional info'
   simple_captcha:
     placeholder:                 'Please type the code from the image'
   validation_errors:
     blank:                       "Can\'t be blank"
+  devise:
+    resend_confirm_instructions:                                        'Resend confirmation instructions'
+    email_label:                                                        'Enter your email'
+    change_your_password:                                               'Change your password'
+    new_password:                                                       'New password'
+    confirm_new_password:                                               'Confirm new password'
+    change_my_password:                                                 'Change my password'
+    forgot_password:                                                    'Forgot password'
+    send_restore_passwords_instructions:                                'Send restore password instructions'
+    registration:                                                       'Registration'
+    sign_up:                                                            'Sign Up'
+    profile:                                                            'Profile'
+    password:                                                           'Password'
+    leave_blanck:                                                       "Leave blank if you don\'t to change"
+    password_confirmation:                                              'Password confirmation'
+    current_password:                                                   'Current password'
+    save_changes:                                                       'Save changes'
+    back:                                                               'Back'
+    enter:                                                              'Log In'
+    exit:                                                               'Log Out'
+    didnt_receive:                                                      "Didn't receive confirmation instructions?"

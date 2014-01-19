@@ -1,5 +1,5 @@
 %h2.title.calibri
-  Інформація профілю
+  = t('devise.profile')
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
   = devise_error_messages!
   .row-fluid
@@ -11,23 +11,19 @@
         Currently waiting confirmation for:
         = resource.unconfirmed_email
       %br
-    Пароль
+    = t('devise.password')
     %i
-      Залиште пустим якщо не збираєтесь змінювати
+      - t('devise.leave_blanck')
     = f.password_field :password, :autocomplete => "off", class: 'span_12 text_field'
     %br
-    Підтвердження пароля
+    - t('devise.password_confirmation')
     = f.password_field :password_confirmation, class: 'span_12 text_field'
     %br
-    Текучий пароль
+    = t('devise.current_password')
     = f.password_field :current_password, class: 'span_12 text_field'
-    = f.submit "Зберегти зміни", class: 'btn btn-info'
-    = link_to "Назад", :back, class: 'btn'
+    = f.submit t('devise.save_changes'), class: 'btn btn-info'
+    = link_to t('devise.back'), :back, class: 'btn'
 
-Cancel my account
-%br
-Unhappy?
-= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete
 
 
 
