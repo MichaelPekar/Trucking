@@ -5,11 +5,6 @@ en:
   trucking: Trucking
   news: News
   make_order: Make Order
-  gallery:
-    slide1_html: We will arrange delivery of <b>your cargo </b>to the point of discharge.
-    slide2_html: <b> Flexible pricing </b>and <b>competent management </b>allow us always to compromise and move forward <b>together with you. </b>
-    slide3_html: <b> Individual approach </b>to each client.
-    slide4_html: Our team of specialists and managers <b>solve your most ambitious tasks. </b>
   helpers:
     titles:
       new: New %{model}
@@ -36,3 +31,48 @@ en:
     sk: 'Slovakia'
     cz: 'Czech Republic'
     pl: 'Poland'
+  order_form:
+    order:                       'Order'
+    orders:                      'Orders'
+    company:                     'Company Name'
+    company_placeholder:         'Please enter your company name'
+    contact_person:              'Contact Person'
+    contact_person_placeholder:  'Please enter your name'
+    phone:                       'Phone'
+    phone_placeholder:           'Please enter your phone'
+    email:                       'Email'
+    email_placeholder:           'Please enter your email'
+    cargo:                       'Name and features of the cargo'
+    cargo_placeholder:           'Please enter name and features of the cargo'
+    from_address:                'From'
+    from_address_placeholder:    'Please enter from address'
+    to_address:                  'To'
+    to_address_placeholder:      'Please enter to address'
+    start_date:                  'Date'
+    additional_info:             'Additional info'
+    additional_info_placeholder: 'Please enter additional info'
+  simple_captcha:
+    placeholder:                 'Please type the code from the image'
+  validation_errors:
+    blank:                       "Can\'t be blank"
+  devise:
+    resend_confirm_instructions:                                        'Resend confirmation instructions'
+    email_label:                                                        'Enter your email'
+    change_your_password:                                               'Change your password'
+    new_password:                                                       'New password'
+    confirm_new_password:                                               'Confirm new password'
+    change_my_password:                                                 'Change my password'
+    forgot_password:                                                    'Forgot password'
+    send_restore_passwords_instructions:                                'Send restore password instructions'
+    registration:                                                       'Registration'
+    sign_up:                                                            'Sign Up'
+    profile:                                                            'Profile'
+    password:                                                           'Password'
+    leave_blanck:                                                       "Leave blank if you don\'t to change"
+    password_confirmation:                                              'Password confirmation'
+    current_password:                                                   'Current password'
+    save_changes:                                                       'Save changes'
+    back:                                                               'Back'
+    enter:                                                              'Log In'
+    exit:                                                               'Log Out'
+    didnt_receive:                                                      "Didn't receive confirmation instructions?"

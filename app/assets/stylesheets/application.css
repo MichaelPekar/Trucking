@@ -85,3 +85,16 @@ body{
     color: #1f7dd2;
 }
 
+.form-label{
+    font-weight: bold;
+    text-align: right;
+}
+
+.error-text{
+    color: red;
+}
+
+.error{
+    border: 1px solid red !important;
+}
+

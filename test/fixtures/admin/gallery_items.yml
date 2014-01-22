@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  en_text: MyString
+  de_text: MyString
+  ru_text: MyString
+  ua_text: MyString
+  sk_text: MyString
+  cz_text: MyString
+  pl_text: MyString
+
+two:
+  en_text: MyString
+  de_text: MyString
+  ru_text: MyString
+  ua_text: MyString
+  sk_text: MyString
+  cz_text: MyString
+  pl_text: MyString

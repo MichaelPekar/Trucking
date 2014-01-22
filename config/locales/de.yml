@@ -2,11 +2,6 @@ de:
   trucking: Trucking
   news: Neuigkeiten
   make_order: Ordnung machen
-  gallery:
-    slide1_html: Wir werden Anlieferung <b>Ihre Ladung </b>, um die Einleitungsstelle zu vereinbaren.
-    slide2_html: <b> Flexible Preisgestaltung </b>und <b>kompetentes Management </b>können wir immer Kompromisse eingehen und sich zu bewegen <b>gemeinsam mit Ihnen. </b>
-    slide3_html: <b> Individuellen Ansatz </b>für jeden Kunden.
-    slide4_html: Unser Team von Spezialisten und Führungskräften <b>lösen Ihre ehrgeizigsten Aufgaben. </b>
   tabs:
     home: Zuhause
     contact: Kontaktieren Sie uns
@@ -29,3 +24,48 @@ de:
     sk: 'Slowakei'
     cz: 'Tschechien'
     pl: 'Polen'
+  order_form:
+    order:                       'bestellen'
+    orders:                      'Bestellungen'
+    company:                     'Name des Unternehmens'
+    company_placeholder:         'Bitte geben Sie den Namen Ihres Unternehmens'
+    contact_person:              'Ansprechpartner'
+    contact_person_placeholder:  'Bitte geben Sie Ihren Namen'
+    phone:                       'Telefon'
+    phone_placeholder:           'Bitte geben Sie Ihre Telefon'
+    email:                       'E-Mail'
+    email_placeholder:           'Bitte geben Sie Ihre E-Mail'
+    cargo:                       'Namen und Funktionen der Lade'
+    cargo_placeholder:           'Bitte geben Sie Namen und Funktionen der Fracht'
+    from_address:                'von-Adresse'
+    from_address_placeholder:    'Bitte geben Sie Adresse aus'
+    to_address:                  'Zum Adressieren'
+    to_address_placeholder:      'Bitte geben Sie an die Adresse'
+    start_date:                  'Startdatum'
+    additional_info:             'Zusatzinfo'
+    additional_info_placeholder: 'Bitte geben Sie zusätzliche Informationen'
+  simple_captcha:
+    placeholder:                 'Bitte geben Sie den Code aus dem Bild'
+  validation_errors:
+    blank:                       'Darf nicht leer sein'
+  devise:
+    resend_confirm_instructions:                                        "Erneut senden Best?tigungsanweisungen"
+    email_label:                                                        "Geben Sie Ihre E-Mail"
+    change_your_password:                                               "?ndern Sie Ihr Passwort"
+    new_password:                                                       "Neues Kennwort"
+    confirm_new_password:                                               "Neues Kennwort best?tigen"
+    change_my_password:                                                 "Eigenes Kennwort ?ndern"
+    forgot_password:                                                    "Passwort vergessen"
+    send_restore_passwords_instructions:                                "Senden wiederherstellen passwort Anweisungen "
+    registration:                                                       "Registrierung"
+    sign_up:                                                            'Registrieren'
+    profile:                                                            "Profil"
+    password:                                                           'Passwort'
+    leave_blanck:                                                       "Leer lassen, wenn Sie nicht ?ndern"
+    password_confirmation:                                              "Passwort-Best?tigung"
+    current_password:                                                   "Aktuelles Kennwort"
+    save_changes:                                                       "?nderungen speichern"
+    back:                                                               'Zur?ck'
+    enter:                                                              'Anmelden'
+    exit:                                                               "Abmelden"
+    didnt_receive:                                                      "Hast Best?tigungsanweisungen nicht empfangen hast?"

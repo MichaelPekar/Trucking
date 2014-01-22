@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140117112405) do
+ActiveRecord::Schema.define(:version => 20140118143727) do
 
   create_table "admin_about_us_pages", :force => true do |t|
     t.text     "content"
@@ -38,6 +38,22 @@ ActiveRecord::Schema.define(:version => 20140117112405) do
     t.string   "lang"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "admin_gallery_items", :force => true do |t|
+    t.string   "en_text"
+    t.string   "de_text"
+    t.string   "ru_text"
+    t.string   "ua_text"
+    t.string   "sk_text"
+    t.string   "cz_text"
+    t.string   "pl_text"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "admin_page_sections", :force => true do |t|
@@ -82,14 +98,16 @@ ActiveRecord::Schema.define(:version => 20140117112405) do
   create_table "orders", :force => true do |t|
     t.string   "company"
     t.string   "contact_person"
-    t.string   "address"
     t.string   "cargo"
     t.string   "from_address"
     t.string   "to_address"
     t.datetime "start_date"
     t.integer  "user_id"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.string   "phone"
+    t.string   "email"
+    t.text     "additional_info"
   end
 
   create_table "roles", :force => true do |t|

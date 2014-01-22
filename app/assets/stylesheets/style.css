@@ -485,7 +485,7 @@ h3 b, h4 b {
 #header .row-2 ul li a {
 	text-decoration:none;
 	color:#fff;
-	width: 154px;
+	width: 186px;
 	text-align:center;
 	display:block;
 	cursor:pointer;
@@ -497,7 +497,7 @@ h3 b, h4 b {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    width: 154px;
+    width: 186px;
 }
 #header .row-2 ul li a:hover, #header .row-2 ul li a.active {
 	background:url(nav-act.png) repeat-x left top;

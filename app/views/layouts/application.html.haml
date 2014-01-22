@@ -69,35 +69,31 @@
                 = link_to raw("<span>#{ t 'tabs.partners' }</span>"), pages_partners_path, class: "#{ "active" if params[:action] == 'partners'}"
               %li
                 = link_to raw("<span>#{ t 'make_order' }</span>"), new_order_path, class: "#{ "active" if params[:action] == 'new'}"
-              %li
-                = link_to raw("<span>#{ t 'tabs.team' }</span>"), pages_team_path, class: "#{ "active" if params[:action] == 'team'}"
+              -#%li
+              -#  = link_to raw("<span>#{ t 'tabs.team' }</span>"), pages_team_path, class: "#{ "active" if params[:action] == 'team'}"
               %li.last
                 = link_to raw("<span>#{ t 'tabs.contact' }</span>"), pages_contact_path, class: "#{ "active" if params[:action] == 'contact'}"
         .row-3
           .inside
             = render partial: 'layouts/gallery'
       #content
-        .row-fluid
-          .span3
-            = link_to t('make_order'), new_order_path, class: "btn btn-primary btn-large", style: "width: 174px"
-            %br
-            %br
-            = render partial: 'informers/fuel'
-            %br
-            %br
-            = render partial: 'informers/weather'
-          .span6
-            = yield
-          .span3
-            -#%h4.calibri
-            -#  %b
-            -#    = t :news
-            = render partial: 'informers/news'
-            -#%br
-            -#%h4.calibri
-            -#  %b
-            -#    = t('tabs.partners')
-            -#= render partial: 'informers/partners'
+        %table
+          %tr
+            %td{ style: 'width: 222px; vertical-align: top'}
+              = link_to t('make_order'), new_order_path, class: "btn btn-primary btn-large", style: "width: 174px"
+              %br
+              %br
+              = render partial: 'informers/fuel'
+              %br
+              %br
+              = render partial: 'informers/exchange_rates'
+              %br
+              %br
+              = render partial: 'informers/weather'
+            %td{ style: 'width: 468px; padding-left: 24px; vertical-align: top' }
+              = yield
+            %td{ style: 'width: 222; padding-left: 24px; vertical-align: top' }
+              = render partial: 'informers/news'
       #footer
         .footer-nav
           .left
@@ -110,8 +106,8 @@
                 = link_to t('tabs.partners'), pages_partners_path, class: "#{ "active" if params[:action] == 'partners'}"
               %li
                 = link_to t('make_order'), new_order_path, class: "#{ "active" if params[:action] == 'new'}"
-              %li
-                = link_to t('tabs.team'), pages_team_path, class: "#{ "active" if params[:action] == 'team'}"
+              -#%li
+              -#  = link_to t('tabs.team'), pages_team_path, class: "#{ "active" if params[:action] == 'team'}"
               %li.last
                 = link_to t('tabs.contact'), pages_contact_path, class: "#{ "active" if params[:action] == 'contact'}"
         .footerlink

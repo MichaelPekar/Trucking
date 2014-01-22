@@ -1,0 +1,36 @@
+<style>
+    #IUAfinance53 { min-width: 175px; width: 217px; cursor: pointer;}
+    #IUAfinance53 * {margin: 0; padding: 0;}
+    #IUAfinance53 .content {overflow: hidden; padding: 4px; font-family: Arial; font-size: 10px; color: #000000; background: #eeeeee; border: 1px solid #1166cc;}
+    #IUAfinance53 h1 {overflow: hidden; margin-top: -4px; font-size: 12px; font-weight: bold; height: 20px; line-height: 20px; color: #1166cc;}
+    #IUAfinance53 h1 span {float: left; white-space: nowrap;}
+    #IUAfinance53 h1 i {float: right; display: inline-block; width: 36px; height: 15px; background: url(http://i.i.ua/v2/logo/logo_small_14_black.png) no-repeat 0 1px transparent; opacity: .3;}
+    #IUAfinance53 a, #IUAfinance53 a:hover {border: none; text-decoration: underline; color: #1166cc;}
+    #IUAfinance53 dl {overflow: hidden; background: #ffffff; padding: 4px; margin-bottom: 4px;}
+    #IUAfinance53 dl dt {font-weight: bold; font-size: 12px;}
+    #IUAfinance53 dl dd {clear: left; border-top: 1px dotted #DDD;}
+    #IUAfinance53 dl span {display: block; float: left; width: 39%; white-space: nowrap; text-align: right;}
+    #IUAfinance53 dl span.th {width: 22%; text-align: left;}
+    #IUAfinance53 dl dt span {font-size: 10px; font-weight: normal;}
+    #IUAfinance53 dl dd span {line-height: 24px; font-size: 20px; font-family: Trebuchet MS;}
+    #IUAfinance53 dl dd span img {vertical-align: middle; margin-right: 1px;}
+</style>
+<div id="IUAfinance53">
+  <div class="content">
+    <h1><span><a href="http://finance.i.ua/bank/15/" id="IUAfinance53TitleLink">Курсы валют</a></span><i></i></h1>
+    <dl id="IUAfinance53Embed"></dl>
+    <a href="http://finance.i.ua/">Курсы доллара, евро и рубля по банкам</a>
+  </div>
+</div>
+<script type="text/javascript">
+    if (typeof(iFinance) == "undefined") {
+        if (typeof(iFinanceData) == "undefined") {
+            document.write('<scr' + 'ipt src="http://i.i.ua/js/i/finance_informer.js?1" type="text/javascript" charset = "windows-1251"></scr' + 'ipt>');
+            iFinanceData = [];
+        }
+        iFinanceData.push({b:15,c:[840,978,643],enc:0, lang:0,p:'53'});
+    } else {
+        window['oiFinance53'] = new iFinance();
+        window['oiFinance53'].gogo({b:15,c:[840,978,643],enc:0, lang:0,p:'53'});
+    }
+</script>

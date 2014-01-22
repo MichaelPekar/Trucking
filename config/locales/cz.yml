@@ -1,31 +1,71 @@
 cz:
-  trucking: Přepravní
-  news: Zprávy
-  make_order: Aby objednávka
-  gallery:
-    slide1_html: Zajistíme dodání <b>vašeho nákladu </b>k místu vypouštění.
-    slide2_html: <b> Flexibilní cenová </b>a <b>příslušné řízení </b>, aby nám vždy ke kompromisu a pokročit <b>společně s vámi.</b>
-    slide3_html: <b> Individuální přístup </b>ke každému klientovi.
-    slide4_html: Náš tým specialistů a manažerů <b>vyřešit vaše nejnáročnější úkoly. </b>
+  trucking: Prepravni
+  news: Zpravy
+  make_order: Aby objednavka
   tabs:
-    home: Domácí
-    contact: Kontaktujte nás
-    team: Náš tým
-    partners: Partneři
-    services: Služby
-    about: O nás
+    home: Domaci
+    contact: Kontaktujte nas
+    team: Nas tym
+    partners: Partneri
+    services: Sluzby
+    about: O nas
   icons:
-    login: Přihlásit
+    login: Prihlasit
     logout: Exit
-    home: Domů
+    home: Domu
     admin: Admin
     profile: Profil
-    orders: Objednávky
+    orders: Objednavky
   countries:
-    en: 'Velká Británie (UK)'
-    de: 'Německo'
-    ru: 'Ruská federace'
+    en: 'Velka Britanie (UK)'
+    de: 'Nemecko'
+    ru: 'Ruska federace'
     ua: 'Ukrajina'
     sk: 'Slovensko'
-    cz: 'Česká republika'
+    cz: 'Ceska republika'
     pl: 'Polsko'
+  order_form:
+    order:                       'Objednavka'
+    orders:                      'Objednavky'
+    company:                     'Nazev spolecnosti'
+    company_placeholder:         'Prosim, zadejte nazev vasi spolecnosti'
+    contact_person:              'Kontaktni osoba'
+    contact_person_placeholder:  'Prosim, zadejte sve jmeno'
+    phone:                       'telefon'
+    phone_placeholder:           'Prosim zadejte svuj telefon'
+    email:                       'E-mail'
+    email_placeholder:           'Prosim zadejte svuj e-mail'
+    cargo:                       'Jmeno a funkce nakladu'
+    cargo_placeholder:           'Prosim, zadejte nazev a vlastnosti nakladu'
+    from_address:                'z adresy'
+    from_address_placeholder:    'Prosim, zadejte z adresy'
+    to_address:                  'Pro reseni'
+    to_address_placeholder:      'Prosim, zadejte na adresu'
+    start_date:                  'datum zahajeni'
+    additional_info:             'Dalsi informace'
+    additional_info_placeholder: 'Zadejte prosim dalsi informace'
+  simple_captcha:
+    placeholder:                 'Zadejte prosim kod z obrazku'
+  validation_errors:
+    blank:                       'Nemuze byt prazdny'
+  devise:
+    resend_confirm_instructions:                                        "Znovu poslat potvrzení pokyny"
+    email_label:                                                        "Zadejte Váš e-mail"
+    change_your_password:                                               "Změnit heslo"
+    new_password:                                                       'Nové heslo'
+    confirm_new_password:                                               "Potvrzení nového hesla"
+    change_my_password:                                                 "Změnit heslo"
+    forgot_password:                                                    "Zapomněli jste heslo?"
+    send_restore_passwords_instructions:                                "Poslat nové pokyny hesla"
+    registration:                                                       "Registrace"
+    sign_up:                                                            "Registrace"
+    profile:                                                            "Profil"
+    password:                                                           "Heslo"
+    leave_blanck:                                                       "Ponechte prázdné, pokud jste ne změnit"
+    password_confirmation:                                              "Potvrzení hesla"
+    current_password:                                                   "Aktuální heslo"
+    save_changes:                                                       "Uložit změny"
+    back:                                                               "Zpět"
+    enter:                                                              "Přihlásit se"
+    exit:                                                               'Odhlásit se'
+    didnt_receive:                                                      "Neobdrželi jste potvrzující informaci?"

@@ -1,18 +1,11 @@
 %h2.title.calibri
-  Вхід
+  = t('devise.enter')
 = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
   .row-fluid
     = f.email_field :email, :autofocus => true, placeholder: 'Email', class: 'span_12 text_field'
     %br
     = f.password_field :password, placeholder: 'Password', class: 'span_12 text_field'
-
-  - if devise_mapping.rememberable?
-    %label.checkbox.inline
-      = f.check_box :remember_me
-      Залишатися в системі.
-
-
   %div
-    = f.submit "Увійти", class: 'btn btn-info'
+    = f.submit t('devise.enter'), class: 'btn btn-info'
 
 = render "devise/shared/links"

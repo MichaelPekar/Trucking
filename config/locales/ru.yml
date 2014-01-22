@@ -2,11 +2,6 @@ ru:
   trucking: Грузоперевозки
   news: Новости
   make_order: Оформить заказ
-  gallery:
-    slide1_html: Мы организуем<b> доставку Вашего груза</b> до места разгрузки.
-    slide2_html: <b>Гибкая ценовая политика</b> и<b> грамотный менеджмент </b>позволяют нам всегда находить компромисы и идти вперед<b> вместе с Вами.</b>
-    slide3_html: <b>Индивидуальний подход </b>к каждому клиенту.
-    slide4_html: Наша команда специалистов и менеджеров решит <b>Ваши самые амбициозные задачи.</b>
   tabs:
     home: Главная
     contact: Контакты
@@ -29,3 +24,48 @@ ru:
     sk: 'Словакия'
     cz: 'Чехия'
     pl: 'Польша'
+  order_form:
+    order:                       'Заказ'
+    orders:                      'Заказы'
+    company:                     'Название компании'
+    company_placeholder:         'Пожалуйста, введите название вашей компании'
+    contact_person:              'Контактное лицо'
+    contact_person_placeholder:  'Пожалуйста, введите свое имя'
+    phone:                       'телефон'
+    phone_placeholder:           'Пожалуйста, введите ваш телефон'
+    email:                       'E-mail'
+    email_placeholder:           'Пожалуйста, введите адрес электронной почты'
+    cargo:                       'Название и особенности груза'
+    cargo_placeholder:           'Пожалуйста, введите название и особенности груза'
+    from_address:                'Откуда'
+    from_address_placeholder:    'Пожалуйста, введите адрес отправления'
+    to_address:                  'Куда'
+    to_address_placeholder:      'Пожалуйста, введите адрес назначения'
+    start_date:                  'Дата'
+    additional_info:             'Дополнительная информация'
+    additional_info_placeholder: 'Пожалуйста, введите дополнительную информацию'
+  simple_captcha:
+    placeholder:                 'Пожалуйста, введите код, указанный на картинке'
+  validation_errors:
+    blank:                       'Не может быть пустым'
+  devise:
+    resend_confirm_instructions:                                        'Прислать подтверждение ещё раз'
+    email_label:                                                        'Введите адрес электронной почты'
+    change_your_password:                                               'Изменить пароль'
+    new_password:                                                       'Новый пароль'
+    confirm_new_password:                                               "Подтвердите новый пароль"
+    change_my_password:                                                 "Изменение пароля"
+    forgot_password:                                                    "Забыли пароль"
+    send_restore_passwords_instructions:                                'Отправить инструкции по восстановлению пароля'
+    registration:                                                       "Регистрация"
+    sign_up:                                                            'Зарегистрироваться'
+    profile:                                                            'Профиль'
+    password:                                                           'Пароль'
+    leave_blanck:                                                       "Оставьте пустым, если не собираетесь изменять"
+    password_confirmation:                                              'Подтверждение пароля'
+    current_password:                                                   "Текущий пароль"
+    save_changes:                                                       "Сохранить изменения"
+    back:                                                               "Назад"
+    enter:                                                              "Войти"
+    exit:                                                               'Выход'
+    didnt_receive:                                                      "Не получили письмо с подтверждением?"

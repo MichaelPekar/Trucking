@@ -1,0 +1,54 @@
+= form_for @admin_gallery_item, :html => { :class => 'form-horizontal' } do |f|
+  .control-group
+    .controls2
+      .fileupload.fileupload-new{"data-provides" => "fileupload"}
+        .fileupload-preview.fileupload-exists.thumbnail{style: "max-width: 100%; max-height: 500px; line-height: 20px;"}
+          = image_tag @admin_gallery_item.image.url, style: 'max-width: 200px; max-height: 150px;'
+        %div
+          = f.file_field :image, :class => 'span_12 file_field'
+  .control-group
+    %label.control-label
+      .flag{ class: 'gb' }
+      = t('countries.en')
+    .controls
+      = f.text_field :en_text, :class => 'span_12 text_field'
+  .control-group
+    %label.control-label
+      .flag{ class: 'de' }
+      = t('countries.de')
+    .controls
+      = f.text_field :de_text, :class => 'span_12 text_field'
+  .control-group
+    %label.control-label
+      .flag{ class: 'ru' }
+      = t('countries.ru')
+    .controls
+      = f.text_field :ru_text, :class => 'span_12 text_field'
+  .control-group
+    %label.control-label
+      .flag{ class: 'ua' }
+      = t('countries.ua')
+    .controls
+      = f.text_field :ua_text, :class => 'span_12 text_field'
+  .control-group
+    %label.control-label
+      .flag{ class: 'sk' }
+      = t('countries.sk')
+    .controls
+      = f.text_field :sk_text, :class => 'span_12 text_field'
+  .control-group
+    %label.control-label
+      .flag{ class: 'cz' }
+      = t('countries.cz')
+    .controls
+      = f.text_field :cz_text, :class => 'span_12 text_field'
+  .control-group
+    %label.control-label
+      .flag{ class: 'pl' }
+      = t('countries.pl')
+    .controls
+      = f.text_field :pl_text, :class => 'span_12 text_field'
+  .control-group
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), admin_gallery_items_path, :class => 'btn'
