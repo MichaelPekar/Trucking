@@ -9,92 +9,9 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require bootstrap
  *= require gallery/style.css
- *= require bootstrap_and_overrides
  *= require country_select/css/msdropdown/dd
  *= require country_select/css/msdropdown/flags
  *= require bootstrap-datetimepicker
  */
-
-
-.gallery-text{
-    font-size: 30px;
-    color: #303030;
-}
-
-.gallery-text b{
-    color: #1f7dd2;
-    font-size: 30px;
-}
-
-ul, ol{
-    margin: 1px 0 0px 0px !important;
-}
-
-#jnews img{
-    max-width: 100px !important;
-
-}
-
-#map label { width: auto; display:inline; }
-#map img { max-width: none; }
-
-.truking-box{
-    background-color: white;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-box-shadow: 0px 0px 5px 0px rgb(31, 125, 210);
-    -moz-box-shadow:    0px 0px 5px 0px rgb(31, 125, 210);
-    box-shadow:         0px 0px 5px 0px rgb(31, 125, 210);
-}
-
-body{
-    background-image: url(bg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-}
-
-#myCarousel ol li{
-    border: 1px solid #1f7dd2;
-}
-#myCarousel ol li.active{
-    background-color: #1f7dd2;
-}
-#myCarousel{
-    width: 100%;
-    height: 250px;
-}
-
-.title-text{
-    font-family: Arial;
-    font-size: 24px;
-    color: #1f7dd2;
-}
-
-.calibri{
-    font-size: 22px;
-    line-height: 28px;
-    font-weight: bold;
-}
-.calibri b{
-    font-size: 22px;
-    line-height: 28px;
-    color: #1f7dd2;
-}
-
-.form-label{
-    font-weight: bold;
-    text-align: right;
-}
-
-.error-text{
-    color: red;
-}
-
-.error{
-    border: 1px solid red !important;
-}
-

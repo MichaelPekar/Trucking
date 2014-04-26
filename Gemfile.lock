@@ -32,6 +32,8 @@ GEM
     bcrypt-ruby (3.1.2)
     bcrypt-ruby (3.1.2-x86-mingw32)
     bootstrap-datetimepicker-rails (0.0.11)
+    bootstrap-sass (3.1.1.1)
+      sass (~> 3.2)
     builder (3.0.4)
     cancan (1.6.10)
     ckeditor (4.0.8)
@@ -152,6 +154,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-datetimepicker-rails
+  bootstrap-sass (~> 3.1.1)
   cancan
   ckeditor (~> 4.0.2)
   coffee-rails (~> 3.2.1)

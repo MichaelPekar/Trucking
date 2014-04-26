@@ -22,6 +22,8 @@ gem 'i18n_data'
 gem "galetahub-simple_captcha", :require => "simple_captcha"
 gem 'email_validator'
 
+gem 'bootstrap-sass', '~> 3.1.1'
+
 
 # Gems used only for assets and not required
 # in production environments by default.

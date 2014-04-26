@@ -14,7 +14,10 @@
 //= require jquery_ujs
 //= require gallery/jquery.gallery
 //= require country_select/js/msdropdown/jquery.dd.min
-//= require twitter/bootstrap
+//= require bootstrap
+//= require bootstrap/scrollspy
+//= require bootstrap/modal
+//= require bootstrap/dropdown
 //= require underscore
 //= require gmaps/google
 //= require bootstrap-datetimepicker

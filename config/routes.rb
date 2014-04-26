@@ -27,7 +27,7 @@ Trucking::Application.routes.draw do
     resources :services, only: [:index, :show]
     resources :orders
 
-    root :to => 'pages#about'
+    root :to => 'pages#index'
 
   end
 
