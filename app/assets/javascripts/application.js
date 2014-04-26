@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require gallery/jquery.gallery
 //= require country_select/js/msdropdown/jquery.dd.min
 //= require bootstrap
 //= require bootstrap/scrollspy
@@ -20,27 +19,26 @@
 //= require bootstrap/dropdown
 //= require underscore
 //= require gmaps/google
-//= require bootstrap-datetimepicker
 
 
 $(document).ready(function() {
-    $("#countries").msDropdown();
-    $("#countries").change(function(){
-        window.location.href = $(this).find('option:selected').data('href');
-    });
-
-    if($('#map').size() > 0){
-        handler = Gmaps.build('Google');
-        handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-            markers = handler.addMarkers([
-                {
-                    "lat": 48.607518,
-                    "lng": 22.310761,
-                    "infowindow": "hello!"
-                }
-            ]);
-            handler.map.centerOn({lat: 48.607518, lng: 22.310761});
-            handler.getMap().setZoom(15);
-        });
-    }
+//    $("#countries").msDropdown();
+//    $("#countries").change(function(){
+//        window.location.href = $(this).find('option:selected').data('href');
+//    });
+//
+//    if($('#map').size() > 0){
+//        handler = Gmaps.build('Google');
+//        handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+//            markers = handler.addMarkers([
+//                {
+//                    "lat": 48.607518,
+//                    "lng": 22.310761,
+//                    "infowindow": "hello!"
+//                }
+//            ]);
+//            handler.map.centerOn({lat: 48.607518, lng: 22.310761});
+//            handler.getMap().setZoom(15);
+//        });
+//    }
 });

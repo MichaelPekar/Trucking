@@ -17,3 +17,104 @@
     %script{src: "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js", type: "text/javascript"}
   %body
     = yield
+
+    %footer
+      .container
+        .row
+          .col-lg-2
+            %h4
+              %i.icon-star.icon-white
+              Products
+            %nav
+              %ul.quick-links
+                %li
+                  %a{href: "product.html"} Product1
+                %li
+                  %a{href: "product.html"} Product2
+                %li
+                  %a{href: "product.html"} Product3
+                %li
+                  %a{href: "all_products.html"} All products
+            %h4
+              %i.icon-cogs.icon-white
+              Services
+            %nav
+              %ul.quick-links
+                %li
+                  %a{href: "service.html"} Service1
+                %li
+                  %a{href: "service.html"} Service2
+                %li
+                  %a{href: "service.html"} Service3
+                %li
+                  %a{href: "all_services.html"} All services
+          .col-lg-2
+            %h4
+              %i.icon-beaker.icon-white
+              About
+            %nav
+              %ul.quick-links
+                %li
+                  %a{href: "our_works.html"} Our works
+                %li
+                  %a{href: "patnerships.html"} Patnerships
+                %li
+                  %a{href: "leadership.html"} Leadership
+                %li
+                  %a{href: "news.html"} News
+                %li
+                  %a{href: "events.html"} Events
+                %li
+                  %a{href: "blog.html"} Blog
+                %ul
+          .col-lg-2
+            %h4
+              %i.icon-thumbs-up.icon-white
+              Support
+            %nav
+              %ul.quick-links
+                %li
+                  %a{href: "faq.html"} FAQ
+                %li
+                  %a{href: "contact_us.html"} Contact us
+            %h4
+              %i.icon-legal.icon-white
+              Legal
+            %nav
+              %ul.quick-links
+                %li
+                  %a{href: "#"} License
+                %li
+                  %a{href: "#"} Terms of Use
+                %li
+                  %a{href: "#"} Privacy Policy
+                %li
+                  %a{href: "#"} Security
+          .col-lg-3
+            %h4 Get in touch
+            .social-icons-row
+              %a{href: "#"}
+                %i.icon-twitter
+              %a{href: "#"}
+                %i.icon-facebook
+              %a{href: "#"}
+                %i.icon-linkedin
+            .social-icons-row
+              %a{href: "#"}
+                %i.icon-google-plus
+              %a{href: "#"}
+                %i.icon-github
+              %a{href: "mailto:soundar.rathinasamy@gmail.com"}
+                %i.icon-envelope
+            .social-icons-row
+              %i.icon-phone.icon-large.phone-number
+              +919750227877
+          .col-lg-3
+            %h4 Get updated by email
+            %form
+              %input{name: "email", placeholder: "Email address", type: "text"}/
+              %input.btn.btn-primary{type: "submit", value: "Subscribe"}/
+      %hr.footer-divider/
+      .container
+        %p
+          © 2012-3000 Bootbusiness, Inc. All Rights Reserved.
