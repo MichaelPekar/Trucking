@@ -7,60 +7,26 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      / You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it)
-      %a.navbar-brand{href: "index.html"} Modern Business
-    / Collect the nav links, forms, and other content for toggling
+      = link_to root_path, class: 'navbar-brand' do
+        BABYDORYCH-TRANS.COM.UA
     .collapse.navbar-collapse.navbar-ex1-collapse
       %ul.nav.navbar-nav.navbar-right
         %li
-          %a{href: "about.html"} About
-        %li
-          %a{href: "services.html"} Services
-        %li
-          %a{href: "contact.php"} Contact
-        %li.dropdown
-          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
-            Portfolio
-            %b.caret
-          %ul.dropdown-menu
-            %li
-              %a{href: "portfolio-1-col.html"} 1 Column Portfolio
-            %li
-              %a{href: "portfolio-2-col.html"} 2 Column Portfolio
-            %li
-              %a{href: "portfolio-3-col.html"} 3 Column Portfolio
-            %li
-              %a{href: "portfolio-4-col.html"} 4 Column Portfolio
-            %li
-              %a{href: "portfolio-item.html"} Single Portfolio Item
-        %li.dropdown
-          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
-            Blog
-            %b.caret
-          %ul.dropdown-menu
-            %li
-              %a{href: "blog-home-1.html"} Blog Home 1
-            %li
-              %a{href: "blog-home-2.html"} Blog Home 2
-            %li
-              %a{href: "blog-post.html"} Blog Post
-        %li.dropdown
-          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
-            Other Pages
-            %b.caret
-          %ul.dropdown-menu
-            %li
-              %a{href: "full-width.html"} Full Width Page
-            %li
-              %a{href: "sidebar.html"} Sidebar Page
-            %li
-              %a{href: "faq.html"} FAQ
-            %li
-              %a{href: "404.html"} 404
-            %li
-              %a{href: "pricing.html"} Pricing Table
-    / /.navbar-collapse
-  / /.container
+          = link_to "Home", root_path, title: t('icons.home')
+        - if current_user
+          %li
+            = link_to "Admin", admin_path, title: t('icons.admin') if current_user.admin?
+          %li
+            = link_to "Profile", edit_user_registration_path, title: t('icons.profile')
+          %li
+            = link_to "Orders", orders_path, title: t('icons.orders')
+          %li
+            = link_to "Log Out", destroy_user_session_path, method: :delete, title: t('icons.logout')
+        - else
+          %li
+            = link_to "Log In", new_user_session_path, title: t('icons.login')
+        = locale_select id: 'countries', locales: application_languages
+
 #myCarousel.carousel.slide
   / Indicators
   %ol.carousel-indicators
@@ -69,25 +35,19 @@
     %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
   / Wrapper for slides
   .carousel-inner
-    .item.active
-      .fill{style: "background-image:url('http://placehold.it/1900x1080&text=Slide One');"}
-      .carousel-caption
-        %h1 Modern Business - A Bootstrap 3 Template
-    .item
-      .fill{style: "background-image:url('http://placehold.it/1900x1080&text=Slide Two');"}
-      .carousel-caption
-        %h1 Ready to Style & Add Content
-    .item
-      .fill{style: "background-image:url('http://placehold.it/1900x1080&text=Slide Three');"}
-      .carousel-caption
-        %h1
-          Additional Layout Options at
-          %a{href: "http://startbootstrap.com"} http://startbootstrap.com
-  / Controls
+    - Admin::GalleryItem.all.each do |item|
+      .item.active
+        .fill{ style: "background-image: url(#{ item.image.url })"}
+        .carousel-caption
+          %h1
+            = item.text
+
   %a.left.carousel-control{"data-slide" => "prev", href: "#myCarousel"}
     %span.icon-prev
   %a.right.carousel-control{"data-slide" => "next", href: "#myCarousel"}
     %span.icon-next
+
+
 .section
   .container
     .row

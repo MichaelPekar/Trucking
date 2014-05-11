@@ -1,8 +1,10 @@
-%select{ style: 'width: 60px;', id: id, name: (name || nil) }
-  - locales.each do |locale|
-    %option{ value:             locale[:value],
-             selected:          (I18n.locale.to_s == locale[:value].to_s),
-             'data-image'    => '/assets/country_select/images/msdropdown/icons/blank.gif',
-             'data-imagecss' => "flag #{ locale[:flag] }",
-             'data-title'    => locale[:title],
-             'data-href'     => url_for(params.merge({ :locale => locale[:value] } )) }
+%li.dropdown
+  %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+    = I18n.locale.to_s
+    %b.caret
+  %ul.dropdown-menu{ style: 'width: 200px' }
+    - locales.each do |locale|
+      %li
+        = link_to url_for(params.merge({ :locale => locale[:value] } )) do
+          %span{ style: "background-image: url('/assets/country_select/images/msdropdown/icons/flagssprite_small.png'); ", class: "flag #{ locale[:flag] }" }
+          = locale[:title]
