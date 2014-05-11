@@ -4,11 +4,8 @@ class PagesController < ApplicationController
 
   end
 
-  def partners
-    @partners = Admin::Partner.all
-  end
-
   def index
+    @partners = Admin::Partner.all
     render layout: 'new_layout'
   end
 

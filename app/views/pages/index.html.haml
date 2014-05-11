@@ -27,6 +27,21 @@
 .section
   .container
     .row
+      .col-lg-12.text-center
+        %h2
+          = t('tabs.partners')
+        %hr
+      - @partners.each do |partner|
+        .col-lg-2.col-md-2.col-sm-3
+          %a{ href: "http://#{ partner.link }" }
+            = image_tag partner.logo.url(:thumb), class: 'img-responsive img-home-portfolio', style: 'width: 100%'
+    / /.row
+  / /.container
+/ /.section
+
+.section
+  .container
+    .row
       .col-lg-4.col-md-4
         %h3
           %i.fa.fa-check-circle
@@ -65,33 +80,6 @@
     / /.row
   / /.container
 / /.section-colored
-.section
-  .container
-    .row
-      .col-lg-12.text-center
-        %h2 Display Some Work on the Home Page Portfolio
-        %hr/
-      .col-lg-4.col-md-4.col-sm-6
-        %a{href: "portfolio-item.html"}
-          %img.img-responsive.img-home-portfolio{src: "http://placehold.it/700x450"}/
-      .col-lg-4.col-md-4.col-sm-6
-        %a{href: "portfolio-item.html"}
-          %img.img-responsive.img-home-portfolio{src: "http://placehold.it/700x450"}/
-      .col-lg-4.col-md-4.col-sm-6
-        %a{href: "portfolio-item.html"}
-          %img.img-responsive.img-home-portfolio{src: "http://placehold.it/700x450"}/
-      .col-lg-4.col-md-4.col-sm-6
-        %a{href: "portfolio-item.html"}
-          %img.img-responsive.img-home-portfolio{src: "http://placehold.it/700x450"}/
-      .col-lg-4.col-md-4.col-sm-6
-        %a{href: "portfolio-item.html"}
-          %img.img-responsive.img-home-portfolio{src: "http://placehold.it/700x450"}/
-      .col-lg-4.col-md-4.col-sm-6
-        %a{href: "portfolio-item.html"}
-          %img.img-responsive.img-home-portfolio{src: "http://placehold.it/700x450"}/
-    / /.row
-  / /.container
-/ /.section
 .container
   .row.well
     .col-lg-8.col-md-8
