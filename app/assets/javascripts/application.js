@@ -24,9 +24,9 @@ $(document).ready(function() {
     $('#myCarousel').carousel({
         interval: 4000
     })
-    if($('#map').size() > 0){
+    if($('#roads-map').size() > 0){
         handler = Gmaps.build('Google');
-        handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+        handler.buildMap({ provider: {}, internal: {id: 'roads-map'}}, function(){
             markers = handler.addMarkers([
                 {
                     "lat": 48.607518,
@@ -36,6 +36,20 @@ $(document).ready(function() {
             ]);
             handler.map.centerOn({lat: 48.607518, lng: 22.310761});
             handler.getMap().setZoom(15);
+        });
+    }
+    if($('#base-map').size() > 0){
+        handler2 = Gmaps.build('Google');
+        handler2.buildMap({ provider: {}, internal: {id: 'base-map'}}, function(){
+            markers = handler2.addMarkers([
+                {
+                    "lat": 48.607518,
+                    "lng": 22.310761,
+                    "infowindow": "hello!"
+                }
+            ]);
+            handler2.map.centerOn({lat: 48.607518, lng: 22.310761});
+            handler2.getMap().setZoom(15);
         });
     }
 });

@@ -2,7 +2,7 @@
   .container
     .row
       .col-lg-6.col-md-6.col-sm-6
-        #map{ style: 'width: 100%; height: 400px' }
+        #roads-map{ style: 'width: 100%; height: 400px' }
       .col-lg-6.col-md-6.col-sm-6
         %h2
           = t 'tabs.about'
@@ -10,6 +10,20 @@
     / /.row
   / /.container
 / /.section
+
+.section-colored
+  .container
+    .row
+      .col-lg-6.col-md-6.col-sm-6
+        %h2
+          = t 'tabs.contact'
+        = contact_us_page
+      .col-lg-6.col-md-6.col-sm-6
+        #base-map{ style: 'width: 100%; height: 400px' }
+    / /.row
+  / /.container
+/ /.section-colored
+
 .section
   .container
     .row
@@ -78,29 +92,6 @@
     / /.row
   / /.container
 / /.section
-.section-colored
-  .container
-    .row
-      .col-lg-6.col-md-6.col-sm-6
-        %h2 Modern Business Features Include:
-        %ul
-          %li Bootstrap 3 Framework
-          %li Mobile Responsive Design
-          %li Predefined File Paths
-          %li Working PHP Contact Page
-          %li Minimal Custom CSS Styles
-          %li Unstyled: Add Your Own Style and Content!
-          %li Font-Awesome fonts come pre-installed!
-          %li
-            100%
-            %strong Free
-            to Use
-          %li Open Source: Use for any project, private or commercial!
-      .col-lg-6.col-md-6.col-sm-6
-        %img.img-responsive{src: "http://placehold.it/700x450/ffffff/cccccc"}/
-    / /.row
-  / /.container
-/ /.section-colored
 .container
   .row.well
     .col-lg-8.col-md-8
