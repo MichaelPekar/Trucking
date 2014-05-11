@@ -24,18 +24,18 @@ $(document).ready(function() {
     $('#myCarousel').carousel({
         interval: 4000
     })
-//    if($('#map').size() > 0){
-//        handler = Gmaps.build('Google');
-//        handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-//            markers = handler.addMarkers([
-//                {
-//                    "lat": 48.607518,
-//                    "lng": 22.310761,
-//                    "infowindow": "hello!"
-//                }
-//            ]);
-//            handler.map.centerOn({lat: 48.607518, lng: 22.310761});
-//            handler.getMap().setZoom(15);
-//        });
-//    }
+    if($('#map').size() > 0){
+        handler = Gmaps.build('Google');
+        handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+            markers = handler.addMarkers([
+                {
+                    "lat": 48.607518,
+                    "lng": 22.310761,
+                    "infowindow": "hello!"
+                }
+            ]);
+            handler.map.centerOn({lat: 48.607518, lng: 22.310761});
+            handler.getMap().setZoom(15);
+        });
+    }
 });

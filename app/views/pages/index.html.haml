@@ -1,6 +1,18 @@
 .section
   .container
     .row
+      .col-lg-6.col-md-6.col-sm-6
+        #map{ style: 'width: 100%; height: 400px' }
+      .col-lg-6.col-md-6.col-sm-6
+        %h2
+          = t 'tabs.about'
+        = about_us_page
+    / /.row
+  / /.container
+/ /.section
+.section
+  .container
+    .row
       .col-lg-4.col-md-4
         %h3
           %i.fa.fa-check-circle
@@ -89,36 +101,13 @@
     / /.row
   / /.container
 / /.section-colored
-.section
-  .container
-    .row
-      .col-lg-6.col-md-6.col-sm-6
-        %img.img-responsive{src: "http://placehold.it/700x450"}/
-      .col-lg-6.col-md-6.col-sm-6
-        %h2 Modern Business Features Include:
-        %ul
-          %li Bootstrap 3 Framework
-          %li Mobile Responsive Design
-          %li Predefined File Paths
-          %li Working PHP Contact Page
-          %li Minimal Custom CSS Styles
-          %li Unstyled: Add Your Own Style and Content!
-          %li Font-Awesome fonts come pre-installed!
-          %li
-            100%
-            %strong Free
-            to Use
-          %li Open Source: Use for any project, private or commercial!
-    / /.row
-  / /.container
-/ /.section
 .container
   .row.well
     .col-lg-8.col-md-8
       %h4 'Modern Business' is a ready-to-use, Bootstrap 3 updated, multi-purpose HTML theme!
       %p For more templates and more page options that you can integrate into this website template, visit Start Bootstrap!
     .col-lg-4.col-md-4
-      %a.btn.btn-lg.btn-primary.pull-right{href: "http://startbootstrap.com"} See More Templates!
+      %a.btn.btn-lg.btn-primary.pull-right{href: "http://startbootstrap.com"} Make Order !!!
   / /.row
 
 / /.container

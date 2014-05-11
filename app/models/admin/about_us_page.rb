@@ -6,7 +6,8 @@ class Admin::AboutUsPage < ActiveRecord::Base
   private
 
   def validate_lang
-    if self.class.where(lang: lang).count > 0
+    arel = self.class.arel_table
+    if self.class.where(arel[:lang].eq(self.lang).and(arel[:id].not_eq(self.id))).count > 0
       errors[:lang] << "About Us Page(#{lang}) already exist."
     end
   end
