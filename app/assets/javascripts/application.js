@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require country_select/js/msdropdown/jquery.dd.min
 //= require bootstrap
 //= require bootstrap/scrollspy
 //= require bootstrap/modal

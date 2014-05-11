@@ -12,19 +12,19 @@
     .collapse.navbar-collapse.navbar-ex1-collapse
       %ul.nav.navbar-nav.navbar-right
         %li
-          = link_to "Home", root_path, title: t('icons.home')
+          = link_to t('tabs.home'), root_path, title: t('icons.home')
         - if current_user
           %li
-            = link_to "Admin", admin_path, title: t('icons.admin') if current_user.admin?
+            = link_to t('icons.admin'), admin_path, title: t('icons.admin') if current_user.admin?
           %li
-            = link_to "Profile", edit_user_registration_path, title: t('icons.profile')
+            = link_to t('icons.profile'), edit_user_registration_path, title: t('icons.profile')
           %li
-            = link_to "Orders", orders_path, title: t('icons.orders')
+            = link_to t('icons.orders'), orders_path, title: t('icons.orders')
           %li
-            = link_to "Log Out", destroy_user_session_path, method: :delete, title: t('icons.logout')
+            = link_to t('icons.logout'), destroy_user_session_path, method: :delete, title: t('icons.logout')
         - else
           %li
-            = link_to "Log In", new_user_session_path, title: t('icons.login')
+            = link_to t('devise.enter'), new_user_session_path, title: t('icons.login')
         = locale_select id: 'countries', locales: application_languages
 
 #myCarousel.carousel.slide
