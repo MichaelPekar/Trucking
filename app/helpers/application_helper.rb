@@ -31,4 +31,8 @@ module ApplicationHelper
     render partial: 'layouts/language_select', locals: { id: options[:id], name: options[:name] , locales: options[:locales] }
   end
 
+  def admin_locale_select( options )
+    render partial: 'layouts/admin/language_select', locals: { id: options[:id], name: options[:name] , locales: options[:locales] }
+  end
+
 end

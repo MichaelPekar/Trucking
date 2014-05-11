@@ -1,0 +1,8 @@
+%select{ style: 'width: 60px;', id: id, name: (name || nil) }
+  - locales.each do |locale|
+    %option{ value:             locale[:value],
+             selected:          (I18n.locale.to_s == locale[:value].to_s),
+             'data-image'    => '/assets/country_select/images/msdropdown/icons/blank.gif',
+             'data-imagecss' => "flag #{ locale[:flag] }",
+             'data-title'    => locale[:title],
+             'data-href'     => url_for(params.merge({ :locale => locale[:value] } )) }
