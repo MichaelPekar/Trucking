@@ -20,8 +20,6 @@ Trucking::Application.routes.draw do
 
     devise_for :users, controllers: { :sessions => "sessions", :registrations => "registrations" }
 
-    get "pages/team"
-    get "pages/partners"
     resources :services, only: [:index, :show]
     resources :orders
 
