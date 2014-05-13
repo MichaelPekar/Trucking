@@ -1,10 +1,18 @@
-%h2.title.calibri
-  = t 'devise.forgot_password'
-= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
-  = devise_error_messages!
-  .row-fluid
-    = f.email_field :email, :autofocus => true, placeholder: 'Email', class: 'span_12 text_field'
-  %div
-    = f.submit t('devise.send_restore_passwords_instructions'), class: 'btn btn-info'
+.container
+  .form-wrap
+    .row
+      .title.animated.fadeInDown{"data-animation" => "fadeInDown", "data-animation-delay" => ".8s", style: "-webkit-animation: 0.8s;"}
+        %h1
+          = t 'devise.forgot_password'
+      = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :зщые }) do |f|
+        = devise_error_messages!
+        .form-group
+          = f.email_field :email, class: 'form-control', placeholder: t('devise.email_label'), required: "required"
 
-= render "devise/shared/links"
+        %button#signIn_1.btn.btn-block.signin{type: "submit"}
+          = t('devise.send_restore_passwords_instructions')
+      %br
+      %br
+      %br
+      %br
+      = render "devise/shared/links"
