@@ -1,28 +1,38 @@
-%h2.title.calibri
-  = t('devise.profile')
-= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
-  = devise_error_messages!
-  .row-fluid
-    = f.label :email
-    = f.email_field :email, :autofocus => true, class: 'span_12'
-    %br
-    - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-      %div
-        Currently waiting confirmation for:
-        = resource.unconfirmed_email
+.container
+  .form-wrap
+    .row
+      .title.animated.fadeInDown{"data-animation" => "fadeInDown", "data-animation-delay" => ".8s", style: "-webkit-animation: 0.8s;"}
+        %h1
+          = t('devise.profile')
+      = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
+        = devise_error_messages!
+        .form-main
+          .form-group
+            %input.form-control{ placeholder: "Email", disabled: "disabled", value: current_user.email }
+          .form-group
+            - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+              Currently waiting confirmation for:
+              = resource.unconfirmed_email
+          %hr
+          .form-group
+            = t('devise.leave_blanck')
+          .form-group
+            = f.password_field :password, class: 'form-control', placeholder: t('devise.password')
+          .form-group
+            = f.password_field :password_confirmation, class: 'form-control', placeholder: t('devise.password_confirmation')
+
+          %hr
+          .form-group
+            = f.password_field :current_password, class: 'form-control', placeholder: t('devise.current_password'), required: "required"
+
+          %button#signIn_1.btn.btn-block.signin{type: "submit"}
+            = t('devise.save_changes')
       %br
-    = t('devise.password')
-    %i
-      - t('devise.leave_blanck')
-    = f.password_field :password, :autocomplete => "off", class: 'span_12 text_field'
-    %br
-    - t('devise.password_confirmation')
-    = f.password_field :password_confirmation, class: 'span_12 text_field'
-    %br
-    = t('devise.current_password')
-    = f.password_field :current_password, class: 'span_12 text_field'
-    = f.submit t('devise.save_changes'), class: 'btn btn-info'
-    = link_to t('devise.back'), :back, class: 'btn'
+      %br
+      %br
+      %br
+      = render "devise/shared/links"
+
 
 
 
