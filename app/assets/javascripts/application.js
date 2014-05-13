@@ -21,6 +21,11 @@
 
 
 $(document).ready(function() {
+
+    if($(document).height() <= $(window).height()){
+        $("footer").addClass("navbar-fixed-bottom");
+    };
+
     $('#myCarousel').carousel({
         interval: 4000
     })
