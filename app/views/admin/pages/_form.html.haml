@@ -5,9 +5,9 @@
       = @section.name
       .flag{ class: application_languages.select{ |l| l[:value] == @section.lang }.first[:flag] }
   .control-group
-    = f.label :title, :class => 'control-label'
-    .controls
-      = f.text_field :title, :class => 'text_field span_12'
+    -#= f.label :title, :class => 'control-label'
+    -#.controls
+    -#  = f.text_field :title, :class => 'text_field span_12'
   = f.cktext_area :content, :class => "text_area span_12", :ckeditor => {:language => params[:locale]}
   = f.hidden_field :section_id, :value => @section.id
   .form-actions

@@ -20,7 +20,6 @@ Trucking::Application.routes.draw do
 
     devise_for :users, controllers: { :sessions => "sessions", :registrations => "registrations" }
 
-    resources :services, only: [:index, :show]
     resources :orders
 
     root :to => 'pages#index'

@@ -21,9 +21,9 @@
 .section
   .container
     .row
-      .col-lg-6.col-md-6.col-sm-6
-        #roads-map{ style: 'width: 100%; height: 400px' }
-      .col-lg-6.col-md-6.col-sm-6
+      .col-lg-4.col-md-4.col-sm-4
+        = image_tag 'logo.png', style: 'width: 100%'
+      .col-lg-8.col-md-8.col-sm-8
         %h2
           = t 'tabs.about'
         = about_us_page
@@ -39,7 +39,7 @@
           = t 'tabs.contact'
         = contact_us_page
       .col-lg-6.col-md-6.col-sm-6
-        #base-map{ style: 'width: 100%; height: 400px' }
+        #base-map{ style: 'width: 100%; height: 150px' }
     / /.row
   / /.container
 / /.section-colored
@@ -59,7 +59,7 @@
   / /.container
 / /.section
 
-.section
+.section-colored
   .container
     .row
       .col-lg-12.text-center
@@ -82,51 +82,27 @@
 .section
   .container
     .row
-      .col-lg-4.col-md-4
-        %h3
-          %i.fa.fa-check-circle
-          Bootstrap 3 Built
-        %p
-          The 'Modern Business' website template by
-          %a{href: "http://startbootstrap.com"} Start Bootstrap
-          is built with
-          = succeed "." do
-            %a{href: "http://getbootstrap.com"} Bootstrap 3
-      .col-lg-4.col-md-4
-        %h3
-          %i.fa.fa-pencil
-          Ready to Style & Edit
-        %p
-          You're ready to go with this pre-built page structure, now all you need to do is add your own custom stylings! You can see some free themes over at
-          = succeed "," do
-            %a{href: "http://bootswatch.com"} Bootswatch
-          = succeed "!" do
-            %a{href: "http://getbootstrap.com/customize/"} the Bootstrap customizer
-      .col-lg-4.col-md-4
-        %h3
-          %i.fa.fa-folder-open
-          Many Page Options
-        %p This template features many common pages that you might see on a business website. Pages include: about, contact, portfolio variations, blog, pricing, FAQ, 404, services, and general multi-purpose pages.
+      .col-lg-12.text-center
+        %h2
+          = t('tabs.services')
+        %hr
+
+      .col-lg-12.text-center
+        #accordion.panel-group
+          - @sections.each_with_index do |section, i|
+            .panel.panel-default
+              .panel-heading
+                %h4.panel-title
+                  %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapse#{ i }"}
+                    = section.name
+              .panel-collapse.collapse.out{ id: "collapse#{ i }"}
+                .panel-body
+                  %ul
+                    - section.pages.each do |page|
+                      %li
+                        = raw page.content
+
+
     / /.row
   / /.container
 / /.section
-.section-colored.text-center
-  .container
-    .row
-      .col-lg-12
-        %h2 Modern Business: A Clean & Simple Full Website Template by Start Bootstrap
-        %p A complete website design featuring various single page templates from Start Bootstraps library of free HTML starter templates.
-        %hr/
-    / /.row
-  / /.container
-/ /.section-colored
-.container
-  .row.well
-    .col-lg-8.col-md-8
-      %h4 'Modern Business' is a ready-to-use, Bootstrap 3 updated, multi-purpose HTML theme!
-      %p For more templates and more page options that you can integrate into this website template, visit Start Bootstrap!
-    .col-lg-4.col-md-4
-      %a.btn.btn-lg.btn-primary.pull-right{href: "http://startbootstrap.com"} Make Order !!!
-  / /.row
-
-/ /.container

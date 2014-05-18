@@ -1,9 +1,0 @@
-- @sections.each do |section|
-  .calibri
-    %b
-      = section.name
-  %ul
-    - section.pages.each do |page|
-      %li
-        %h5
-          = link_to page.title, service_path(page)
