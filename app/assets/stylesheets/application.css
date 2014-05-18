@@ -12,4 +12,6 @@
  *= require bootstrap
  *= require country_select/css/msdropdown/dd
  *= require country_select/css/msdropdown/flags
+ *= require bootstrap
+ *= require bootstrap-datetimepicker
  */

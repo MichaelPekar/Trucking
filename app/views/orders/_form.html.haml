@@ -1,119 +1,80 @@
-= form_for @order, :html => { :class => 'form-horizontal' } do |f|
-  .row-fluid
-    .span3
-      .form-label
-        = t 'order_form.company'
-        = ':'
-    .span9
-      - if @order.errors[:company].any?
-        .error-text
-          = @order.errors[:company].join(', ')
-          - order_error = "error"
-      = f.text_field :company, :class => "span_12 text_field #{ order_error }", placeholder: t('order_form.company_placeholder')
-  %br
-  .row-fluid
-    .span3
-      .form-label
-        = t 'order_form.contact_person'
-        = ':'
-    .span9
-      - if @order.errors[:contact_person].any?
-        .error-text
-          = @order.errors[:contact_person].join(', ')
-          - contact_person_error = "error"
-      = f.text_field :contact_person, :class => "span_12 text_field #{ contact_person_error }", placeholder: t('order_form.contact_person_placeholder')
-  %br
-  .row-fluid
-    .span3
-      .form-label
-        = t 'order_form.phone'
-        = ':'
-    .span9
-      - if @order.errors[:phone].any?
-        .error-text
-          = @order.errors[:phone].join(', ')
-          - phone_error = "error"
-      = f.phone_field :phone, :class => "span_12 text_field #{ phone_error }", placeholder: t('order_form.phone_placeholder')
-  %br
-  .row-fluid
-    .span3
-      .form-label
-        = t 'order_form.email'
-        = ':'
-    .span9
-      - if @order.errors[:email].any?
-        .error-text
-          = @order.errors[:email].join(', ')
-          - email_error = "error"
-      = f.email_field :email, :class => "span_12 text_field #{ email_error }", placeholder: t('order_form.email_placeholder'), value: "#{ current_user.email if current_user }"
-  %br
-  .row-fluid
-    .span3
-      .form-label
-        = t 'order_form.cargo'
-        = ':'
-    .span9
-      - if @order.errors[:cargo].any?
-        .error-text
-          = @order.errors[:cargo].join(', ')
-          - cargo_error = "error"
-      = f.text_area :cargo, class: "span_12 text_field #{ cargo_error }", rows: 5, placeholder: t('order_form.cargo_placeholder'), style: 'resize: none'
-  %br
-  .row-fluid
-    .span3
-      .form-label
-        = t 'order_form.from_address'
-        = ':'
-    .span9
-      - if @order.errors[:from_address].any?
-        .error-text
-          = @order.errors[:from_address].join(', ')
-          - from_address_error = "error"
-      = f.text_area :from_address, class: "span_12 text_field #{ from_address_error }", rows: 3, placeholder: t('order_form.from_address_placeholder'), style: 'resize: none'
-  %br
-  .row-fluid
-    .span3
-      .form-label
-        = t 'order_form.to_address'
-        = ':'
-    .span9
-      - if @order.errors[:to_address].any?
-        .error-text
-          = @order.errors[:to_address].join(', ')
-          - to_address_error = "error"
-      = f.text_area :to_address, class: "span_12 text_field #{ to_address_error }", rows: 3, placeholder: t('order_form.to_address_placeholder'), style: 'resize: none'
-  %br
-  .row-fluid
-    .span3
-      .form-label
-        = t 'order_form.start_date'
-        = ':'
-    .span9
-      - if @order.errors[:start_date].any?
-        .error-text
-          = @order.errors[:start_date].join(', ')
-          - start_date_error = "error"
-      #datetimepicker1.input-append.date{ style: 'width: 91%'}
-        = f.text_field :start_date, class: "span_12", 'data-format' => 'dd/MM/yyyy hh:mm:ss', 'type' => 'text'
-        %span.add-on
-          %i{ 'data-time-icon' => 'icon-time', 'data-date-icon' => 'icon-calendar'}
-          :javascript
-            $(function(){
-                $('#datetimepicker1').datetimepicker({
-                    language: 'pt-BR'
-                });
-            });
-  %br
-  .row-fluid
-    .span3
-      .form-label
-        = t 'order_form.additional_info'
-        = ':'
-    .span9
-      = f.text_area :additional_info, class: 'span_12', rows: 3, placeholder: t('order_form.additional_info_placeholder'), style: 'resize: none'
-  %br
-  = f.simple_captcha :label => "Enter numbers.."
-  %br
-  %div
-    = f.submit t('make_order'), :class => 'btn btn-primary'
-    = link_to t('.cancel', :default => t("helpers.links.cancel")), orders_path, :class => 'btn'
+= @order.errors.full_messages
+.container
+  .form-wrap
+    .row
+      .title.animated.fadeInDown{"data-animation" => "fadeInDown", "data-animation-delay" => ".8s", style: "-webkit-animation: 0.8s;"}
+        %h1
+          = t('order_form.order')
+      = form_for @order, :html => { :class => 'form-horizontal' } do |f|
+        .form-main
+          .form-group
+            = f.text_field :company, class: 'form-control', placeholder: t('order_form.company')
+            - if @order.errors[:company].any?
+              .error-text
+                = @order.errors[:company].join(', ')
+                - order_error = "error"
+          .form-group
+            = f.phone_field :phone, class: 'form-control', placeholder: t('order_form.phone')
+            - if @order.errors[:phone].any?
+              .error-text
+                = @order.errors[:phone].join(', ')
+                - order_error = "error"
+          .form-group
+            = f.text_field :contact_person, class: 'form-control', placeholder: t('order_form.contact_person')
+            - if @order.errors[:contact_person].any?
+              .error-text
+                = @order.errors[:contact_person].join(', ')
+                - order_error = "error"
+          .form-group
+            = f.email_field :email, class: 'form-control', placeholder: t('order_form.email')
+            - if @order.errors[:email].any?
+              .error-text
+                = @order.errors[:email].join(', ')
+                - order_error = "error"
+          .form-group
+            = f.text_area :cargo, class: 'form-control', rows: 4 , placeholder: t('order_form.cargo')
+            - if @order.errors[:cargo].any?
+              .error-text
+                = @order.errors[:cargo].join(', ')
+                - order_error = "error"
+          .form-group
+            = f.text_area :from_address, class: 'form-control', rows: 4 , placeholder: t('order_form.from_address')
+            - if @order.errors[:from_address].any?
+              .error-text
+                = @order.errors[:from_address].join(', ')
+                - order_error = "error"
+          .form-group
+            = f.text_area :to_address, class: 'form-control', rows: 4 , placeholder: t('order_form.to_address')
+            - if @order.errors[:to_address].any?
+              .error-text
+                = @order.errors[:to_address].join(', ')
+                - order_error = "error"
+          .form-group
+            #datetimepicker1.input-append.date
+              = f.text_field :start_date, class: "form-control", 'data-format' => 'dd/MM/yyyy hh:mm:ss'
+              %span.add-on
+                %i{ 'data-time-icon' => 'icon-time', 'data-date-icon' => 'icon-calendar'}
+                :javascript
+                  $(function(){
+                      $('#datetimepicker1').datetimepicker({
+                          language: 'pt-BR'
+                      });
+                  });
+            - if @order.errors[:start_date].any?
+              .error-text
+                = @order.errors[:start_date].join(', ')
+                - order_error = "error"
+          .form-group
+            = f.text_area :additional_info, class: 'form-control', rows: 4 , placeholder: t('order_form.additional_info')
+            - if @order.errors[:additional_info].any?
+              .error-text
+                = @order.errors[:additional_info].join(', ')
+                - order_error = "error"
+          .form-group
+            = f.simple_captcha :label => "Enter numbers.."
+
+          .form-group
+            = f.submit t('make_order'), :class => 'btn btn-block signin', id: 'signIn_1'
+          .form-group
+            = button_to t('devise.back'), orders_path, :class => 'btn btn-block signin', id: 'signIn_1'
+

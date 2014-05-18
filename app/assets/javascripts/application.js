@@ -18,6 +18,8 @@
 //= require bootstrap/dropdown
 //= require underscore
 //= require gmaps/google
+//= require moment
+//= require bootstrap-datetimepicker
 
 
 $(document).ready(function() {

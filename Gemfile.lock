@@ -31,9 +31,10 @@ GEM
     arel (3.0.3)
     bcrypt-ruby (3.1.2)
     bcrypt-ruby (3.1.2-x86-mingw32)
-    bootstrap-datetimepicker-rails (0.0.11)
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
+    bootstrap3-datetimepicker-rails (3.0.0)
+      momentjs-rails (~> 2.5.0)
     builder (3.0.4)
     cancan (1.6.10)
     ckeditor (4.0.8)
@@ -82,6 +83,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+    momentjs-rails (2.5.1)
+      railties (>= 3.1)
     multi_json (1.8.4)
     mysql2 (0.3.11)
     mysql2 (0.3.11-x86-mingw32)
@@ -153,8 +156,8 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  bootstrap-datetimepicker-rails
   bootstrap-sass (~> 3.1.1)
+  bootstrap3-datetimepicker-rails (~> 3.0.0)
   cancan
   ckeditor (~> 4.0.2)
   coffee-rails (~> 3.2.1)
@@ -166,6 +169,7 @@ DEPENDENCIES
   haml-rails
   i18n_data
   jquery-rails
+  momentjs-rails (~> 2.5.0)
   mysql2 (= 0.3.11)
   paperclip
   rails (= 3.2.11)

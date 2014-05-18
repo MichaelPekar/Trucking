@@ -16,7 +16,8 @@ gem 'cancan'
 gem 'underscore-rails'
 gem 'gmaps4rails', "2.0.4"
 gem 'will_paginate-bootstrap', '0.2.5'
-gem 'bootstrap-datetimepicker-rails'
+gem 'momentjs-rails', '~> 2.5.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 3.0.0'
 gem 'geocoder'
 gem 'i18n_data'
 gem "galetahub-simple_captcha", :require => "simple_captcha"
