@@ -30,7 +30,7 @@
           %ul.nav.navbar-nav.navbar-right
             %li
               %navbar-form
-                = link_to 'Make Order', new_order_path, class: 'btn btn-default navbar-btn btn-sm'
+                = link_to t('make_order'), new_order_path, class: 'btn btn-default navbar-btn btn-sm'
             %li
               = link_to t('tabs.home'), root_path, title: t('icons.home')
             - if current_user

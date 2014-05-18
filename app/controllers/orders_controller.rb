@@ -8,14 +8,7 @@ class OrdersController < ApplicationController
       @orders = current_user.orders.paginate(:page => params[:page], per_page: 20).order('id DESC')
     end
   end
-  # GET /orders/1
-  # GET /orders/1.json
-  def show
-    @order = Order.find(params[:id])
-    unless current_user && @order.user == current_user
-      redirect_to new_user_session_path
-    end
-  end
+  
 
   # GET /orders/new
   # GET /orders/new.json

@@ -1,4 +1,3 @@
-= @order.errors.full_messages
 .container
   .form-wrap
     .row
@@ -76,5 +75,5 @@
           .form-group
             = f.submit t('make_order'), :class => 'btn btn-block signin', id: 'signIn_1'
           .form-group
-            = button_to t('devise.back'), orders_path, :class => 'btn btn-block signin', id: 'signIn_1'
+            = link_to t('devise.back'), orders_path, :class => 'btn btn-block signin', id: 'signIn_1'
 
