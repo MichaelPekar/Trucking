@@ -10,5 +10,5 @@ ActionMailer::Base.smtp_settings = {
     :user_name =>  Admin::MailerSettings.instance.email,
     :password => Admin::MailerSettings.instance.password,
     :enable_starttls_auto => true
-}
+} if ActiveRecord::Base.connection.table_exists? 'admin_mailer_settings'
 
