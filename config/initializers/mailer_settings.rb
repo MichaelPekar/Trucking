@@ -7,7 +7,8 @@ ActionMailer::Base.smtp_settings = {
     :port => 587,
     :domain => "babydorych-trans.com.ua",
     :authentication => "plain",
-    :user_name => "info@babydorych-trans.com.ua",
-    :password => "arturs8180",
+    :user_name =>  Admin::MailerSettings.instance.email,
+    :password => Admin::MailerSettings.instance.password,
     :enable_starttls_auto => true
 }
+

@@ -13,12 +13,6 @@ class Order < ActiveRecord::Base
   private
 
   def send_notification
-    #smtp_config = user.smtp_configuration
-    #
-    #ActionMailer::Base.username = smtp_config.username
-    #ActionMailer::Base.password = smtp_config.password
-    #ActionMailer::Base.server = ..
-    #    ActionMailer::Base.port = ..
-    #    ActionMailer::Base.authentication = ..
+    OrderMailer.accept_order(self).deliver
   end
 end

@@ -22,6 +22,7 @@ gem 'geocoder'
 gem 'i18n_data'
 gem "galetahub-simple_captcha", :require => "simple_captcha"
 gem 'email_validator'
+gem 'acts_as_singleton'
 
 gem 'bootstrap-sass', '~> 3.1.1'
 

@@ -33,9 +33,9 @@ class OrdersController < ApplicationController
     respond_to do |format|
       if @order.save_with_captcha
         if current_user
-          format.html { redirect_to @order, notice: 'Order was successfully created.' }
+          redirect_to orders_path, notice: 'Order was successfully created.'
         else
-          format.html { redirect_to root_path, notice: 'Order was successfully created.' }
+          redirect_to root_path, notice: 'Order was successfully created.'
         end
       else
         format.html { render action: "new" }
