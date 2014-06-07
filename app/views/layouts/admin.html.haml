@@ -42,6 +42,8 @@
                 = link_to "Orders", admin_orders_path
               %li{class: "nav #{'active' if params[:controller] == 'admin/gallery_items'}"}
                 = link_to "Gallery", admin_gallery_items_path
+              %li{class: "nav #{'active' if params[:controller] == 'admin/mailer_settings'}"}
+                = link_to "Mail", admin_mailer_settings_path
           / /.nav-collapse
     .container-fluid
       .row-fluid

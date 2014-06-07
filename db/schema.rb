@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140118143727) do
+ActiveRecord::Schema.define(:version => 20140607113159) do
 
   create_table "admin_about_us_pages", :force => true do |t|
     t.text     "content"
@@ -54,6 +54,11 @@ ActiveRecord::Schema.define(:version => 20140118143727) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+  end
+
+  create_table "admin_mailer_settings", :force => true do |t|
+    t.string "email"
+    t.string "password"
   end
 
   create_table "admin_page_sections", :force => true do |t|

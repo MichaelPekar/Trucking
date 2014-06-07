@@ -12,6 +12,8 @@ Trucking::Application.routes.draw do
       resources :orders, only: [:index, :show]
       post "orders/accept"
       resources :gallery_items
+      resources :mailer_settings, only: [:index]
+      post "mailer_settings/update"
     end
 
     mount Ckeditor::Engine => '/ckeditor'
