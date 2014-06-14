@@ -1,12 +1,13 @@
 #myCarousel.carousel.slide
+  - gallery_items = Admin::GalleryItem.all
   / Indicators
   %ol.carousel-indicators
-    %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
-    %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
-    %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
+    - gallery_items.count.times do |i|
+      %li{ data: { 'slide-to' => i, target: "#myCarousel"}, class: "#{ 'active' if i == 0}"}
+
   / Wrapper for slides
   .carousel-inner
-    - Admin::GalleryItem.all.each_with_index do |item, i|
+    - gallery_items.each_with_index do |item, i|
       .item{ class: "#{ 'active' if i == 0 }"}
         .fill{ style: "background-image: url(#{ item.image.url })"}
         .carousel-caption
