@@ -50,7 +50,7 @@ body {
 
 /* Half Page Height Carousel Customization */
 .carousel {
-    height: 50%;
+    height: 380px;
 }
 
 .item,
@@ -121,10 +121,6 @@ body {
 /* Responsive Styles */
 @media (max-width: 767px) {
 
-    .carousel {
-        height: 70%;
-        /* increases the carousel height so it looks good on phones */
-    }
 }
 
 
